@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="it">
+  
 <head>
   <meta charset="UTF-8">
-<title>nome dell'azienda</title>
+<title>Esmeny</title>
+   <link rel="stylesheet" href="https://Esmeny/perteeperiltuofuturo">
 </head>
   
 <body>
-  <div style=backgroud-color:green;>
-    <a href="#chisiamo">chi siamo<|a>
-    <a href="#dovesiamo">Dove siamo<|a>    
-  </div>
+  <div style=backgroud-color:black;>
+  <div class="container">
+    <h1 id="nomeaziendaemotto">Nome azienda e motto</h1>
+    <p>Esmeny-Per te e per il tuo futuro</p>
+    <h1 id="chisiamo">Chi siamo</h1>
+    <p>Siamo un'azienda che crea prodotti naturali che mettono d'accordo sostenibilità, innovazione e design. Tutti i prodotti Esmeny sono progettati per evitare l'uso di plastica monouso e di sostanze chimiche non necessarie, riducendo cosi fino al 95% le emissioni di CO2 rispetto alle alternative tadizionali. Il nostro obbiettivo è far si che sempre più persone scelgano una vita quotidiana più sostenibile e rispettosa dell'ambiente, Perchè siamo convinti che il vero cambiamento passi dalla collaborazione di tutti e da un impegno comune.</p>
+    <h1 id="dovetrovarci">Dove trovarci</h1>
+    <p>Ci puoi trovare sul sito internet: www://Esmeny/perteeperiltuofuturo.
+       Sui social: instagram e facebook:dolceesmeny</p>
+    
+    <form name="contatti" method="POST" data-netlify="true">      
+      <input type="hidden" name="subject" value="Nuovi dati ricevuti dalla form %{formName} (%{submissionId})" />
+      <!-- form group   -->
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" class="form-control" placeholder="Inserisci il tuo nome: ci aiuterà a ricordarci come ti chiami">
+      </div>
+      <!-- form group   -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Inserisci la tua email: ci permetterà di risponderti">
+      </div>
+      <!-- form group   -->
+      <div class="form-group">
+        <label for="messaggio">Commento</label>
+        <textarea name="messaggio" id="messaggio" class="form-control"
+          placeholder="Inserisci il motivo del tuo contatto"></textarea>
+      </div>
+      <br />
 
       
-<h1 id="chisiamo">Chi siamo</h1>
-<p>Testo del paragrafo</p>
 
-<h1 id="dovesiamo">Dove siamo</h1>
-<p>Testo del paragrafo</p>
       
 </body>
 </html>
