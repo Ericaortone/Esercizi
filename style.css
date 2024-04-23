@@ -58,3 +58,12 @@
   font-family: "Wildwest";
   font-size: 100;
 }
+
+.image-container img {
+    width: 15%; 
+    height: auto; 
+  }
+.image-container {
+    
+    justify-content: space-between;
+  }
