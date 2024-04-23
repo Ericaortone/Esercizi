@@ -59,12 +59,11 @@
   font-size: 100;
 }
 
-.image-container {
-    display: flex;
-    justify-content: space-between;
+.image-container img {
+    width: 15%; 
+    height: auto; 
   }
-
-  .image-container img {
-    width: 25%; 
-    height: auto; /* Mantieni l'aspetto proporzionato */
+.image-container {
+    
+    justify-content: space-between;
   }
