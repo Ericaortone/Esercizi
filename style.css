@@ -61,7 +61,6 @@
 
 .image-container {
     display: flex;
-    justify-content: space-between;
   }
 
   .image-container img {
