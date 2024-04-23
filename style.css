@@ -59,11 +59,12 @@
   font-size: 100;
 }
 
-.image-container img {
-    width: 15%; 
-    height: auto; 
-  }
 .image-container {
-    
+    display: flex;
     justify-content: space-between;
+  }
+
+  .image-container img {
+    width: 10%; 
+    height: auto; /* Mantieni l'aspetto proporzionato */
   }
