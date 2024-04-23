@@ -61,9 +61,10 @@
 
 .image-container {
     display: flex;
+    justify-content: space-between;
   }
 
   .image-container img {
-    width: 10%; 
+    width: 35%; 
     height: auto; /* Mantieni l'aspetto proporzionato */
   }
