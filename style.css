@@ -65,13 +65,13 @@
     align-items: center; 
     margin-bottom: 20px; 
   }
-.image-container img {
-    width: 50%; /* Imposta la larghezza delle immagini */
-    height: auto; /* Mantieni l'aspetto proporzionato */
+
+  .image-container img {
+    width: 50%;
+    height: auto; 
   }
 
-  
   .image-container p {
-    text-align: center; /* Centra il testo */
-    margin-top: 10px; /* Aggiunge uno spazio tra l'immagine e la descrizione */
+    text-align: center; 
+    margin-top: 10px; 
   }
