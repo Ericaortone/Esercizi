@@ -1,77 +1,81 @@
 *
 {
-    margin:0; padding:0;
-    box-sizing: border-box;
-    font-family: verdana;
-    text-transform: capitalize;
-    text-decoration: none;
-  } 
-  
-  body{
-    min-height: 100vh;
-   background:url(https://i.pinimg.com/564x/43/22/6d/43226d585afae7f79ba6aff77724364a.jpg) no-repeat;
-   background-size: cover;
-    background-position: center;
-  }
-  
-  header{
-    top:0; left; 0; right:0;
-    background-color:rgb(218, 182, 182);
-    box-shadow: 0 5px 10px rgba(168, 126, 126, 0.363);
-    padding:0px 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-  }
-  header .logo{
-    font-weight: bolder;
-    font-size: 25px;
-    color: #333;
-  }
-  
-  header .navbar ul{
-    list-style:none;
-  }
-  
-  header .navbar ul li{
-    position:relative;
-    float: left;
-  }
-  
-  header .navbar ul li a{
-    font-size: 20px;
-    padding:10px;
-    color:#333;
-    display: block;
-  }
-  
-  header .navbar ul li a:hover{
-    background:#333
-    color:#fff;
-  }
-.corpo
-{
+  margin:0; padding:0;
+  box-sizing: border-box;
+  font-family: verdana;
+  text-transform: capitalize;
+  text-decoration: none;
+} 
 
+body{
+  min-height: 100vh;
+ background:url(https://i.pinimg.com/564x/43/22/6d/43226d585afae7f79ba6aff77724364a.jpg);
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
 }
-.tiolo h1{
-  font-family: "Wildwest";
-  font-size: 100;
+
+.titolo {
+    text-align: center;
 }
+
+h1, p {
+    font-family: 'Kromosius', sans-serif;
+}
+
+header{
+  top:0; left; 0; right:0;
+  background-color:rgb(218, 182, 182);
+  box-shadow: 0 5px 10px rgba(168, 126, 126, 0.363);
+  padding:0px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+header .logo{
+  font-weight: bolder;
+  font-size: 25px;
+  color: #333;
+}
+
+header .navbar ul{
+  list-style:none;
+}
+
+header .navbar ul li{
+  position:relative;
+  float: left;
+}
+
+header .navbar ul li a{
+  font-size: 20px;
+  padding:10px;
+  color:#333;
+  display: block;
+}
+
+header .navbar ul li a:hover{
+  background:#333
+  color:#fff;
+}
+
 
 .image-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    margin-bottom: 20px; 
+    align-items: center; /* Centra verticalmente il contenuto */
+    margin-bottom: 20px; /* Aggiunge uno spazio tra i contenitori delle immagini */
   }
 
+  /* Stile per le immagini */
   .image-container img {
-    width: 50%;
-    height: auto; 
+    width: 50%; /* Imposta la larghezza delle immagini */
+    height: auto; /* Mantieni l'aspetto proporzionato */
   }
 
+  /* Stile per il testo sotto le immagini */
   .image-container p {
-    text-align: center; 
-    margin-top: 10px; 
+    text-align: center; /* Centra il testo */
+    margin-top: 10px; /* Aggiunge uno spazio tra l'immagine e la descrizione */
   }
