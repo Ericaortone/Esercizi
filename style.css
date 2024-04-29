@@ -15,14 +15,6 @@ body{
  background-repeat: no-repeat;
 }
 
-.titolo {
-    text-align: center;
-}
-
-h1, p {
-    font-family: 'Kromosius', sans-serif;
-}
-
 header{
   top:0; left; 0; right:0;
   background-color:rgb(218, 182, 182);
