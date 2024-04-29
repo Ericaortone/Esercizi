@@ -66,7 +66,7 @@
     margin-bottom: 20px; 
   }
 .image-container img {
-    width: 20%; /* Imposta la larghezza delle immagini */
+    width: 50%; /* Imposta la larghezza delle immagini */
     height: auto; /* Mantieni l'aspetto proporzionato */
   }
 
