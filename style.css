@@ -53,21 +53,42 @@ header .navbar ul li a:hover{
 }
 
 
+
+.container {
+    max-width: 9200px; /* Personalizzazione della larghezza massima del contenitore */
+    margin: 0 auto; /* Per centrare il contenitore */
+}
+
 .image-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* Centra verticalmente il contenuto */
-    margin-bottom: 20px; /* Aggiunge uno spazio tra i contenitori delle immagini */
-  }
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
 
-  /* Stile per le immagini */
-  .image-container img {
-    width: 50%; /* Imposta la larghezza delle immagini */
-    height: auto; /* Mantieni l'aspetto proporzionato */
-  }
+.image-container div {
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+}
 
-  /* Stile per il testo sotto le immagini */
-  .image-container p {
-    text-align: center; /* Centra il testo */
-    margin-top: 10px; /* Aggiunge uno spazio tra l'immagine e la descrizione */
-  }
+.image-container img {
+    width: 75%; /* Impostare la larghezza delle immagini al 75% */
+    height: auto;
+}
+
+/* Aggiunta spazio orizzontale tra le prime quattro immagini */
+.image-container:nth-child(1) div {
+    margin-right: 20%; /* Spazio orizzontale del 20% */
+}
+
+
+#albicocca .text {
+    text-align: center;
+    width: 75%; /* Larghezza del testo */
+}
+#albicocca .img img {
+    float: left;
+    width: 75%;
+}
