@@ -83,6 +83,7 @@ header .navbar ul li a:hover{
     margin-right: 20%; /* Spazio orizzontale del 20% */
 }
 
+#albiccoca.image-container {
 
 #albicocca .text {
     text-align: center;
@@ -91,4 +92,18 @@ header .navbar ul li a:hover{
 #albicocca .img img {
     float: left;
     width: 75%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Allinea gli elementi ai lati opposti */
+     margin-top: 20px;
+}
+
+.img img {
+    width: 75%; /* Larghezza dell'immagine */
+}
+
+.text {
+    max-width: 75%; /* Regola la larghezza del testo */
 }
