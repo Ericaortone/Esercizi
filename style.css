@@ -84,6 +84,10 @@ header .navbar ul li a:hover{
 }
 
 #albiccoca.image-container {
+      display: flex;
+    justify-content: space-between; /* Allinea gli elementi ai lati opposti */
+     margin-top: 20px;
+}
 
 #albicocca .text {
     text-align: center;
