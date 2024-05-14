@@ -100,7 +100,6 @@ header .navbar ul li a:hover{
 
 .image-container {
     display: flex;
-    justify-content: space-between; /* Allinea gli elementi ai lati opposti */
      margin-top: 20px;
 }
 
