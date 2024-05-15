@@ -25,10 +25,10 @@ header{
   justify-content: space-between;
   z-index: 1000;
 }
-header .logo{
-  font-weight: bolder;
-  font-size: 25px;
-  color: #333;
+
+.logo{
+  width: 100px; /* Larghezza del logo */
+    height: auto; /* Altezza automatica mantenendo l'aspect ratio */
 }
 
 header .navbar ul{
