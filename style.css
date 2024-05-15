@@ -27,7 +27,7 @@ header{
 }
 
 .logo{
-  width: 45px; /* Larghezza del logo */
+  width: 75px; /* Larghezza del logo */
     height: auto; /* Altezza automatica mantenendo l'aspect ratio */
 }
 
