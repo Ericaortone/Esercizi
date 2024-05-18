@@ -25,9 +25,8 @@ header{
   justify-content: space-between;
   z-index: 1000;
 }
-
 .logo{
-  width: 75px; /* Larghezza del logo */
+  width: 50px; /* Larghezza del logo */
     height: auto; /* Altezza automatica mantenendo l'aspect ratio */
 }
 
@@ -78,36 +77,74 @@ header .navbar ul li a:hover{
     height: auto;
 }
 
+.image-container div:hover img {
+    transform: scale(1.1); /* Effetto di zoom */
+    filter: brightness(80%); /* Effetto di oscuramento */
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
 /* Aggiunta spazio orizzontale tra le prime quattro immagini */
 .image-container:nth-child(1) div {
     margin-right: 20%; /* Spazio orizzontale del 20% */
 }
 
 #albiccoca.image-container {
-      display: flex;
+  display: flex;
     justify-content: space-between; /* Allinea gli elementi ai lati opposti */
      margin-top: 20px;
-}
+
 
 #albicocca .text {
     text-align: center;
-    width: 75%; /* Larghezza del testo */
+    width: 75%; 
 }
 #albicocca .img img {
     float: left;
     width: 75%;
 }
 
-.image-container {
+#caffe.image-container {
     display: flex;
-    justify-content: space-between; /* Allinea gli elementi ai lati opposti */
      margin-top: 20px;
 }
 
-.img img {
+#caffe.img img {
     width: 75%; /* Larghezza dell'immagine */
 }
 
-.text {
+#caffe.text {
     max-width: 75%; /* Regola la larghezza del testo */
 }
+  
+#avena.image-container {
+  display: flex;
+    justify-content: space-between; /* Allinea gli elementi ai lati opposti */
+     margin-top: 20px;
+
+
+#avena .text {
+    text-align: center;
+    width: 75%; 
+}
+#avena .img img {
+    float: left;
+    width: 75%;
+}
+
+#mandorle.image-container {
+    display: flex;
+     margin-top: 20px;
+}
+
+#mandorle.img img {
+    width: 75%; /* Larghezza dell'immagine */
+}
+
+#mandorle.text {
+    max-width: 75%; /* Regola la larghezza del testo */
+}  
