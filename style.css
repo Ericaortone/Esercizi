@@ -1,54 +1,59 @@
-*
-{
-  margin:0; padding:0;
+* {
+  margin: 0; padding: 0;
   box-sizing: border-box;
-  font-family: verdana;
+  font-family: Verdana, sans-serif;
   text-transform: capitalize;
   text-decoration: none;
 } 
 
-body{
+body {
   min-height: 100vh;
- background-color:rgba(168, 126, 126, 0.363);
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
+  background-color: rgba(168, 126, 126, 0.363);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-header{
-  top:0; left; 0; right:0;
-  background-color:rgb(218, 182, 182);
+header {
+  top: 0; left: 0; right: 0;
+  background-color: rgb(218, 182, 182);
   box-shadow: 0 5px 10px rgba(168, 126, 126, 0.363);
-  padding:0px 7%;
+  padding: 10px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
 }
-.logo{
-  width: 50px; 
-    height: auto; 
+
+.logo {
+  width: 50px;
+  height: auto;
 }
 
-header .navbar ul{
-  list-style:none;
+header .navbar ul {
+  list-style: none;
+  display: flex;
 }
 
-header .navbar ul li{
-  position:relative;
-  float: left;
+header .navbar ul li {
+  margin-right: 20px;
 }
 
-header .navbar ul li a{
+header .navbar ul li a {
   font-size: 20px;
-  padding:10px;
-  color:#333;
+  padding: 10px;
+  color: #333;
   display: block;
 }
 
-header .navbar ul li a:hover{
-  background:#333
-  color:#fff;
+header .navbar ul li a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
 .search-bar {
@@ -58,6 +63,7 @@ header .navbar ul li a:hover{
   border-radius: 20px;
   padding: 5px 10px;
   background-color: #fff;
+  margin-right: 10px; 
 }
 
 .search-bar input[type="text"] {
@@ -65,50 +71,60 @@ header .navbar ul li a:hover{
   outline: none;
   padding: 5px;
   border-radius: 20px;
+  width: 120px; 
 }
 
 .search-bar button {
   border: none;
   background: none;
   cursor: pointer;
-  color: #007bff;
-  font-size: 16px;
+  color: #333;
+  font-size: 24px;
   font-weight: bold;
 }
 
+.cart a {
+  color: #333;
+  font-size: 24px;
+}
+
+.cart a:hover {
+  color: #007bff;
+}
+
 .container {
-    max-width: 9200px; 
-    margin: 0 auto; 
+  max-width: 9200px;
+  margin: 0 auto;
 }
 
 .image-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .image-container div {
-    text-align: center;
-    margin: 10px;
-    flex: 1;
+  text-align: center;
+  margin: 10px;
+  flex: 1;
 }
 
 .image-container img {
-    width: 75%; 
-    height: auto;
+  width: 75%;
+  height: auto;
 }
 
 .image-container div:hover img {
-    transform: scale(1.1); 
-    filter: brightness(80%); 
+  transform: scale(1.1);
+  filter: brightness(80%);
 }
 
 .image-container p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
 }
 
 .image-container:nth-child(1) div {
@@ -170,3 +186,5 @@ header .navbar ul li a:hover{
 #mandorle.text {
     max-width: 75%; 
 }  
+
+  
