@@ -131,6 +131,61 @@ header .navbar ul li a:hover {
     margin-right: 20%; 
 }
 
+.newsletter-bar {
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 20px;
+}
+
+.newsletter-bar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black; 
+}
+
+.newsletter-bar p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: black; 
+}
+.newsletter-bar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsletter-bar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.newsletter-bar input[type="email"] {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.newsletter-bar button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+}
+
+.newsletter-bar button:hover {
+  background-color: #004280;
+}
+
+.privacy-policy {
+  color: black;
+}
+
 #albiccoca.image-container {
   display: flex;
     justify-content: space-between; 
@@ -186,5 +241,6 @@ header .navbar ul li a:hover {
 #mandorle.text {
     max-width: 75%; 
 }  
+
 
   
