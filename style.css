@@ -26,8 +26,8 @@ header{
   z-index: 1000;
 }
 .logo{
-  width: 50px; /* Larghezza del logo */
-    height: auto; /* Altezza automatica mantenendo l'aspect ratio */
+  width: 50px; 
+    height: auto; 
 }
 
 header .navbar ul{
@@ -51,11 +51,34 @@ header .navbar ul li a:hover{
   color:#fff;
 }
 
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color: #fff;
+}
 
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.search-bar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
+}
 
 .container {
-    max-width: 9200px; /* Personalizzazione della larghezza massima del contenitore */
-    margin: 0 auto; /* Per centrare il contenitore */
+    max-width: 9200px; 
+    margin: 0 auto; 
 }
 
 .image-container {
@@ -73,13 +96,13 @@ header .navbar ul li a:hover{
 }
 
 .image-container img {
-    width: 75%; /* Impostare la larghezza delle immagini al 75% */
+    width: 75%; 
     height: auto;
 }
 
 .image-container div:hover img {
-    transform: scale(1.1); /* Effetto di zoom */
-    filter: brightness(80%); /* Effetto di oscuramento */
+    transform: scale(1.1); 
+    filter: brightness(80%); 
 }
 
 .image-container p {
@@ -88,14 +111,13 @@ header .navbar ul li a:hover{
     color: #333;
 }
 
-/* Aggiunta spazio orizzontale tra le prime quattro immagini */
 .image-container:nth-child(1) div {
-    margin-right: 20%; /* Spazio orizzontale del 20% */
+    margin-right: 20%; 
 }
 
 #albiccoca.image-container {
   display: flex;
-    justify-content: space-between; /* Allinea gli elementi ai lati opposti */
+    justify-content: space-between; 
      margin-top: 20px;
 
 
@@ -114,16 +136,16 @@ header .navbar ul li a:hover{
 }
 
 #caffe.img img {
-    width: 75%; /* Larghezza dell'immagine */
+    width: 75%; 
 }
 
 #caffe.text {
-    max-width: 75%; /* Regola la larghezza del testo */
+    max-width: 75%; 
 }
   
 #avena.image-container {
   display: flex;
-    justify-content: space-between; /* Allinea gli elementi ai lati opposti */
+    justify-content: space-between; 
      margin-top: 20px;
 
 
@@ -142,9 +164,9 @@ header .navbar ul li a:hover{
 }
 
 #mandorle.img img {
-    width: 75%; /* Larghezza dell'immagine */
+    width: 75%; 
 }
 
 #mandorle.text {
-    max-width: 75%; /* Regola la larghezza del testo */
+    max-width: 75%; 
 }  
