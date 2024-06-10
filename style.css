@@ -1,10 +1,8 @@
 * {
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Verdana, sans-serif;
-  text-transform: capitalize;
-  text-decoration: none;
-} 
+}
 
 body {
   min-height: 100vh;
@@ -12,7 +10,9 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-family: 'kromosius', sans-serif; 
 }
+
 
 header {
   top: 0; left: 0; right: 0;
@@ -42,12 +42,12 @@ header .navbar ul li {
 header .navbar ul li a {
   font-size: 20px;
   padding: 10px;
-  color: #333;
+  color: #fff;
   display: block;
 }
 
 header .navbar ul li a:hover {
-  background: #333;
+  background: #e88a8a;
   color: #fff;
 }
 
@@ -78,23 +78,77 @@ header .navbar ul li a:hover {
   border: none;
   background: none;
   cursor: pointer;
-  color: #333;
+  color: #e88a8a;
   font-size: 24px;
   font-weight: bold;
 }
 
 .cart a {
-  color: #333;
+  color: #e88a8a;
   font-size: 24px;
 }
 
 .cart a:hover {
-  color: #007bff;
+  color: #e88a8a
 }
 
 .container {
   max-width: 9200px;
   margin: 0 auto;
+}
+
+#chisiamo h1 {
+    background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  border-radius: 15px;
+  padding: 0px; 
+}
+
+.banner {
+    background-color: #f9f9f9; /* Colore di sfondo */
+    padding: 50px 20px; /* Spaziatura interna */
+    border-radius: 20px; /* Bordi arrotondati */
+    text-align: center; /* Allineamento testo al centro */
+    max-width: 1370px; /* Larghezza massima */
+    margin: 0 auto; /* Centrato orizzontalmente */
+  }
+
+  .banner h1 {
+    color: #333; /* Colore del testo */
+    font-size: 36px; /* Dimensione del testo */
+    margin-bottom: 20px; /* Margine inferiore */
+  }
+
+  .banner p {
+    color: black; /* Colore del testo */
+    font-size: 18px; /* Dimensione del testo */
+    margin-bottom: 30px; /* Margine inferiore */
+  }
+
+  .banner .button {
+    background-color: rgb(218, 182, 182); /* Colore di sfondo */
+    color: #fff; /* Colore del testo */
+    padding: 15px 30px; /* Spaziatura interna */
+    border-radius: 25px; /* Bordi arrotondati */
+    text-decoration: none; /* Rimuove sottolineatura */
+    transition: background-color 0.3s ease-in-out; /* Transizione */
+  }
+
+  .banner .button:hover {
+    background-color: #e88a8a; /* Colore di sfondo al passaggio del mouse */
+  }
+
+#inostriprodotti h1 {
+    background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  border-radius: 15px;
+  padding: 0px;
+}
+
+.image-frame {
+  border: 2px solid rgb(218, 182, 182); 
+  padding: 20px; 
+  margin: 20px; 
+  border-radius: 20px; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .image-container {
@@ -114,6 +168,7 @@ header .navbar ul li a:hover {
 .image-container img {
   width: 75%;
   height: auto;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .image-container div:hover img {
@@ -129,6 +184,67 @@ header .navbar ul li a:hover {
 
 .image-container:nth-child(1) div {
     margin-right: 20%; 
+}
+
+.reviews {
+   display: flex;
+   justify-content: center;
+   margin-top: 10px;
+}
+
+ .reviews span {
+   color: rgb(218, 182, 182);
+   font-size: 24px;
+   transition: color 0.5s;
+}
+
+.reviews span:hover {
+   color: #e88a8a; 
+}
+
+.image-container:nth-child(1) .fa-star.checked:nth-child(-n+4),
+.image-container:nth-child(2) .fa-star.checked:nth-child(-n+4),
+.image-container:nth-child(3) .fa-star.checked:nth-child(-n+4),
+.image-container:nth-child(4) .fa-star.checked:nth-child(-n+4) {
+  color: #e88a8a;
+}
+
+.highlighted {
+   color: #e88a8a; 
+} 
+
+.star-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 10px;
+}
+        
+ .star-container span {
+   color: rgb(218, 182, 182);
+   font-size: 24px;
+   transition: color 0.5s;
+   color: #e88a8a;
+}
+
+.star-container span:hover {
+   color: #e88a8a; 
+}
+
+.highlighted {
+   color: #e88a8a; 
+}
+
+#curiositàsuinostriprodotti h1 {
+    background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  border-radius: 15px;
+  padding: 0px;
+}
+
+
+h2 {
+     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  border-radius: 15px;
+  padding: 0px;
 }
 
 .newsletter-bar {
@@ -149,6 +265,7 @@ header .navbar ul li a:hover {
   margin-bottom: 20px;
   color: black; 
 }
+
 .newsletter-bar .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -174,16 +291,85 @@ header .navbar ul li a:hover {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  background-color: #333;
+  background-color: rgb(218, 182, 182);
   color: white;
 }
 
 .newsletter-bar button:hover {
-  background-color: #004280;
+  background-color: #e88a8a;
+  transition: background-color 0.3s ease-in-out;
 }
+
+#dovetrovarci {
+  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  border-radius: 15px;
+  padding: 0px;
+}
+
+#dovetrovarci h1 {
+  background-color: rgb(218, 182, 182);
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.social-icons a {
+      font-size: 24px; 
+      color: #e88a8a; 
+      margin: 10px; 
+      text-decoration: none; 
+    }
+
+.social-icons a:hover {
+      color: rgb(218, 182, 182); 
+    } 
 
 .privacy-policy {
   color: black;
+}
+
+#iservizicheoffriamo .container {
+  background: rgb(218, 182, 182);
+  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  border-radius: 15px; 
+  padding: 15px; 
+}
+
+.service-section {
+  background-color: #f9f9f9;
+  padding: 50px 20px; 
+  border-radius: 20px; 
+}
+
+.service-section .container {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-section h1 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.service-section .service-description {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.service-section .service-cta .button {
+  background-color: rgb(218, 182, 182);
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.service-section .service-cta .button:hover {
+  background-color: #e88a8a;
 }
 
 #albiccoca.image-container {
@@ -241,6 +427,7 @@ header .navbar ul li a:hover {
 #mandorle.text {
     max-width: 75%; 
 }  
+  
 
 
   
