@@ -31,6 +31,7 @@ header {
 }
 
 header .navbar ul {
+  font-family: "kromosius";
   list-style: none;
   display: flex;
 }
@@ -97,44 +98,50 @@ header .navbar ul li a:hover {
   margin: 0 auto;
 }
 
+.titolo{
+font-family: "kromosius"  
+} 
+
 #chisiamo h1 {
     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px; 
+  font-family: "kromosius"
 }
 
 .banner {
-    background-color: #f9f9f9; /* Colore di sfondo */
-    padding: 50px 20px; /* Spaziatura interna */
-    border-radius: 20px; /* Bordi arrotondati */
-    text-align: center; /* Allineamento testo al centro */
-    max-width: 1370px; /* Larghezza massima */
-    margin: 0 auto; /* Centrato orizzontalmente */
+    background-color: #f9f9f9; 
+    padding: 50px 20px; 
+    border-radius: 20px; 
+    text-align: center; 
+    max-width: 1370px; 
+    margin: 0 auto; 
   }
 
   .banner h1 {
-    color: #333; /* Colore del testo */
-    font-size: 36px; /* Dimensione del testo */
-    margin-bottom: 20px; /* Margine inferiore */
+    color: #333; 
+    font-size: 36px; 
+    margin-bottom: 20px; 
   }
 
   .banner p {
-    color: black; /* Colore del testo */
-    font-size: 18px; /* Dimensione del testo */
-    margin-bottom: 30px; /* Margine inferiore */
+    font-family: "kromosius"
+    color: black; 
+    font-size: 18px; 
+    margin-bottom: 30px; 
   }
 
   .banner .button {
-    background-color: rgb(218, 182, 182); /* Colore di sfondo */
-    color: #fff; /* Colore del testo */
-    padding: 15px 30px; /* Spaziatura interna */
-    border-radius: 25px; /* Bordi arrotondati */
-    text-decoration: none; /* Rimuove sottolineatura */
-    transition: background-color 0.3s ease-in-out; /* Transizione */
+    background-color: rgb(218, 182, 182); 
+    color: #fff; 
+    padding: 15px 30px; 
+    border-radius: 25px; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease-in-out; 
   }
 
   .banner .button:hover {
-    background-color: #e88a8a; /* Colore di sfondo al passaggio del mouse */
+    background-color: #e88a8a; 
   }
 
 #inostriprodotti h1 {
@@ -427,7 +434,7 @@ h2 {
 #mandorle.text {
     max-width: 75%; 
 }  
-  
+
 
 
   
