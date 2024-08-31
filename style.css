@@ -102,24 +102,24 @@ header .navbar ul li a:hover {
 font-family: "kromosius"  
 } 
 
-#scrollTopButton {
-  position: fixed; /* Fissa il pulsante */
-  bottom: 80px; /* Sopra il chatbot */
-  right: 20px; /* A destra dello schermo */
-  background-color: rgb(218, 182, 182); /* Colore di sfondo */
-  color: #fff; /* Colore del testo */
-  border: none; /* Rimuove il bordo */
-  padding: 15px; /* Spaziatura interna */
-  border-radius: 50px; /* Bordo arrotondato */
-  font-size: 16px; /* Dimensione del testo */
-  cursor: pointer; /* Cursore a mano */
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Ombra */
-  transition: background-color 0.3s ease-in-out; /* Transizione per l'hover */
-  z-index: 1000; /* Assicura che il pulsante sia sopra gli altri contenuti */
+.back-to-top {
+    position: fixed;
+    bottom: 80px;    /* Distanza dal fondo della finestra */
+    right: 20px;     /* Distanza dal lato destro della finestra */
+    background-color: rgb(218, 182, 182); /* Colore di sfondo del pulsante */
+    color: #fff;     /* Colore del testo */
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; /* Rimuove la sottolineatura dal link */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1000;   /* Assicura che il pulsante sia sempre sopra gli altri contenuti */
 }
 
-#scrollTopButton:hover {
-  background-color: #da7070; /* Colore di sfondo al passaggio del mouse */
+.back-to-top:hover {
+    background-color: #da7070; /* Cambia colore al passaggio del mouse */
 }
 
 
@@ -536,7 +536,7 @@ footer .social-media a:hover {
 
 #mandorle.text {
     max-width: 75%; 
-} 
+}
 
 
 
