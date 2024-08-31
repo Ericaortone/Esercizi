@@ -483,17 +483,17 @@ footer .social-media a:hover {
 
 /* Stile per il popup di notifica */
 .notification-popup {
-  display: flex; /* Usa flexbox per centrare il contenuto */
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente */
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: fadeIn 1s ease-in-out; /* Animazione per mostrare il popup */
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .notification-popup .notification-content {
@@ -542,11 +542,24 @@ footer .social-media a:hover {
   color: #333;
 }
 
-/* Animazione per far apparire il popup */
+/* Nascondi il popup quando il checkbox non è selezionato */
+.popup-toggle:checked ~ .notification-popup {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.popup-toggle:not(:checked) ~ .notification-popup {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Animazione per mostrare il popup */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 
 
 #albiccoca.image-container {
