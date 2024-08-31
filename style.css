@@ -102,6 +102,83 @@ header .navbar ul li a:hover {
 font-family: "kromosius"  
 } 
 
+#scrollTopButton {
+  position: fixed; /* Fissa il pulsante */
+  bottom: 80px; /* Sopra il chatbot */
+  right: 20px; /* A destra dello schermo */
+  background-color: rgb(218, 182, 182); /* Colore di sfondo */
+  color: #fff; /* Colore del testo */
+  border: none; /* Rimuove il bordo */
+  padding: 15px; /* Spaziatura interna */
+  border-radius: 50px; /* Bordo arrotondato */
+  font-size: 16px; /* Dimensione del testo */
+  cursor: pointer; /* Cursore a mano */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Ombra */
+  transition: background-color 0.3s ease-in-out; /* Transizione per l'hover */
+  z-index: 1000; /* Assicura che il pulsante sia sopra gli altri contenuti */
+}
+
+#scrollTopButton:hover {
+  background-color: #da7070; /* Colore di sfondo al passaggio del mouse */
+}
+
+
+#chatbot {
+  position: fixed; /* Fissa la posizione del chatbot */
+  bottom: 20px;    /* Distanza dal fondo della finestra */
+  right: 20px;     /* Distanza dal lato destro della finestra */
+  z-index: 1000;   /* Assicura che il chatbot sia sempre sopra gli altri contenuti */
+}
+
+.chatbot-button {
+  background-color: rgb(218, 182, 182);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.chatbot-button i {
+  margin-right: 10px;
+}
+
+.chatbot-button:hover {
+  background-color: #da7070;
+}
+
+.chatbot-window {
+  display: none; /* Inizialmente nascosta */
+  position: absolute;
+  bottom: 70px; /* Sopra il bottone */
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.chatbot-window h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.chat-content {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Mostra la finestra del chatbot quando il bottone viene cliccato */
+.chatbot-button:focus + .chatbot-window,
+.chatbot-window:hover {
+  display: block;
+}
+
 #chisiamo h1 {
     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
@@ -313,23 +390,6 @@ h2 {
   padding: 0px;
 }
 
-#dovetrovarci h1 {
-  background-color: rgb(218, 182, 182);
-  padding: 10px 20px;
-  border-radius: 15px;
-  display: inline-block;
-}
-
-.social-icons a {
-      font-size: 24px; 
-      color: #e88a8a; 
-      margin: 10px; 
-      text-decoration: none; 
-    }
-
-.social-icons a:hover {
-      color: rgb(218, 182, 182); 
-    } 
 
 .privacy-policy {
   color: black;
@@ -378,6 +438,49 @@ h2 {
 .service-section .service-cta .button:hover {
   background-color: #e88a8a;
 }
+
+footer {
+  background-color: rgb(218, 182, 182); /* Sfondo scuro per il footer */
+  padding: 20px 0; /* Spazio interno al footer */
+  color: #fff; /* Colore del testo */
+  text-align: center; /* Centra il testo */
+}
+
+footer .container {
+  max-width: 960px; /* Larghezza massima del contenitore */
+  margin: 0 auto; /* Centro del contenitore */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  margin: 10px 0; /* Margine tra il testo e gli elementi circostanti */
+}
+
+footer .social-media {
+  list-style: none; /* Rimuove i punti elenco */
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centra le icone orizzontalmente */
+  gap: 15px; /* Spazio tra le icone */
+  margin-top: 15px; /* Spazio tra il testo e le icone */
+}
+
+footer .social-media li {
+  display: inline-block; /* Dispone le icone in linea */
+}
+
+footer .social-media a {
+  color: #fff; /* Colore delle icone */
+  font-size: 24px; /* Dimensione delle icone */
+  transition: color 0.3s ease-in-out; /* Transizione per l'effetto hover */
+}
+
+footer .social-media a:hover {
+  color: #e88a8a; /* Cambia colore al passaggio del mouse */
+}
+
 
 #albiccoca.image-container {
   display: flex;
@@ -433,7 +536,7 @@ h2 {
 
 #mandorle.text {
     max-width: 75%; 
-}  
+} 
 
 
 
