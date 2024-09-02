@@ -30,6 +30,73 @@ header {
   height: auto;
 }
 
+/* Stile generale per il popup dei cookie */
+.cookie-popup {
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+  width: 300px;
+  padding: 20px;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Mostra il popup quando il checkbox non è selezionato */
+.cookie-toggle:not(:checked) ~ .cookie-popup {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Nascondi il popup quando il checkbox è selezionato */
+.cookie-toggle:checked ~ .cookie-popup {
+  transform: translateY(
+  100%);
+  opacity: 0;
+}
+
+/* Stile per il contenuto del popup */
+.cookie-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cookie-content a {
+  color: #e88a8a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cookie-content a:hover {
+  text-decoration: underline;
+}
+
+/* Stile del pulsante "Accetta" */
+.cookie-button {
+  cursor: pointer;
+  background-color: rgb(218, 182, 182);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cookie-button:hover {
+  background-color: #e88a8a;
+}
+
+
 header .navbar ul {
   font-family: "kromosius";
   list-style: none;
@@ -246,13 +313,29 @@ font-family: "kromosius"
 }
 
 
-
 #chisiamo h1 {
     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px; 
   font-family: "kromosius"
 }
+
+#sfondo {
+  width: 100%; /* Larghezza totale della pagina */
+  height: 300px; /* Altezza fissa del contenitore */
+  overflow: hidden; /* Nasconde la parte dell'immagine fuori dal contenitore */
+  position: relative; /* Necessario per il posizionamento dell'immagine */
+}
+
+#sfondo img {
+  width: 100%; /* Larghezza dell'immagine */
+  height: auto; /* Mantiene le proporzioni verticali */
+  position: absolute; /* Permette di posizionare l'immagine */
+  top: 50%; /* Posiziona l'immagine al centro verticale */
+  left: 50%; /* Posiziona l'immagine al centro orizzontale */
+  transform: translate(-50%, -50%); /* Centra l'immagine nel contenitore */
+}
+
 
 .banner {
     background-color: #f9f9f9; 
@@ -303,7 +386,7 @@ font-family: "kromosius"
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
-.image-container {
+.image-container-products{
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -311,30 +394,30 @@ font-family: "kromosius"
   margin-top: 20px;
 }
 
-.image-container div {
+.image-container-products div {
   text-align: center;
   margin: 10px;
   flex: 1;
 }
 
-.image-container img {
+.image-container-products img {
   width: 75%;
   height: auto;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-.image-container div:hover img {
+.image-container-products div:hover img {
   transform: scale(1.1);
   filter: brightness(80%);
 }
 
-.image-container p {
+.image-container-products p {
   margin-top: 10px;
   font-size: 16px;
   color: #333;
 }
 
-.image-container:nth-child(1) div {
+.image-container-products:nth-child(1) div {
     margin-right: 20%; 
 }
 
@@ -354,10 +437,10 @@ font-family: "kromosius"
    color: #e88a8a; 
 }
 
-.image-container:nth-child(1) .fa-star.checked:nth-child(-n+4),
-.image-container:nth-child(2) .fa-star.checked:nth-child(-n+4),
-.image-container:nth-child(3) .fa-star.checked:nth-child(-n+4),
-.image-container:nth-child(4) .fa-star.checked:nth-child(-n+4) {
+.image-container-products:nth-child(1) .fa-star.checked:nth-child(-n+4),
+.image-container-products:nth-child(2) .fa-star.checked:nth-child(-n+4),
+.image-container-products:nth-child(3) .fa-star.checked:nth-child(-n+4),
+.image-container-products:nth-child(4) .fa-star.checked:nth-child(-n+4) {
   color: #e88a8a;
 }
 
@@ -386,6 +469,7 @@ font-family: "kromosius"
    color: #e88a8a; 
 }
 
+
 #curiositàsuinostriprodotti h1 {
     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
@@ -398,6 +482,87 @@ h2 {
   border-radius: 15px;
   padding: 0px;
 }
+
+
+.carousel {
+  position: relative;
+  width: 80%; /* Adatta la larghezza del carosello */
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  padding: 20px; /* Aggiungi un po' di padding */
+}
+
+.carousel-item img {
+  width: 200px; /* Aumenta la larghezza dell'immagine */
+  height: auto;
+  margin-right: 30px; /* Aumenta lo spazio tra immagine e testo */
+}
+
+.carousel-text p {
+  line-height: 1.; /* Migliora l'altezza della linea per una migliore leggibilità */
+}
+
+input[name="carousel"] {
+  display: none;
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 30px;
+  width: 20%;
+  text-align: center;
+}
+
+.carousel-control {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(218, 182, 182);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+#slide1:checked ~ .carousel-images {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-images {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-images {
+  transform: translateX(-200%);
+}
+
+#slide4:checked ~ .carousel-images {
+  transform: translateX(-300%);
+}
+
+#slide1:checked ~ .carousel-controls label[for="slide1"],
+#slide2:checked ~ .carousel-controls label[for="slide2"],
+#slide3:checked ~ .carousel-controls label[for="slide3"],
+#slide4:checked ~ .carousel-controls label[for="slide4"] {
+  background-color: white;
+}
+
 
 .newsletter-bar {
   color: white;
@@ -467,7 +632,7 @@ h2 {
   background: rgb(218, 182, 182);
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px; 
-  padding: 15px; 
+  padding: 0px; 
 }
 
 .service-section {
@@ -506,6 +671,42 @@ h2 {
 .service-section .service-cta .button:hover {
   background-color: #e88a8a;
 }
+
+.promo-bar {
+    background-color: rgb(218, 182, 182); /* Colore di sfondo rosa */
+    padding: 50px 250px; /* Spaziatura */
+    display: flex; /* Disposizione flessibile */
+    justify-content: space-between; /* Spaziatura tra gli elementi */
+    align-items: center; /* Allinea verticalmente gli elementi */
+    color: #fff; /* Colore del testo */
+    font-family: Kromosius; /* Font del testo */
+}
+
+.promo-item {
+    display: flex; /* Disposizione flessibile per icona e testo */
+    align-items: center; /* Allinea verticalmente icona e testo */
+}
+
+.promo-item i {
+    font-size: 60px; /* Dimensione dell'icona */
+    color: #e88a8a; /* Colore dell'icona */
+    margin-right: 20px; /* Spaziatura tra icona e testo */
+}
+
+.promo-text p {
+    margin: 0; /* Rimuove il margine dai paragrafi */
+    line-height: 1.2; /* Altezza linea per il testo */
+}
+
+.promo-bar .promo-item:first-child {
+    margin-right: auto; /* Sposta il primo elemento verso sinistra */
+}
+
+.promo-bar .promo-item:last-child {
+    margin-left: auto; /* Sposta il secondo elemento verso destra */
+    text-align: right; /* Allinea il testo a destra */
+}
+
 
 footer {
   background-color: rgb(218, 182, 182); /* Sfondo scuro per il footer */
@@ -621,63 +822,6 @@ footer .social-media a:hover {
   opacity: 0;
   pointer-events: none;
 }
-
-
-#albiccoca.image-container {
-  display: flex;
-    justify-content: space-between; 
-     margin-top: 20px;
-
-
-#albicocca .text {
-    text-align: center;
-    width: 75%; 
-}
-#albicocca .img img {
-    float: left;
-    width: 75%;
-}
-
-#caffe.image-container {
-    display: flex;
-     margin-top: 20px;
-}
-
-#caffe.img img {
-    width: 75%; 
-}
-
-#caffe.text {
-    max-width: 75%; 
-}
-  
-#avena.image-container {
-  display: flex;
-    justify-content: space-between; 
-     margin-top: 20px;
-
-
-#avena .text {
-    text-align: center;
-    width: 75%; 
-}
-#avena .img img {
-    float: left;
-    width: 75%;
-}
-
-#mandorle.image-container {
-    display: flex;
-     margin-top: 20px;
-}
-
-#mandorle.img img {
-    width: 75%; 
-}
-
-#mandorle.text {
-    max-width: 75%; 
-} 
   
 
 
