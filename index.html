@@ -15,9 +15,9 @@
       <label for="popup-toggle" class="close-btn">&times;</label>
       <h2>Non perdere le novità!</h2>
       <p>Scopri le ultime offerte e aggiornamenti speciali.</p>
-      <a href="https://esempio.com/scopri-di-piu" class="button">Scopri di più</a>
-    </div>
+      <label for="popup-toggle" class="button">Scopri di più</label>
   </div>
+</div>
    
 <header>
   
@@ -37,10 +37,14 @@
       <div class="search-bar">
       <input type="text" placeholder="Cerca...">
       <button type="submit"><i class="fas fa-search"></i></button>
+        
     </div>
       <div class="cart">
         <a href="#"><i class="fas fa-shopping-cart"></i></a>
       </div>
+  <div class="profile">
+  <a href="#"><i class="fas fa-user"></i> </a>
+</div>
   </header>
     </ul>
   </nav>
@@ -59,19 +63,32 @@
    
     
     <div id="chatbot">
-  <button class="chatbot-button">
+  <!-- Checkbox per gestire l'apertura e chiusura del chatbot -->
+  <input type="checkbox" id="chatbot-toggle" class="chatbot-toggle">
+  
+  <!-- Bottone per aprire la chat -->
+  <label for="chatbot-toggle" class="chatbot-button">
     <font face="Kromosius">
-    <i class="fas fa-comment"></i> Chatta con noi
-  </button>
+      <i class="fas fa-comment"></i> Chatta con noi
+    </font>
+  </label>
+  
   <!-- Finestra del chatbot (inizialmente nascosta) -->
   <div class="chatbot-window">
     <h2>Chat Support</h2>
     <div class="chat-content">
       <p>Come possiamo aiutarti oggi?</p>
-      <!-- Puoi aggiungere il contenuto della chat qui -->
+      <!-- Aggiungi il contenuto della chat qui -->
+      
+      <!-- Area di input per il messaggio -->
+      <div class="chat-input-area">
+        <input type="text" class="chat-input" placeholder="Scrivi un messaggio...">
+        <button class="send-button">Invia</button>
+      </div>
     </div>
   </div>
 </div>
+
 
       <a href="#top" class="back-to-top">↑ Torna su</a>
      
