@@ -9,6 +9,15 @@
 
   <body>
     <font face="Kromosius">
+    <input type="checkbox" id="cookie-toggle" class="cookie-toggle">
+  <div class="cookie-popup">
+    <div class="cookie-content">
+      <p>Questo sito utilizza cookie per migliorare l'esperienza di navigazione. <a href="#">Scopri di più🍪</a></p>
+      <label for="cookie-toggle" class="cookie-button">Accetta</label>
+    </div>
+  </div>
+    
+    
     <input type="checkbox" id="popup-toggle" class="popup-toggle" checked>
   <div class="notification-popup">
     <div class="notification-content">
@@ -18,7 +27,7 @@
       <label for="popup-toggle" class="button">Scopri di più</label>
   </div>
 </div>
-   
+      
 <header>
   
   <img src="https://i.pinimg.com/736x/70/cb/5f/70cb5fea06757a8318a9df1761b10ff9.jpg" alt="Logo" class="logo">
@@ -57,7 +66,7 @@
   <h1>Esmeny-shampoo solido</h1> 
   <p>Per te e per il tuo futuro</p>
     <div id="sfondo">
-  <img src="https://allegronatura.it/cdn/shop/collections/solidi_gamma_3_sito_copia_460x@2x.jpg?v=1693753345" alt="shampoo solido">
+  <img src="https://www.greenme.it/wp-content/uploads/2022/10/shampoo-solido.jpg" alt="shampoo solido">
 </div>
     
    
@@ -66,19 +75,19 @@
   <!-- Checkbox per gestire l'apertura e chiusura del chatbot -->
   <input type="checkbox" id="chatbot-toggle" class="chatbot-toggle">
   
-  <!-- Bottone per aprire la chat -->
+  
   <label for="chatbot-toggle" class="chatbot-button">
     <font face="Kromosius">
       <i class="fas fa-comment"></i> Chatta con noi
     </font>
   </label>
   
-  <!-- Finestra del chatbot (inizialmente nascosta) -->
+ 
   <div class="chatbot-window">
     <h2>Chat Support</h2>
     <div class="chat-content">
       <p>Come possiamo aiutarti oggi?</p>
-      <!-- Aggiungi il contenuto della chat qui -->
+      
       
       <!-- Area di input per il messaggio -->
       <div class="chat-input-area">
@@ -111,7 +120,7 @@
     <section id="inostriprodotti" class="intestazione">
  <div class="container">
   <h1>I nostri prodotti</h1> 
-   <div class="image-container">
+   <div class="image-container-products">
       <div class="image-frame">
       <img src="https://r5living.com/cdn/shop/products/R5_Shampoo_still.png?v=1713869914" alt="Immagine 1">
         <p>Bagnoschiuma idratante con olio di albicocca e olio di jojoba</p>
@@ -158,7 +167,7 @@
   </div>
 </div>     
      
-<div class="image-container">
+<div class="image-container-products">
    <div class="image-frame">
    <img src="https://r5living.com/cdn/shop/products/R5_Still_Shampoo_2in1.jpg?v=1715069363" alt="Immagine 5">
       <p>Bagnoschiuma con olio di ciliegia e olio di girasole</p>
@@ -213,56 +222,58 @@
     <div class="container">
       <h1>Cuorisità sui nostri prodotti</h1>
    
-      <div id="albicocca"
-           class="image-container">
-    <div class="img">
-        <img src="https://r5living.com/cdn/shop/files/albicocca_2.jpg?v=1672998489&width=1500" alt="Albicocca">
-    </div>
-        <div class="text">
-          <h2>Olio di albicocca</h2>
+      <div class="carousel">
+    <input type="radio" name="carousel" id="slide1" checked>
+    <input type="radio" name="carousel" id="slide2">
+    <input type="radio" name="carousel" id="slide3">
+    <input type="radio" name="carousel" id="slide4">
+
+    <div class="carousel-images">
+      <div class="carousel-slide">
+        <div class="carousel-item">
+          <img src="https://r5living.com/cdn/shop/files/albicocca_2.jpg?v=1672998489&width=1500" alt="Immagine 1">
+          <div class="carousel-text">
+            <h1>Olio di albicocca</h1>
             <p>Si ricava dalla spremitura a freddo dei noccioli del frutto ed ha riconosciute proprieta’ nutrienti, emollienti, e rigeneranti. L'olio di albicocca è indicato in cosmesi per essere utilizzato puro sulla pelle, oppure mescolato ad altri oli vegetali, burri e oli essenziali per ottenere creme per viso e corpo, oli da massaggio. Nei prodotti capelli è indicato per restituire idratazione e luminosità ai capelli sfibrati e che necessitano di un prodotto riparatore.</p>
-          <h2>Olio di jojoba</h2>  
-         <p>Aiuta a prevenire la disidratazione, a rivitalizzare la pelle e a regolare la produzione di sebo. Ha un’azione equilibrante per i capelli grassi e ridona vitalità ai capelli secchi e fragili.</p> 
-          <h2>Olio di oliva</h2> 
-         <p>L'olio d'oliva è un ottimo rimedio contro la debolezza e la caduta dei capelli, in quanto nutre e rinforza profondamente il bulbo pilifero. L'olio d'oliva è particolarmente benefico per i capelli secchi e spessi.</p> 
+            <h2>Olio di jojoba</h2>
+            <p>Aiuta a prevenire la disidratazione, a rivitalizzare la pelle e a regolare la produzione di sebo. Ha un’azione equilibrante per i capelli grassi e ridona vitalità ai capelli secchi e fragili.</p>
+            <h2>Olio di oliva</h2>
+            <p>L'olio d'oliva è un ottimo rimedio contro la debolezza e la caduta dei capelli, in quanto nutre e rinforza profondamente il bulbo pilifero. L'olio d'oliva è particolarmente benefico per i capelli secchi e spessi.</p>
           </div>
-       </div>
-  </section> 
-     
-     <div class="image-container">
-    <div class="text">
-      <h2>Estratto di caffè verde</h2>
-      <p>Si ricava dai semi non tostati della pianta di Caffè Arabica, un arbusto tropicale che cresce soprattutto in Africa, Asia e Sud America. Rispetto al caffè tostato, il caffè verde ha una più alta concentrazione di acidi clorogenici che svolgono un'azione antiossidante, anti radicali liberi e tonificante.</p> 
-      <h2>Olio di avocado</h2>
-      <p>Olio emolliente ricco di sostanze antiossidanti utili a prevenire l’invecchiamento della pelle e per ridare lucentezza ai capelli. Ampiamente utilizzato in cosmetica per le sue caratteristiche sebosimili, nutrienti e rigeneranti. Favorisce il rinnovamento cutaneo e aumenta l'elasticità e l'idratazione della pelle.</p>
-      <h2>Burro di illipe</h2>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-item">
+          <img src="https://r5living.com/cdn/shop/files/Greencoffee_copy.jpg?v=1637774394&width=1500" alt="Immagine 2">
+          <div class="carousel-text">
+            <h2>Estratto di caffè verde</h2>
+            <p>Si ricava dai semi non tostati della pianta di Caffè Arabica, un arbusto tropicale che cresce soprattutto in Africa, Asia e Sud America. Rispetto al caffè tostato, il caffè verde ha una più alta concentrazione di acidi clorogenici che svolgono un'azione antiossidante, anti radicali liberi e tonificante.</p>
+            <h2>Olio di avocado</h2>
+            <p>Olio emolliente ricco di sostanze antiossidanti utili a prevenire l’invecchiamento della pelle e per ridare lucentezza ai capelli. Ampiamente utilizzato in cosmetica per le sue caratteristiche sebosimili, nutrienti e rigeneranti. Favorisce il rinnovamento cutaneo e aumenta l'elasticità e l'idratazione della pelle.</p>
+            <h2>Burro di illipe</h2>
       <p>La Shorea Stenoptera è un grande albero che vegeta nelle foreste umide e piovose del Borneo. Dalla spremitura a freddo dei semi di questa pianta si ottiene il burro di illipe, noto anche come sego del Borneo, in grado di svolgere un'azione emolliente e nutriente.</p>
-    </div>
-    <div class="caffe">
-        <img src="https://r5living.com/cdn/shop/files/Greencoffee_copy.jpg?v=1637774394&width=1500" alt="caffe">
-    </div>
-</div>
-     
-      <div id="avena"
-           class="image-container">
-    <div class="img">
-        <img src="https://r5living.com/cdn/shop/files/AVENA.jpg?v=1672751382&width=1500" alt="avena">
-    </div>
-        <div class="text">
-          <h2>Estratto di avena</h2>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-item">
+          <img src="https://r5living.com/cdn/shop/files/AVENA.jpg?v=1672751382&width=1500" alt="Immagine 3">
+          <div class="carousel-text">
+            <h2>Estratto di avena</h2>
             <p>L'avena è nota per le sue proprietà antiossidanti e lenitive della pelle. È cereale dalle proprietà idratante e protettive, capace di scolere anche un’azione anti prurito e anti arrossamento. Ha un elevato potere detergente grazie alla presenza di una sostanza simile alla saponina che consente una detersione delicata. Ammorbisce e leviga la pelle.</p>
   <h2>Amido di riso</h2>          
          <p>È una polvere molto fine e bianca che si ottiene dalla trasformazione dei chicchi di riso ed è utilizzato nell’ambito della cosmesi naturale per le sue proprietà lenitive e rinfrescanti. Permette una detersione delicata
 nel rispetto delle difese naturali della pelle.</p> 
  <h2>Olio di cocco</h2> 
-         <p>È un potente idratante naturale per la cura della pelle e dei capelli. Contiene infatti acidi grassi essenziali, simili alle sostanze lipidiche di cui è fatto il film protettivo della pelle, grazie ai quali restituisce il giusto livello di idratazione.</p> 
+         <p>È un potente idratante naturale per la cura della pelle e dei capelli. Contiene infatti acidi grassi essenziali, simili alle sostanze lipidiche di cui è fatto il film protettivo della pelle, grazie ai quali restituisce il giusto livello di idratazione.</p>
+          </div>
         </div>
-     </div>
-  </section>
-    
-    <div class="image-container">
-    <div class="text">
-      <h2>Olio di mandorle dolci</h2> 
+      </div>
+      <div class="carousel-slide">
+        <div class="carousel-item">
+          <img src="https://r5living.com/cdn/shop/files/olio_di_mandorle_dolci.jpg?v=1668778212&width=1500" alt="Immagine 4">
+          <div class="carousel-text">
+            <h2>Olio di mandorle dolci</h2> 
       <p>Si ottiene prevalentemente dai semi del Prunus dulcis, appartenente alla famiglia delle Rosaceae, attraverso un processo di spremitura a freddo.
 La polpa del frutto è sottile, dura e secca e per questo il frutto non viene consumato.
 Ha un aspetto liquido, un color giallo chiaro e un odore delicato ed è composto prevalentemente da acido oleico (65%) e acido linoleico (30%).
@@ -273,15 +284,23 @@ Ha numerosi impieghi in cosmetica, a partire dall'ulitizzo per effettuare massag
       <p>È una polvere molto fine e bianca che si ottiene dalla trasformazione dei chicchi di riso ed è utilizzato nell’ambito della cosmesi naturale per le sue proprietà lenitive e rinfrescanti. Permette una detersione delicata
 nel rispetto delle difese naturali della pelle.
 Viene consigliato come prodotto delicato e adatto alle pelli più sensibili. Proprio per questo trova impiego nei prodotti per bambini.</p> 
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="img">
-        <img src="https://r5living.com/cdn/shop/files/olio_di_mandorle_dolci.jpg?v=1668778212&width=1500" alt="mandorle">
+
+    <div class="carousel-controls">
+      <label for="slide1" class="carousel-control"></label>
+      <label for="slide2" class="carousel-control"></label>
+      <label for="slide3" class="carousel-control"></label>
+      <label for="slide4" class="carousel-control"></label>
     </div>
-</div>
+  </div>
+
     
 <section id="dovetrovarci" class="intestazione">
   <div class="container">
-    <h1>Dove trovarci</h1>
+    <h2>Dove trovarci</h2>
   </div>
 </section>
 
@@ -297,7 +316,7 @@ Viene consigliato come prodotto delicato e adatto alle pelli più sensibili. Pro
       
       <section id="iservizicheoffriamo" class="intestazione">
         <div class="container">
-          <h1>I servizi che offriamo</h1>
+          <h2>I servizi che offriamo</h2>
           <div class="service-section">
               <div class="service-description">
                 <p>Scopri i nostri servizi personalizzati per ogni tipo di capelli e cute. Offriamo una vasta gamma di prodotti di bellezza progettati per soddisfare le tue esigenze. Oltre all'acquisto dei nostri shampoo solidi ecologici, offriamo anche la possibilità di creare il tuo shampoo personalizzato a casa, utilizzando ingredienti naturali disponibili sul nostro sito.</p>
@@ -309,6 +328,25 @@ Viene consigliato come prodotto delicato e adatto alle pelli più sensibili. Pro
           </div>
         </div>
       </section>
+  
+  <div class="promo-bar">
+    <div class="promo-item">
+        <i class="fas fa-truck"></i>
+    <div class="promo-text">
+            <h2>Spedizione gratuita</h2>
+            <p>Ordini superiori ai 39 euro</p>
+        </div>
+    </div>
+    <div class="promo-item">
+        <i class="fas fa-comments"></i>
+    <div class="promo-text">
+            <h2>Need help?</h2>
+            <p>Non sai qual è il prodotto adatto a te?</p>
+            <p>Il nostro staff è pronto ad aiutarti</p>
+        </div>
+    </div>
+</div>
+
        
      <section class="newsletter-bar">
   <div class="container">
@@ -334,8 +372,6 @@ Viene consigliato come prodotto delicato e adatto alle pelli più sensibili. Pro
         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
       </ul>
     </div>
-  </footer>
+  </footer>      
 </body>
-
 </html>
-
