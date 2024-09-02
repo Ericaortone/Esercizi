@@ -50,6 +50,7 @@ header .navbar ul li a {
 header .navbar ul li a:hover {
   background: #e88a8a;
   color: #fff;
+  border-radius: 18px;
 }
 
 .header-right {
@@ -93,6 +94,23 @@ header .navbar ul li a:hover {
   color: #e88a8a
 }
 
+/* Stile per il contenitore del profilo */
+.profile {
+  display: inline-block;
+  margin-right: 15px; /* Spazio tra profilo e carrello */
+  font-family: 'Kromosius', sans-serif;
+}
+
+.profile a {
+  color: #e88a8a;
+  font-size: 24px;
+}
+
+.profile i {
+  margin-right: 5px;
+}
+
+
 .container {
   max-width: 9200px;
   margin: 0 auto;
@@ -123,61 +141,111 @@ font-family: "kromosius"
 }
 
 
+/* Stile generale per il contenitore del chatbot */
 #chatbot {
-  position: fixed; /* Fissa la posizione del chatbot */
-  bottom: 20px;    /* Distanza dal fondo della finestra */
-  right: 20px;     /* Distanza dal lato destro della finestra */
-  z-index: 1000;   /* Assicura che il chatbot sia sempre sopra gli altri contenuti */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 170px;
+  z-index: 1000;
 }
 
+/* Stile per il bottone del chatbot */
 .chatbot-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(218, 182, 182);
-  color: #fff;
-  border: none;
+  color: white;
   padding: 15px;
   border-radius: 50px;
-  font-size: 16px;
+  border: none;
   cursor: pointer;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-family: 'Kromosius', sans-serif;
   transition: background-color 0.3s ease-in-out;
 }
 
-.chatbot-button i {
-  margin-right: 10px;
-}
-
 .chatbot-button:hover {
-  background-color: #da7070;
+    background-color: #da7070;
 }
 
+.chatbot-button i {
+  margin-right: 8px;
+}
+
+/* Stile per la finestra del chatbot */
 .chatbot-window {
-  display: none; /* Inizialmente nascosta */
-  position: absolute;
-  bottom: 70px; /* Sopra il bottone */
-  right: 0;
+  display: none;
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
   width: 300px;
-  background-color: #fff;
+  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Kromosius', sans-serif;
 }
 
-.chatbot-window h2 {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.chat-content {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Mostra la finestra del chatbot quando il bottone viene cliccato */
-.chatbot-button:focus + .chatbot-window,
-.chatbot-window:hover {
+/* Mostra la finestra del chatbot quando il checkbox è selezionato */
+#chatbot-toggle:checked ~ .chatbot-window {
   display: block;
 }
+
+/* Stile per l'intestazione del chatbot */
+.chatbot-window h2 {
+  font-family: 'Kromosius';
+  margin: 0;
+  padding: 15px;
+  background-color: rgb(218, 182, 182);
+  color: white;
+  border-radius: 10px 10px 0 0;
+  font-size: 18px;
+}
+
+/* Stile per il contenuto della chat */
+.chat-content {
+  font-family: 'Kromosius';
+  padding: 9px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Stile per l'area di input */
+.chat-input-area {
+  display: flex;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.send-button {
+  background-color: rgb(218, 182, 182);
+  color: white;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.send-button:hover {
+  background-color: #e88a8a;
+}
+
+/* Stile per la checkbox nascosta (usata per gestire l'apertura e la chiusura) */
+.chatbot-toggle {
+  display: none;
+}
+
+
 
 #chisiamo h1 {
     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
@@ -223,7 +291,7 @@ font-family: "kromosius"
 
 #inostriprodotti h1 {
     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 15px;
+  border-radius: 18px;
   padding: 0px;
 }
 
@@ -231,7 +299,7 @@ font-family: "kromosius"
   border: 2px solid rgb(218, 182, 182); 
   padding: 20px; 
   margin: 20px; 
-  border-radius: 20px; 
+  border-radius: 18px; 
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
@@ -335,7 +403,7 @@ h2 {
   color: white;
   text-align: center;
   padding: 20px 0;
-  border-radius: 20px;
+  border-radius: 18px;
 }
 
 .newsletter-bar h2 {
@@ -363,7 +431,7 @@ h2 {
 .newsletter-bar input[type="email"] {
   padding: 15px;
   font-size: 18px;
-  border-radius: 20px;
+  border-radius: 18px;
   border: none;
   width: 70%;
   margin-bottom: 10px;
@@ -372,7 +440,7 @@ h2 {
 .newsletter-bar button {
   padding: 15px 30px;
   font-size: 18px;
-  border-radius: 20px;
+  border-radius: 18px;
   border: none;
   cursor: pointer;
   background-color: rgb(218, 182, 182);
@@ -554,13 +622,6 @@ footer .social-media a:hover {
   pointer-events: none;
 }
 
-/* Animazione per mostrare il popup */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-
 
 #albiccoca.image-container {
   display: flex;
@@ -616,7 +677,7 @@ footer .social-media a:hover {
 
 #mandorle.text {
     max-width: 75%; 
-}  
+} 
   
 
 
