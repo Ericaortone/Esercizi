@@ -864,9 +864,9 @@ html, body {
 
     /* La barra di ricerca, il carrello e il profilo si centrano e si ridimensionano */
     .search-bar, .cart, .profile {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
+        flex-direction: column; /* Sposta il carrello e il profilo in colonna su schermi piccoli */
+        align-items: center; /* Centra orizzontalmente il carrello e il profilo */
+        gap: 10px; /* Spazio verticale tra il carrello e il profilo */
     }
 
     .search-bar input[type="text"] {
