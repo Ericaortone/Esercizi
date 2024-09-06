@@ -823,6 +823,20 @@ footer .social-media a:hover {
   pointer-events: none;
 }
 
+/* Impedire lo scroll orizzontale */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Impostare il box-sizing a border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* Stili generali per dispositivi con larghezza dello schermo inferiore a 768px (tablet e mobile) */
 @media (max-width: 768px) {
 
@@ -868,6 +882,7 @@ footer .social-media a:hover {
 
     .image-frame {
         width: 100%; /* Le immagini occupano tutta la larghezza */
+        padding: 0;
         margin-bottom: 20px;
     }
 
@@ -909,7 +924,9 @@ footer .social-media a:hover {
     }
 
     .carousel-item img {
-        width: 100px; /* Riduce le immagini nel carosello per schermi piccoli */
+        max-width: 100%; /* Assicurati che non superi la larghezza del contenitore */
+        height: auto; /* Mantiene proporzioni corrette */
+        margin: 0 auto;
     }
 }
 
@@ -929,9 +946,12 @@ footer .social-media a:hover {
     }
 
     .carousel-item img {
-        width: 80px; /* Riduce ancora di più le immagini del carosello per smartphone */
+        max-width: 100%; /* Riduce ulteriormente le immagini del carosello per smartphone */
+        height: auto; /* Mantiene proporzioni corrette */
+        margin: 0 auto;
     }
 }
+
 
   
 
