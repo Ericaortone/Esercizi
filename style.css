@@ -10,7 +10,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius, 
+  font-family: kromosius; 
+  overflow-x: hidden; /* Nasconde l'overflow orizzontale *  
 }
 
 
@@ -830,9 +831,6 @@ footer .social-media a:hover {
   pointer-events: none;
 }
 
-body {
-  overflow-x: hidden; /* Nasconde l'overflow orizzontale */
-}
 
 @media (max-width: 768px) {
   .banner {
