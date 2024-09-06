@@ -823,46 +823,73 @@ footer .social-media a:hover {
   pointer-events: none;
 }
 
-/* Media queries per dispositivi con larghezza dello schermo inferiore a 768px (tablet e mobile) */
+/* Stili generali per dispositivi con larghezza dello schermo inferiore a 768px (tablet e mobile) */
 @media (max-width: 768px) {
-    /* Il logo e i menù di navigazione si riducono */
+
+    /* Il logo e il menu di navigazione si riducono */
     header {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .logo {
-        width: 90px; /* Logo leggermente più grande per visibilità su schermi piccoli */
+        width: 70px; /* Riduzione del logo per schermi più piccoli */
+        height: auto;
     }
 
+    /* Navbar verticalmente */
     .navbar ul {
         flex-direction: column;
         padding: 0;
     }
 
     .navbar ul li {
+        margin: 10px 0;
+    }
+
+    /* La barra di ricerca, il carrello e il profilo si centrano e si ridimensionano */
+    .search-bar, .cart, .profile {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%; /* La barra di ricerca si espande per adattarsi allo schermo */
         margin-bottom: 10px;
     }
 
-    /* Barra di ricerca e profilo centrati */
-    .search-bar, .cart, .profile {
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    /* Layout flessibile per immagini prodotti */
+    /* La disposizione delle immagini dei prodotti diventa a colonna */
     .image-container-products {
         flex-direction: column;
+        align-items: center;
     }
 
     .image-frame {
-        width: 100%;
-        margin: 20px 0;
+        width: 100%; /* Le immagini occupano tutta la larghezza */
+        margin-bottom: 20px;
     }
 
+    /* Popup dei cookie centrato e ridimensionato */
+    .cookie-popup {
+        width: 90%;
+        left: 5%;
+        bottom: 10px;
+    }
+
+    /* Promozioni, newsletter e footer centrati e a colonna */
     .promo-bar, .newsletter-bar, footer {
         text-align: center;
         flex-direction: column;
+    }
+
+    .promo-bar .promo-item {
+        margin-bottom: 20px;
+    }
+
+    .newsletter-bar input[type="email"] {
+        width: 100%; /* Campo email che si adatta al dispositivo */
     }
 
     /* Adattamento del chatbot */
@@ -876,19 +903,36 @@ footer .social-media a:hover {
         max-width: 350px;
     }
 
+    /* Stile del carosello */
     .carousel {
         width: 100%;
     }
 
     .carousel-item img {
-        width: 150px; /* Riduci la dimensione delle immagini nel carosello */
+        width: 100px; /* Riduce le immagini nel carosello per schermi piccoli */
+    }
+}
+
+/* Media queries per dispositivi con larghezza inferiore a 480px (smartphone) */
+@media (max-width: 480px) {
+    /* Ulteriore riduzione per schermi molto piccoli */
+    .logo {
+        width: 50px;
     }
 
-    /* Modifica dei pulsanti del popup e altri elementi */
-    .cookie-popup {
-        width: 90%;
-        left: 5%;
+    .navbar ul li {
+        margin-bottom: 8px;
     }
+
+    .image-frame {
+        width: 95%;
+    }
+
+    .carousel-item img {
+        width: 80px; /* Riduce ancora di più le immagini del carosello per smartphone */
+    }
+}
+
   
 
 
