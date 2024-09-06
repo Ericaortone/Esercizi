@@ -822,6 +822,73 @@ footer .social-media a:hover {
   opacity: 0;
   pointer-events: none;
 }
+
+/* Media queries per dispositivi con larghezza dello schermo inferiore a 768px (tablet e mobile) */
+@media (max-width: 768px) {
+    /* Il logo e i menù di navigazione si riducono */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 80px; /* Logo leggermente più grande per visibilità su schermi piccoli */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Barra di ricerca e profilo centrati */
+    .search-bar, .cart, .profile {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    /* Layout flessibile per immagini prodotti */
+    .image-container-products {
+        flex-direction: column;
+    }
+
+    .image-frame {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .promo-bar, .newsletter-bar, footer {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    /* Adattamento del chatbot */
+    #chatbot {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .chatbot-window {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-item img {
+        width: 150px; /* Riduci la dimensione delle immagini nel carosello */
+    }
+
+    /* Modifica dei pulsanti del popup e altri elementi */
+    .cookie-popup {
+        width: 90%;
+        left: 5%;
+    }
   
 
 
