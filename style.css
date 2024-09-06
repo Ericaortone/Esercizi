@@ -1,3 +1,4 @@
+/* Stili base per tutti i dispositivi */
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +11,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius, 
+  font-family: kromosius, sans-serif;
 }
-
 
 header {
   top: 0; left: 0; right: 0;
@@ -30,7 +30,6 @@ header {
   height: auto;
 }
 
-/* Stile generale per il popup dei cookie */
 .cookie-popup {
   position: fixed;
   bottom: 0;
@@ -49,20 +48,16 @@ header {
   justify-content: space-between;
 }
 
-/* Mostra il popup quando il checkbox non è selezionato */
 .cookie-toggle:not(:checked) ~ .cookie-popup {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* Nascondi il popup quando il checkbox è selezionato */
 .cookie-toggle:checked ~ .cookie-popup {
-  transform: translateY(
-  100%);
+  transform: translateY(100%);
   opacity: 0;
 }
 
-/* Stile per il contenuto del popup */
 .cookie-content {
   display: flex;
   flex-direction: column;
@@ -79,7 +74,6 @@ header {
   text-decoration: underline;
 }
 
-/* Stile del pulsante "Accetta" */
 .cookie-button {
   cursor: pointer;
   background-color: rgb(218, 182, 182);
@@ -96,15 +90,16 @@ header {
   background-color: #e88a8a;
 }
 
-
 header .navbar ul {
   font-family: "kromosius";
   list-style: none;
   display: flex;
+  flex-wrap: wrap; /* Permette la responsività degli elementi del menu */
+  gap: 10px; /* Spazio tra gli elementi del menu */
 }
 
 header .navbar ul li {
-  margin-right: 20px;
+  margin: 0;
 }
 
 header .navbar ul li a {
@@ -123,6 +118,7 @@ header .navbar ul li a:hover {
 .header-right {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* Permette la responsività degli elementi a destra */
 }
 
 .search-bar {
@@ -132,7 +128,8 @@ header .navbar ul li a:hover {
   border-radius: 20px;
   padding: 5px 10px;
   background-color: #fff;
-  margin-right: 10px; 
+  margin-right: 10px;
+  flex: 1 1 auto; /* Permette di adattarsi agli spazi disponibili */
 }
 
 .search-bar input[type="text"] {
@@ -140,7 +137,7 @@ header .navbar ul li a:hover {
   outline: none;
   padding: 5px;
   border-radius: 20px;
-  width: 120px; 
+  width: 100%; /* Adatta la larghezza dell'input al contenitore */
 }
 
 .search-bar button {
@@ -158,13 +155,12 @@ header .navbar ul li a:hover {
 }
 
 .cart a:hover {
-  color: #e88a8a
+  color: #e88a8a;
 }
 
-/* Stile per il contenitore del profilo */
 .profile {
   display: inline-block;
-  margin-right: 15px; /* Spazio tra profilo e carrello */
+  margin-right: 15px;
   font-family: 'Kromosius', sans-serif;
 }
 
@@ -177,39 +173,37 @@ header .navbar ul li a:hover {
   margin-right: 5px;
 }
 
-
 .container {
-  max-width: 9200px;
+  max-width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
-.titolo{
-font-family: "kromosius";
-text-align: center;
-} 
+.titolo {
+  font-family: "kromosius";
+  text-align: center;
+}
 
 .back-to-top {
-    position: fixed;
-    bottom: 80px;    /* Distanza dal fondo della finestra */
-    right: 20px;     /* Distanza dal lato destro della finestra */
-    background-color: rgb(218, 182, 182); /* Colore di sfondo del pulsante */
-    color: #fff;     /* Colore del testo */
-    padding: 15px 20px;
-    border-radius: 50px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none; /* Rimuove la sottolineatura dal link */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
-    z-index: 1000;   /* Assicura che il pulsante sia sempre sopra gli altri contenuti */
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: rgb(218, 182, 182);
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1000;
 }
 
 .back-to-top:hover {
-    background-color: #da7070; /* Cambia colore al passaggio del mouse */
+  background-color: #da7070;
 }
 
-
-/* Stile generale per il contenitore del chatbot */
 #chatbot {
   position: fixed;
   bottom: 20px;
@@ -218,7 +212,6 @@ text-align: center;
   z-index: 1000;
 }
 
-/* Stile per il bottone del chatbot */
 .chatbot-button {
   display: flex;
   align-items: center;
@@ -235,14 +228,13 @@ text-align: center;
 }
 
 .chatbot-button:hover {
-    background-color: #da7070;
+  background-color: #da7070;
 }
 
 .chatbot-button i {
   margin-right: 8px;
 }
 
-/* Stile per la finestra del chatbot */
 .chatbot-window {
   display: none;
   position: fixed;
@@ -256,12 +248,10 @@ text-align: center;
   font-family: 'Kromosius', sans-serif;
 }
 
-/* Mostra la finestra del chatbot quando il checkbox è selezionato */
 #chatbot-toggle:checked ~ .chatbot-window {
   display: block;
 }
 
-/* Stile per l'intestazione del chatbot */
 .chatbot-window h2 {
   font-family: 'Kromosius';
   margin: 0;
@@ -272,7 +262,6 @@ text-align: center;
   font-size: 18px;
 }
 
-/* Stile per il contenuto della chat */
 .chat-content {
   font-family: 'Kromosius';
   padding: 9px;
@@ -280,7 +269,6 @@ text-align: center;
   overflow-y: auto;
 }
 
-/* Stile per l'area di input */
 .chat-input-area {
   display: flex;
 }
@@ -308,534 +296,182 @@ text-align: center;
   background-color: #e88a8a;
 }
 
-/* Stile per la checkbox nascosta (usata per gestire l'apertura e la chiusura) */
 .chatbot-toggle {
   display: none;
 }
 
-
 #chisiamo h1 {
-    background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
-  padding: 0px; 
+  padding: 0px;
   font-family: kromosius;
   text-align: center;
 }
 
 #sfondo {
-  width: 100%; /* Larghezza totale della pagina */
-  height: 300px; /* Altezza fissa del contenitore */
-  overflow: hidden; /* Nasconde la parte dell'immagine fuori dal contenitore */
-  position: relative; /* Necessario per il posizionamento dell'immagine */
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
 }
 
 #sfondo img {
-  width: 100%; /* Larghezza dell'immagine */
-  height: auto; /* Mantiene le proporzioni verticali */
-  position: absolute; /* Permette di posizionare l'immagine */
-  top: 50%; /* Posiziona l'immagine al centro verticale */
-  left: 50%; /* Posiziona l'immagine al centro orizzontale */
-  transform: translate(-50%, -50%); /* Centra l'immagine nel contenitore */
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 .banner {
-    background-color: #f9f9f9; 
-    padding: 50px 20px; 
-    border-radius: 20px; 
-    text-align: center; 
-    max-width: 1370px; 
-    margin: 0 auto; 
-  }
-
-  .banner h1 {
-    color: #333; 
-    font-size: 36px; 
-    margin-bottom: 20px; 
-  }
-
-  .banner p {
-    font-family: kromosius;
-    color: black; 
-    font-size: 18px; 
-    margin-bottom: 30px; 
-  }
-
-  .banner .button {
-    background-color: rgb(218, 182, 182); 
-    color: #fff; 
-    padding: 15px 30px; 
-    border-radius: 25px; 
-    text-decoration: none; 
-    transition: background-color 0.3s ease-in-out; 
-  }
-
-  .banner .button:hover {
-    background-color: #e88a8a; 
-  }
-
-#inostriprodotti h1 {
-    background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 18px;
-  padding: 0px;
-  text-align: center;
-}
-
-.image-frame {
-  border: 2px solid rgb(218, 182, 182); 
-  padding: 20px; 
-  margin: 20px; 
-  border-radius: 18px; 
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-}
-
-.image-container-products{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.image-container-products div {
-  text-align: center;
-  margin: 10px;
-  flex: 1;
-}
-
-.image-container-products img {
-  width: 75%;
-  height: auto;
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-.image-container-products div:hover img {
-  transform: scale(1.1);
-  filter: brightness(80%);
-}
-
-.image-container-products p {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #333;
-}
-
-.image-container-products:nth-child(1) div {
-    margin-right: 20%; 
-}
-
-.reviews {
-   display: flex;
-   justify-content: center;
-   margin-top: 10px;
-}
-
- .reviews span {
-   color: rgb(218, 182, 182);
-   font-size: 24px;
-   transition: color 0.5s;
-}
-
-.reviews span:hover {
-   color: #e88a8a; 
-}
-
-.image-container-products:nth-child(1) .fa-star.checked:nth-child(-n+4),
-.image-container-products:nth-child(2) .fa-star.checked:nth-child(-n+4),
-.image-container-products:nth-child(3) .fa-star.checked:nth-child(-n+4),
-.image-container-products:nth-child(4) .fa-star.checked:nth-child(-n+4) {
-  color: #e88a8a;
-}
-
-.highlighted {
-   color: #e88a8a; 
-} 
-
-.star-container {
-   display: flex;
-   justify-content: center;
-   margin-top: 10px;
-}
-        
- .star-container span {
-   color: rgb(218, 182, 182);
-   font-size: 24px;
-   transition: color 0.5s;
-   color: #e88a8a;
-}
-
-.star-container span:hover {
-   color: #e88a8a; 
-}
-
-.highlighted {
-   color: #e88a8a; 
-}
-
-
-#curiositàsuinostriprodotti h1 {
-    background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 15px;
-  padding: 0px;
-  text-align: center;
-}
-
-
-h2 {
-     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 15px;
-  padding: 0px;
-}
-
-
-.carousel {
-  position: relative;
-  width: 80%; /* Adatta la larghezza del carosello */
-  margin: auto;
-  overflow: hidden;
-}
-
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-}
-
-.carousel-item {
-  display: flex;
-  align-items: center;
-  padding: 20px; /* Aggiungi un po' di padding */
-}
-
-.carousel-item img {
-  width: 200px; /* Aumenta la larghezza dell'immagine */
-  height: auto;
-  margin-right: 30px; /* Aumenta lo spazio tra immagine e testo */
-}
-
-.carousel-text h2 {
-text-align: center;
-}
-
-.carousel-text p {
-  line-height: 1.;
-  text-align: center;
-}
-
-
-
-input[name="carousel"] {
-  display: none;
-}
-
-.carousel-controls {
-  position: absolute;
-  bottom: 30px;
-  width: 20%;
-  text-align: center;
-}
-
-.carousel-control {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background-color: rgb(218, 182, 182);
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-#slide1:checked ~ .carousel-images {
-  transform: translateX(0%);
-}
-
-#slide2:checked ~ .carousel-images {
-  transform: translateX(-100%);
-}
-
-#slide3:checked ~ .carousel-images {
-  transform: translateX(-200%);
-}
-
-#slide4:checked ~ .carousel-images {
-  transform: translateX(-300%);
-}
-
-#slide1:checked ~ .carousel-controls label[for="slide1"],
-#slide2:checked ~ .carousel-controls label[for="slide2"],
-#slide3:checked ~ .carousel-controls label[for="slide3"],
-#slide4:checked ~ .carousel-controls label[for="slide4"] {
-  background-color: white;
-}
-
-
-.newsletter-bar {
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  border-radius: 18px;
-}
-
-.newsletter-bar h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: black; 
-}
-
-.newsletter-bar p {
-  font-size: 15px;
-  margin-bottom: 20px;
-  color: black; 
-}
-
-.newsletter-bar .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.newsletter-bar h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.newsletter-bar input[type="email"] {
-  padding: 15px;
-  font-size: 18px;
-  border-radius: 18px;
-  border: none;
-  width: 70%;
-  margin-bottom: 10px;
-}
-
-.newsletter-bar button {
-  padding: 15px 30px;
-  font-size: 18px;
-  border-radius: 18px;
-  border: none;
-  cursor: pointer;
-  background-color: rgb(218, 182, 182);
-  color: white;
-  font-family: Kromosius;
-}
-
-.newsletter-bar button:hover {
-  background-color: #e88a8a;
-  transition: background-color 0.3s ease-in-out;
-}
-
-#dovetrovarci {
-  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 15px;
-  padding: 0px;
-  text-align: center;
-}
-
-
-.privacy-policy {
-  color: black;
-}
-
-#iservizicheoffriamo .container {
-  background: rgb(218, 182, 182);
-  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 15px; 
-  padding: 0px; 
-  text-align: center;
-}
-
-.service-section {
   background-color: #f9f9f9;
-  padding: 50px 20px; 
-  border-radius: 20px; 
-}
-
-.service-section .container {
-  max-width: 760px;
-  margin: 0 auto;
+  padding: 50px 20px;
+  border-radius: 20px;
   text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.service-section h1 {
+.banner h1 {
   color: #333;
   font-size: 36px;
   margin-bottom: 20px;
 }
 
-.service-section .service-description {
+.banner p {
+  font-family: kromosius;
   color: black;
   font-size: 18px;
   margin-bottom: 30px;
 }
 
-.service-section .service-cta .button {
-  background-color: rgb(218, 182, 182);
-  color: #fff;
+.banner .button {
+  background-color: #e88a8a;
+  color: white;
   padding: 15px 30px;
   border-radius: 25px;
   text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
 }
 
-.service-section .service-cta .button:hover {
-  background-color: #e88a8a;
+.banner .button:hover {
+  background-color: #da7070;
 }
 
-.promo-bar {
-    background-color: rgb(218, 182, 182); /* Colore di sfondo rosa */
-    padding: 50px 250px; /* Spaziatura */
-    display: flex; /* Disposizione flessibile */
-    justify-content: space-between; /* Spaziatura tra gli elementi */
-    align-items: center; /* Allinea verticalmente gli elementi */
-    color: #fff; /* Colore del testo */
-    font-family: Kromosius; /* Font del testo */
-}
-
-.promo-item {
-    display: flex; /* Disposizione flessibile per icona e testo */
-    align-items: center; /* Allinea verticalmente icona e testo */
-}
-
-.promo-item i {
-    font-size: 60px; /* Dimensione dell'icona */
-    color: #e88a8a; /* Colore dell'icona */
-    margin-right: 20px; /* Spaziatura tra icona e testo */
-}
-
-.promo-text p {
-    margin: 0; /* Rimuove il margine dai paragrafi */
-    line-height: 1.2; /* Altezza linea per il testo */
-}
-
-.promo-bar .promo-item:first-child {
-    margin-right: auto; /* Sposta il primo elemento verso sinistra */
-}
-
-.promo-bar .promo-item:last-child {
-    margin-left: auto; /* Sposta il secondo elemento verso destra */
-    text-align: right; /* Allinea il testo a destra */
-}
-
-
-footer {
-  background-color: rgb(218, 182, 182); /* Sfondo scuro per il footer */
-  padding: 20px 0; /* Spazio interno al footer */
-  color: #fff; /* Colore del testo */
-  text-align: center; /* Centra il testo */
-}
-
-footer .container {
-  max-width: 960px; /* Larghezza massima del contenitore */
-  margin: 0 auto; /* Centro del contenitore */
+.articles {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer p {
-  margin: 10px 0; /* Margine tra il testo e gli elementi circostanti */
-}
-
-footer .social-media {
-  list-style: none; /* Rimuove i punti elenco */
-  padding: 0;
-  display: flex;
-  justify-content: center; /* Centra le icone orizzontalmente */
-  gap: 15px; /* Spazio tra le icone */
-  margin-top: 15px; /* Spazio tra il testo e le icone */
-}
-
-footer .social-media li {
-  display: inline-block; /* Dispone le icone in linea */
-}
-
-footer .social-media a {
-  color: #fff; /* Colore delle icone */
-  font-size: 24px; /* Dimensione delle icone */
-  transition: color 0.3s ease-in-out; /* Transizione per l'effetto hover */
-}
-
-footer .social-media a:hover {
-  color: #e88a8a; /* Cambia colore al passaggio del mouse */
-}
-
-/* Stile per il popup di notifica */
-.notification-popup {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.notification-popup .notification-content {
+.article {
   background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 100%;
+  width: 300px;
+  max-width: 100%;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  position: relative;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.notification-popup .notification-content h2 {
-  margin: 0 0 10px;
-  color: #333;
+.article:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
-.notification-popup .notification-content p {
-  margin: 0 0 20px;
+.article img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.article h2 {
+  font-family: 'Kromosius', sans-serif;
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.article p {
+  font-family: 'Kromosius', sans-serif;
+  font-size: 16px;
   color: #555;
 }
 
-.notification-popup .notification-content .button {
+.article a {
+  font-family: 'Kromosius', sans-serif;
+  color: rgb(218, 182, 182);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
   display: inline-block;
-  padding: 10px 20px;
-  background-color: rgb(218, 182, 182);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.notification-popup .notification-content .button:hover {
-  background-color: #e88a8a;
+.article a:hover {
+  color: #e88a8a;
 }
 
-.notification-popup .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #333;
+/* Media Queries per la Responsività */
+
+/* Per schermi piccoli (smartphone) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    margin-top: 10px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .cart a, .profile a {
+    font-size: 20px;
+  }
+
+  .cookie-popup {
+    width: calc(100% - 40px);
+    left: 20px;
+  }
+
+  .chatbot-window {
+    width: 250px;
+    bottom: 100px;
+  }
+
+  .banner h1 {
+    font-size: 28px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .article {
+    width: 100%;
+  }
 }
 
-/* Nascondi il popup quando il checkbox non è selezionato */
-.popup-toggle:checked ~ .notification-popup {
-  transform: translateX(0);
-  opacity: 1;
+/* Per schermi medi (tablet) */
+@media (max-width: 900px) {
+  .article {
+    width: calc(50% - 20px);
+  }
+
+  .search-bar {
+    width: auto;
+  }
 }
 
-.popup-toggle:not(:checked) ~ .notification-popup {
-  transform: translateX(100%);
-  opacity: 0;
-  pointer-events: none;
-}
 
 
 
