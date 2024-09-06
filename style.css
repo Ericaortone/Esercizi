@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +11,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius;
+  font-family: kromosius, sans-serif;
 }
 
+/* Header Styles */
 header {
   top: 0; left: 0; right: 0;
   background-color: rgb(218, 182, 182);
@@ -27,66 +29,6 @@ header {
 .logo {
   width: 50px;
   height: auto;
-}
-
-.cookie-popup {
-  position: fixed;
-  bottom: 0;
-  left: 20px;
-  width: 300px;
-  padding: 20px;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(100%);
-  opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.cookie-toggle:not(:checked) ~ .cookie-popup {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.cookie-toggle:checked ~ .cookie-popup {
-  transform: translateY(100%);
-  opacity: 0;
-}
-
-.cookie-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.cookie-content a {
-  color: #e88a8a;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.cookie-content a:hover {
-  text-decoration: underline;
-}
-
-.cookie-button {
-  cursor: pointer;
-  background-color: rgb(218, 182, 182);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cookie-button:hover {
-  background-color: #e88a8a;
 }
 
 header .navbar ul {
@@ -169,14 +111,14 @@ header .navbar ul li a:hover {
 }
 
 .container {
-  max-width: 920px;
+  max-width: 9200px;
   margin: 0 auto;
 }
 
-.titolo {
+.titolo{
   font-family: "kromosius";
   text-align: center;
-}
+} 
 
 .back-to-top {
   position: fixed;
@@ -198,6 +140,7 @@ header .navbar ul li a:hover {
   background-color: #da7070; /* Cambia colore al passaggio del mouse */
 }
 
+/* Chatbot Styles */
 #chatbot {
   position: fixed;
   bottom: 20px;
@@ -294,139 +237,84 @@ header .navbar ul li a:hover {
   display: none;
 }
 
-#chisiamo h1 {
-  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 15px;
-  padding: 0px; 
-  font-family: kromosius;
-  text-align: center;
-}
-
-#sfondo {
-  width: 100%; /* Larghezza totale della pagina */
-  height: 300px; /* Altezza fissa del contenitore */
-  overflow: hidden; /* Nasconde la parte dell'immagine fuori dal contenitore */
-  position: relative; /* Necessario per il posizionamento dell'immagine */
-}
-
-#sfondo img {
-  width: 100%; /* Larghezza dell'immagine */
-  height: auto; /* Mantiene le proporzioni verticali */
-  position: absolute; /* Permette di posizionare l'immagine */
-  top: 50%; /* Posiziona l'immagine al centro verticale */
-  left: 50%; /* Posiziona l'immagine al centro orizzontale */
-  transform: translate(-50%, -50%); /* Centra esattamente l'immagine */
-}
-
-#articoli {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Spazio tra le schede degli articoli */
-}
-
-#articoli .articolo {
-  flex: 1 1 calc(50% - 20px); /* Due articoli per riga con gap */
-  border: 1px solid rgba(168, 126, 126, 0.363);
-  border-radius: 8px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#articoli .articolo:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-#articoli .articolo img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-#articoli .articolo h3 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-#articoli .articolo p {
-  color: #333;
-}
-
-@media (max-width: 900px) {
-  header .navbar ul {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  header .navbar ul li {
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
-
-  header .navbar ul li a {
-    font-size: 18px;
-  }
-
-  .search-bar {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .search-bar input[type="text"] {
-    width: calc(100% - 50px); /* Adatta la larghezza dell'input */
-  }
-
-  .header-right {
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 5%;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .cart a {
-    margin-right: 0;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .search-bar {
+  header .navbar ul {
     flex-direction: column;
-    align-items: stretch;
+    width: 100%;
   }
 
-  .search-bar input[type="text"] {
-    width: 100%;
+  header .navbar ul li {
+    margin-right: 0;
     margin-bottom: 10px;
   }
 
-  .header-right {
-    align-items: center;
-  }
-
-  .profile, .cart {
+  .search-bar {
+    width: 100%;
     margin-right: 0;
+    margin-bottom: 10px;
   }
 
-  .back-to-top {
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    font-size: 14px;
+  .search-bar input[type="text"] {
+    width: calc(100% - 40px); /* Adjust width for smaller screens */
   }
 
-  #chatbot {
-    width: 130px;
+  .image-container-products {
+    flex-direction: column;
   }
 
-  .chatbot-window {
-    width: 250px;
+  .image-container-products div {
+    margin: 10px 0;
+    width: 100%;
   }
 
-  #articoli .articolo {
-    flex: 1 1 100%; /* Un articolo per riga */
+  .carousel {
+    width: 100%;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    margin-right: 0; /* Remove margin for small screens */
+  }
+
+  .promo-bar {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .promo-item {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  footer .social-media {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .banner {
+    padding: 30px 10px;
+  }
+
+  .newsletter-bar input[type="email"] {
+    width: 90%;
   }
 }
+
 
 
 
