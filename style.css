@@ -1,19 +1,21 @@
+/* Reset di base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Stili di base */
 body {
   min-height: 100vh;
   background-color: rgba(168, 126, 126, 0.363);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius, 
+  font-family: kromosius, sans-serif; /* Aggiunto un font di riserva */
 }
 
-
+/* Header */
 header {
   top: 0; left: 0; right: 0;
   background-color: rgb(218, 182, 182);
@@ -25,12 +27,13 @@ header {
   z-index: 1000;
 }
 
+/* Logo */
 .logo {
   width: 50px;
   height: auto;
 }
 
-/* Stile generale per il popup dei cookie */
+/* Popup dei cookie */
 .cookie-popup {
   position: fixed;
   bottom: 0;
@@ -57,8 +60,7 @@ header {
 
 /* Nascondi il popup quando il checkbox è selezionato */
 .cookie-toggle:checked ~ .cookie-popup {
-  transform: translateY(
-  100%);
+  transform: translateY(100%);
   opacity: 0;
 }
 
@@ -96,7 +98,43 @@ header {
   background-color: #e88a8a;
 }
 
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 5%; /* Riduci il padding per dispositivi mobili */
+  }
 
+  .logo {
+    width: 40px; /* Riduci la dimensione del logo sui dispositivi mobili */
+  }
+
+  .cookie-popup {
+    width: calc(100% - 40px); /* Rende il popup più largo sui dispositivi mobili */
+    left: 20px; /* Mantiene il margine sinistro */
+    bottom: 10px; /* Riduci la distanza dal bordo inferiore */
+    padding: 15px; /* Riduci il padding del popup */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 2%; /* Ulteriormente riduci il padding per piccoli schermi */
+  }
+
+  .logo {
+    width: 30px; /* Riduci ulteriormente la dimensione del logo sui piccoli dispositivi */
+  }
+
+  .cookie-popup {
+    width: calc(100% - 20px); /* Rende il popup quasi a larghezza intera sui piccoli dispositivi */
+    left: 10px; /* Riduci il margine sinistro sui piccoli dispositivi */
+    bottom: 10px; /* Mantieni il margine inferiore */
+    padding: 10px; /* Riduci ulteriormente il padding del popup */
+  }
+
+
+
+/* Stile per il menu di navigazione dell'header */
 header .navbar ul {
   font-family: "kromosius";
   list-style: none;
@@ -158,7 +196,7 @@ header .navbar ul li a:hover {
 }
 
 .cart a:hover {
-  color: #e88a8a
+  color: #e88a8a;
 }
 
 /* Stile per il contenitore del profilo */
@@ -177,37 +215,35 @@ header .navbar ul li a:hover {
   margin-right: 5px;
 }
 
-
 .container {
-  max-width: 9200px;
+  max-width: 920px; /* Modifica il valore a 920px, sembra un errore nel valore iniziale di 9200px */
   margin: 0 auto;
 }
 
-.titolo{
-font-family: "kromosius";
-text-align: center;
+.titolo {
+  font-family: "kromosius";
+  text-align: center;
 } 
 
 .back-to-top {
-    position: fixed;
-    bottom: 80px;    /* Distanza dal fondo della finestra */
-    right: 20px;     /* Distanza dal lato destro della finestra */
-    background-color: rgb(218, 182, 182); /* Colore di sfondo del pulsante */
-    color: #fff;     /* Colore del testo */
-    padding: 15px 20px;
-    border-radius: 50px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none; /* Rimuove la sottolineatura dal link */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
-    z-index: 1000;   /* Assicura che il pulsante sia sempre sopra gli altri contenuti */
+  position: fixed;
+  bottom: 80px;    /* Distanza dal fondo della finestra */
+  right: 20px;     /* Distanza dal lato destro della finestra */
+  background-color: rgb(218, 182, 182); /* Colore di sfondo del pulsante */
+  color: #fff;     /* Colore del testo */
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none; /* Rimuove la sottolineatura dal link */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1000;   /* Assicura che il pulsante sia sempre sopra gli altri contenuti */
 }
 
 .back-to-top:hover {
-    background-color: #da7070; /* Cambia colore al passaggio del mouse */
+  background-color: #da7070; /* Cambia colore al passaggio del mouse */
 }
-
 
 /* Stile generale per il contenitore del chatbot */
 #chatbot {
@@ -235,7 +271,7 @@ text-align: center;
 }
 
 .chatbot-button:hover {
-    background-color: #da7070;
+  background-color: #da7070;
 }
 
 .chatbot-button i {
@@ -293,6 +329,119 @@ text-align: center;
   font-size: 14px;
 }
 
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+  header .navbar ul {
+    flex-direction: column; /* Cambia la disposizione dei link in colonna per schermi più piccoli */
+  }
+
+  header .navbar ul li {
+    margin-right: 0;
+    margin-bottom: 10px; /* Aggiungi margine tra gli elementi della lista */
+  }
+
+  header .navbar ul li a {
+    font-size: 18px; /* Riduci la dimensione del testo */
+    padding: 8px; /* Riduci il padding */
+  }
+
+  .search-bar {
+    width: 100%; /* Fai in modo che la barra di ricerca occupi tutta la larghezza disponibile */
+    margin-right: 0; /* Rimuovi il margine destro */
+  }
+
+  .search-bar input[type="text"] {
+    width: calc(100% - 60px); /* Adatta la larghezza dell'input per adattarsi alla barra di ricerca */
+  }
+
+  .search-bar button {
+    font-size: 20px; /* Riduci la dimensione del font */
+  }
+
+  .cart a,
+  .profile a {
+    font-size: 20px; /* Riduci la dimensione del font per i link */
+  }
+
+  .profile {
+    margin-right: 10px; /* Riduci il margine destro */
+  }
+
+  .container {
+    max-width: 100%; /* Adatta il contenitore alla larghezza dello schermo */
+  }
+
+  .back-to-top {
+    bottom: 20px; /* Riduci la distanza dal fondo per schermi più piccoli */
+    right: 10px; /* Riduci la distanza dal lato destro */
+    padding: 10px 15px; /* Riduci il padding */
+    font-size: 14px; /* Riduci la dimensione del font */
+  }
+
+  #chatbot {
+    width: 150px; /* Riduci la larghezza del chatbot per schermi più piccoli */
+  }
+
+  .chatbot-window {
+    width: 250px; /* Riduci la larghezza della finestra del chatbot */
+    bottom: 80px; /* Adatta la posizione della finestra del chatbot */
+  }
+}
+
+@media (max-width: 480px) {
+  header .navbar ul {
+    flex-direction: column; /* Mantieni la disposizione dei link in colonna per schermi molto piccoli */
+  }
+
+  header .navbar ul li {
+    margin-bottom: 5px; /* Riduci il margine tra gli elementi della lista */
+  }
+
+  header .navbar ul li a {
+    font-size: 16px; /* Riduci ulteriormente la dimensione del testo */
+    padding: 6px; /* Riduci il padding */
+  }
+
+  .search-bar input[type="text"] {
+    width: calc(100% - 50px); /* Adatta la larghezza dell'input per schermi molto piccoli */
+  }
+
+  .search-bar button {
+    font-size: 18px; /* Riduci ulteriormente la dimensione del font */
+  }
+
+  .cart a,
+  .profile a {
+    font-size: 18px; /* Riduci ulteriormente la dimensione del font per i link */
+  }
+
+  .profile {
+    margin-right: 5px; /* Riduci il margine destro */
+  }
+
+  .container {
+    padding: 0 10px; /* Aggiungi un po' di padding laterale per i dispositivi più piccoli */
+    max-width: 100%; /* Mantieni la larghezza del contenitore adattabile */
+  }
+
+  .back-to-top {
+    bottom: 10px; /* Riduci ulteriormente la distanza dal fondo */
+    right: 5px; /* Riduci ulteriormente la distanza dal lato destro */
+    padding: 8px 10px; /* Riduci ulteriormente il padding */
+    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
+  }
+
+  #chatbot {
+    width: 130px; /* Riduci ulteriormente la larghezza del chatbot per schermi molto piccoli */
+  }
+
+  .chatbot-window {
+    width: 200px; /* Riduci ulteriormente la larghezza della finestra del chatbot */
+    bottom: 60px; /* Adatta la posizione della finestra del chatbot */
+  }
+
+
+/* Pulsante di invio */
 .send-button {
   background-color: rgb(218, 182, 182);
   color: white;
@@ -313,11 +462,10 @@ text-align: center;
   display: none;
 }
 
-
 #chisiamo h1 {
-    background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
-  padding: 0px; 
+  padding: 0px;
   font-family: kromosius;
   text-align: center;
 }
@@ -338,58 +486,57 @@ text-align: center;
   transform: translate(-50%, -50%); /* Centra l'immagine nel contenitore */
 }
 
-
 .banner {
-    background-color: #f9f9f9; 
-    padding: 50px 20px; 
-    border-radius: 20px; 
-    text-align: center; 
-    max-width: 1370px; 
-    margin: 0 auto; 
-  }
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 1370px;
+  margin: 0 auto;
+}
 
-  .banner h1 {
-    color: #333; 
-    font-size: 36px; 
-    margin-bottom: 20px; 
-  }
+.banner h1 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
 
-  .banner p {
-    font-family: kromosius;
-    color: black; 
-    font-size: 18px; 
-    margin-bottom: 30px; 
-  }
+.banner p {
+  font-family: kromosius;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
 
-  .banner .button {
-    background-color: rgb(218, 182, 182); 
-    color: #fff; 
-    padding: 15px 30px; 
-    border-radius: 25px; 
-    text-decoration: none; 
-    transition: background-color 0.3s ease-in-out; 
-  }
+.banner .button {
+  background-color: rgb(218, 182, 182);
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
 
-  .banner .button:hover {
-    background-color: #e88a8a; 
-  }
+.banner .button:hover {
+  background-color: #e88a8a;
+}
 
 #inostriprodotti h1 {
-    background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 18px;
   padding: 0px;
   text-align: center;
 }
 
 .image-frame {
-  border: 2px solid rgb(218, 182, 182); 
-  padding: 20px; 
-  margin: 20px; 
-  border-radius: 18px; 
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  border: 2px solid rgb(218, 182, 182);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 18px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.image-container-products{
+.image-container-products {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -420,73 +567,54 @@ text-align: center;
   color: #333;
 }
 
-.image-container-products:nth-child(1) div {
-    margin-right: 20%; 
-}
-
 .reviews {
-   display: flex;
-   justify-content: center;
-   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
- .reviews span {
-   color: rgb(218, 182, 182);
-   font-size: 24px;
-   transition: color 0.5s;
+.reviews span {
+  color: rgb(218, 182, 182);
+  font-size: 24px;
+  transition: color 0.5s;
 }
 
 .reviews span:hover {
-   color: #e88a8a; 
-}
-
-.image-container-products:nth-child(1) .fa-star.checked:nth-child(-n+4),
-.image-container-products:nth-child(2) .fa-star.checked:nth-child(-n+4),
-.image-container-products:nth-child(3) .fa-star.checked:nth-child(-n+4),
-.image-container-products:nth-child(4) .fa-star.checked:nth-child(-n+4) {
   color: #e88a8a;
 }
 
 .highlighted {
-   color: #e88a8a; 
-} 
+  color: #e88a8a;
+}
 
 .star-container {
-   display: flex;
-   justify-content: center;
-   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
-        
- .star-container span {
-   color: rgb(218, 182, 182);
-   font-size: 24px;
-   transition: color 0.5s;
-   color: #e88a8a;
+
+.star-container span {
+  color: rgb(218, 182, 182);
+  font-size: 24px;
+  transition: color 0.5s;
 }
 
 .star-container span:hover {
-   color: #e88a8a; 
+  color: #e88a8a;
 }
-
-.highlighted {
-   color: #e88a8a; 
-}
-
 
 #curiositàsuinostriprodotti h1 {
-    background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px;
   text-align: center;
 }
 
-
 h2 {
-     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px;
 }
-
 
 .carousel {
   position: relative;
@@ -520,15 +648,13 @@ h2 {
 }
 
 .carousel-text h2 {
-text-align: center;
-}
-
-.carousel-text p {
-  line-height: 1.;
   text-align: center;
 }
 
-
+.carousel-text p {
+  line-height: 1.5;
+  text-align: center;
+}
 
 input[name="carousel"] {
   display: none;
@@ -574,7 +700,118 @@ input[name="carousel"] {
   background-color: white;
 }
 
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+  /* Pulsante di invio */
+  .send-button {
+    font-size: 11px; /* Riduci la dimensione del font */
+    padding: 8px 12px; /* Riduci il padding */
+  }
 
+  /* Testi degli h1 */
+  #chisiamo h1, #inostriprodotti h1, #curiositàsuinostriprodotti h1, h2 {
+    font-size: 18px; /* Riduci la dimensione del font */
+    padding: 10px; /* Aggiungi padding per una migliore visualizzazione */
+  }
+
+  /* Immagine di sfondo */
+  #sfondo {
+    height: 200px; /* Riduci l'altezza per schermi più piccoli */
+  }
+
+  .banner {
+    padding: 30px 10px; /* Riduci il padding */
+  }
+
+  .banner h1 {
+    font-size: 28px; /* Riduci la dimensione del font */
+  }
+
+  .banner p {
+    font-size: 16px; /* Riduci la dimensione del font */
+  }
+
+  .banner .button {
+    padding: 12px 24px; /* Riduci il padding */
+    font-size: 14px; /* Riduci la dimensione del font */
+  }
+
+  .image-frame {
+    margin: 10px; /* Riduci il margine */
+  }
+
+  .image-container-products img {
+    width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
+  }
+
+  .carousel {
+    width: 90%; /* Riduci la larghezza del carosello */
+  }
+
+  .carousel-item img {
+    width: 150px; /* Riduci la larghezza dell'immagine */
+    margin-right: 20px; /* Riduci il margine */
+  }
+
+  .carousel-controls {
+    width: 30%; /* Riduci la larghezza dei controlli */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Pulsante di invio */
+  .send-button {
+    font-size: 10px; /* Riduci ulteriormente la dimensione del font */
+    padding: 6px 10px; /* Riduci ulteriormente il padding */
+  }
+
+  /* Testi degli h1 */
+  #chisiamo h1, #inostriprodotti h1, #curiositàsuinostriprodotti h1, h2 {
+    font-size: 16px; /* Riduci ulteriormente la dimensione del font */
+  }
+
+  /* Immagine di sfondo */
+  #sfondo {
+    height: 150px; /* Riduci ulteriormente l'altezza */
+  }
+
+  .banner {
+    padding: 20px 5px; /* Riduci ulteriormente il padding */
+  }
+
+  .banner h1 {
+    font-size: 22px; /* Riduci ulteriormente la dimensione del font */
+  }
+
+  .banner p {
+    font-size: 14px; /* Riduci ulteriormente la dimensione del font */
+  }
+
+  .banner .button {
+    padding: 10px 20px; /* Riduci ulteriormente il padding */
+    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
+  }
+
+  .image-frame {
+    margin: 5px; /* Riduci ulteriormente il margine */
+  }
+
+  .carousel {
+    width: 100%; /* Imposta la larghezza al 100% */
+  }
+
+  .carousel-item img {
+    width: 100px; /* Riduci ulteriormente la larghezza dell'immagine */
+    margin-right: 10px; /* Riduci ulteriormente il margine */
+  }
+
+  .carousel-controls {
+    width: 40%; /* Riduci ulteriormente la larghezza dei controlli */
+  }
+
+
+
+/* Newsletter Bar */
 .newsletter-bar {
   color: white;
   text-align: center;
@@ -585,23 +822,18 @@ input[name="carousel"] {
 .newsletter-bar h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: black; 
+  color: black;
 }
 
 .newsletter-bar p {
   font-size: 15px;
   margin-bottom: 20px;
-  color: black; 
+  color: black;
 }
 
 .newsletter-bar .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.newsletter-bar h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
 }
 
 .newsletter-bar input[type="email"] {
@@ -629,6 +861,7 @@ input[name="carousel"] {
   transition: background-color 0.3s ease-in-out;
 }
 
+/* Dov'è Trovarci */
 #dovetrovarci {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
@@ -636,23 +869,25 @@ input[name="carousel"] {
   text-align: center;
 }
 
-
+/* Privacy Policy */
 .privacy-policy {
   color: black;
 }
 
+/* Servizi che Offriamo */
 #iservizicheoffriamo .container {
   background: rgb(218, 182, 182);
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 15px; 
-  padding: 0px; 
+  border-radius: 15px;
+  padding: 0px;
   text-align: center;
 }
 
+/* Service Section */
 .service-section {
   background-color: #f9f9f9;
-  padding: 50px 20px; 
-  border-radius: 20px; 
+  padding: 50px 20px;
+  border-radius: 20px;
 }
 
 .service-section .container {
@@ -686,85 +921,86 @@ input[name="carousel"] {
   background-color: #e88a8a;
 }
 
+/* Promo Bar */
 .promo-bar {
-    background-color: rgb(218, 182, 182); /* Colore di sfondo rosa */
-    padding: 50px 250px; /* Spaziatura */
-    display: flex; /* Disposizione flessibile */
-    justify-content: space-between; /* Spaziatura tra gli elementi */
-    align-items: center; /* Allinea verticalmente gli elementi */
-    color: #fff; /* Colore del testo */
-    font-family: Kromosius; /* Font del testo */
+  background-color: rgb(218, 182, 182);
+  padding: 50px 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-family: Kromosius;
 }
 
 .promo-item {
-    display: flex; /* Disposizione flessibile per icona e testo */
-    align-items: center; /* Allinea verticalmente icona e testo */
+  display: flex;
+  align-items: center;
 }
 
 .promo-item i {
-    font-size: 60px; /* Dimensione dell'icona */
-    color: #e88a8a; /* Colore dell'icona */
-    margin-right: 20px; /* Spaziatura tra icona e testo */
+  font-size: 60px;
+  color: #e88a8a;
+  margin-right: 20px;
 }
 
 .promo-text p {
-    margin: 0; /* Rimuove il margine dai paragrafi */
-    line-height: 1.2; /* Altezza linea per il testo */
+  margin: 0;
+  line-height: 1.2;
 }
 
 .promo-bar .promo-item:first-child {
-    margin-right: auto; /* Sposta il primo elemento verso sinistra */
+  margin-right: auto;
 }
 
 .promo-bar .promo-item:last-child {
-    margin-left: auto; /* Sposta il secondo elemento verso destra */
-    text-align: right; /* Allinea il testo a destra */
+  margin-left: auto;
+  text-align: right;
 }
 
-
+/* Footer */
 footer {
-  background-color: rgb(218, 182, 182); /* Sfondo scuro per il footer */
-  padding: 20px 0; /* Spazio interno al footer */
-  color: #fff; /* Colore del testo */
-  text-align: center; /* Centra il testo */
+  background-color: rgb(218, 182, 182);
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
 }
 
 footer .container {
-  max-width: 960px; /* Larghezza massima del contenitore */
-  margin: 0 auto; /* Centro del contenitore */
+  max-width: 960px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 footer p {
-  margin: 10px 0; /* Margine tra il testo e gli elementi circostanti */
+  margin: 10px 0;
 }
 
 footer .social-media {
-  list-style: none; /* Rimuove i punti elenco */
+  list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center; /* Centra le icone orizzontalmente */
-  gap: 15px; /* Spazio tra le icone */
-  margin-top: 15px; /* Spazio tra il testo e le icone */
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 footer .social-media li {
-  display: inline-block; /* Dispone le icone in linea */
+  display: inline-block;
 }
 
 footer .social-media a {
-  color: #fff; /* Colore delle icone */
-  font-size: 24px; /* Dimensione delle icone */
-  transition: color 0.3s ease-in-out; /* Transizione per l'effetto hover */
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
 }
 
 footer .social-media a:hover {
-  color: #e88a8a; /* Cambia colore al passaggio del mouse */
+  color: #e88a8a;
 }
 
-/* Stile per il popup di notifica */
+/* Popup Notifica */
 .notification-popup {
   display: flex;
   position: fixed;
@@ -825,7 +1061,6 @@ footer .social-media a:hover {
   color: #333;
 }
 
-/* Nascondi il popup quando il checkbox non è selezionato */
 .popup-toggle:checked ~ .notification-popup {
   transform: translateX(0);
   opacity: 1;
@@ -837,189 +1072,113 @@ footer .social-media a:hover {
   pointer-events: none;
 }
 
-/* Media query per dispositivi con larghezza massima di 768px (tablet e telefoni) */
-@media only screen and (max-width: 768px) {
-  /* Header: riduci la spaziatura e imposta la navbar in colonna */
-  header {
-    padding: 10px 5%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header .navbar ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  header .navbar ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  header .navbar ul li a {
-    font-size: 18px;
-  }
-
-  /* Riduci le dimensioni del logo e del pulsante di ricerca */
-  .logo {
-    width: 40px;
-  }
-
-  .search-bar input[type="text"] {
-    width: 100px;
-  }
-
-  .search-bar {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  /* Stile per la sezione delle immagini del carosello */
-  .carousel {
-    width: 90%;
-  }
-
-  .carousel-item img {
-    width: 150px;
-  }
-
-  /* Stile per i contenitori delle immagini e dei testi dei prodotti */
-  .image-container-products {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image-container-products div {
-    margin: 10px 0;
-  }
-
-  .image-container-products img {
-    width: 100%;
-  }
-
-  /* Riduci la larghezza del banner e aumenta il padding */
-  .banner {
-    padding: 30px 10px;
-  }
-
-  .banner h1 {
-    font-size: 28px;
-  }
-
-  .banner p {
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+  /* Newsletter Bar */
+  .newsletter-bar input[type="email"] {
+    width: 80%; /* Riduci la larghezza dell'input */
+    padding: 12px;
     font-size: 16px;
   }
 
-  /* Riduci la larghezza del popup dei cookie e la dimensione del testo */
-  .cookie-popup {
-    width: 80%;
+  .newsletter-bar button {
+    padding: 12px 20px;
+    font-size: 16px;
   }
 
-  .cookie-content a {
-    font-size: 14px;
+  /* Service Section */
+  .service-section {
+    padding: 30px 10px; /* Riduci il padding */
   }
 
-  .cookie-button {
-    padding: 8px 16px;
+  .service-section h1 {
+    font-size: 28px; /* Riduci la dimensione del font */
   }
 
-  /* Riduci la larghezza del chatbot e la dimensione del testo */
-  #chatbot {
-    width: 150px;
+  .service-section .service-description {
+    font-size: 16px; /* Riduci la dimensione del font */
   }
 
-  .chatbot-button {
+  .service-section .service-cta .button {
+    padding: 12px 24px; /* Riduci il padding */
+    font-size: 14px; /* Riduci la dimensione del font */
+  }
+
+  /* Promo Bar */
+  .promo-bar {
+    padding: 30px 20px; /* Riduci il padding */
+    flex-direction: column; /* Disposizione verticale per schermi piccoli */
+  }
+
+  .promo-item {
+    margin-bottom: 20px; /* Spazio tra gli elementi */
+  }
+
+  .promo-item i {
+    font-size: 40px; /* Riduci la dimensione dell'icona */
+    margin-right: 15px; /* Riduci lo spazio tra icona e testo */
+  }
+
+  /* Footer */
+  footer .container {
+    padding: 0 15px; /* Riduci il padding laterale */
+  }
+
+  footer .social-media {
+    gap: 10px; /* Riduci lo spazio tra le icone */
+  }
+
+  footer .social-media a {
+    font-size: 20px; /* Riduci la dimensione delle icone */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Newsletter Bar */
+  .newsletter-bar input[type="email"] {
+    width: 90%; /* Riduci ulteriormente la larghezza dell'input */
     padding: 10px;
     font-size: 14px;
   }
 
-  .chatbot-window {
-    width: 80%;
-    bottom: 100px;
-  }
-
-  .chat-content {
-    max-height: 200px;
-  }
-
-  .chat-input {
-    font-size: 12px;
-  }
-
-  .send-button {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
-  /* Adatta il footer per dispositivi mobili */
-  footer .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  footer .social-media {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* Media query per dispositivi con larghezza massima di 480px (telefoni) */
-@media only screen and (max-width: 480px) {
-  header {
-    padding: 10px 3%;
-  }
-
-  header .navbar ul li a {
-    font-size: 16px;
-  }
-
-  .search-bar input[type="text"] {
-    width: 80px;
-  }
-
-  .carousel-item img {
-    width: 120px;
-  }
-
-  .banner h1 {
-    font-size: 24px;
-  }
-
-  .banner p {
+  .newsletter-bar button {
+    padding: 10px 15px;
     font-size: 14px;
   }
 
-  .cookie-content a {
-    font-size: 12px;
+  /* Service Section */
+  .service-section {
+    padding: 20px 5px; /* Riduci ulteriormente il padding */
   }
 
-  .cookie-button {
-    padding: 6px 12px;
+  .service-section h1 {
+    font-size: 22px; /* Riduci ulteriormente la dimensione del font */
   }
 
-  #chatbot {
-    width: 120px;
+  .service-section .service-description {
+    font-size: 14px; /* Riduci ulteriormente la dimensione del font */
   }
 
-  .chatbot-button {
-    padding: 8px;
-    font-size: 12px;
+  .service-section .service-cta .button {
+    padding: 10px 20px; /* Riduci ulteriormente il padding */
+    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
   }
 
-  .chatbot-window {
-    width: 90%;
-    bottom: 80px;
+  /* Promo Bar */
+  .promo-bar {
+    padding: 20px 10px; /* Riduci ulteriormente il padding */
   }
 
-  .chat-input {
-    font-size: 10px;
+  .promo-item i {
+    font-size: 30px; /* Riduci ulteriormente la dimensione dell'icona */
+    margin-right: 10px; /* Riduci ulteriormente lo spazio tra icona e testo */
   }
 
-  .send-button {
-    padding: 6px 10px;
-    font-size: 10px;
+  /* Footer */
+  footer .social-media a {
+    font-size: 18px; /* Riduci ulteriormente la dimensione delle icone */
   }
-}
+
 
 
 
