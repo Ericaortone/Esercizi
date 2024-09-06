@@ -10,7 +10,9 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius,  
+  font-family: kromosius;
+  box-sizing: border-box; /* Include padding e border nel calcolo della larghezza e altezza */
+  overflow-x: hidden; /* Nasconde qualsiasi scorrimento orizzontale */
 }
 
 
@@ -830,7 +832,110 @@ footer .social-media a:hover {
   pointer-events: none;
 }
 
+@media (max-width: 1200px) {
+  header {
+    padding: 10px 5%;
+  }
 
+  .search-bar input[type="text"] {
+    width: 100px;
+  }
+
+  .product-grid {
+    gap: 15px;
+  }
+
+  .product-item {
+    width: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  header .navbar ul {
+    flex-direction: column;
+  }
+
+  header .navbar ul li {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .cookie-popup {
+    width: 250px;
+    left: 15px;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 30px 10px;
+  }
+
+  .banner h1 {
+    font-size: 28px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .product-item {
+    width: 100%;
+  }
+
+  .chatbot-window {
+    width: 260px;
+  }
+
+  #chatbot {
+    width: 150px;
+  }
+
+  .cookie-popup {
+    width: 220px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  header .navbar ul li a {
+    font-size: 16px;
+  }
+
+  .search-bar input[type="text"] {
+    width: 80px;
+  }
+
+  .cookie-popup {
+    width: 90%;
+    left: 5%;
+  }
+
+  .chat-input {
+    font-size: 12px;
+  }
+
+  .send-button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .back-to-top {
+    bottom: 50px;
+    right: 10px;
+    padding: 10px;
+    font-size: 14px;
+  }
 
 
   
