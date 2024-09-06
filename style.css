@@ -864,10 +864,11 @@ html, body {
 
     /* La barra di ricerca, il carrello e il profilo si centrano e si ridimensionano */
     .search-bar, .cart, .profile {
-        flex-direction: column; /* Sposta il carrello e il profilo in colonna su schermi piccoli */
-        align-items: center; /* Centra orizzontalmente il carrello e il profilo */
-        gap: 10px; /* Spazio verticale tra il carrello e il profilo */
+        display: block;
+        text-align: center;
+        margin-top: 10px;
     }
+
 
     .search-bar input[type="text"] {
         width: 100%; /* La barra di ricerca si espande per adattarsi allo schermo */
