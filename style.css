@@ -870,7 +870,7 @@ html, body {
     }
 
     .search-bar input[type="text"] {
-        width: 100%; /* La barra di ricerca si espande per adattarsi allo schermo */
+        width: 50%; /* La barra di ricerca si espande per adattarsi allo schermo */
         margin-bottom: 10px;
     }
 
