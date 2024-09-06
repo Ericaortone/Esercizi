@@ -832,6 +832,56 @@ footer .social-media a:hover {
   pointer-events: none;
 }
 
+img {
+  max-width: 100%; /* Impedisce che le immagini superino la larghezza del loro contenitore */
+  height: auto; /* Mantiene le proporzioni dell'immagine */
+  display: block; /* Rimuove eventuali spazi sotto l'immagine */
+}
+
+/* Gestione degli Elementi a Larghezza Fissa */
+.carousel-item {
+  max-width: 100%; /* Impedisce che l'elemento superi la larghezza del contenitore */
+  box-sizing: border-box; /* Include padding e border nel calcolo della larghezza */
+}
+
+.container {
+  max-width: 100%; /* Impedisce che il contenitore superi la larghezza del viewport */
+  overflow: hidden; /* Nasconde eventuali overflow */
+}
+
+/* Gestione del Carosello */
+.carousel {
+  overflow: hidden; /* Nasconde le parti dell'immagine fuori dal carosello */
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%; /* Ogni slide occupa il 100% della larghezza del carosello */
+}
+
+/* Gestione dei Contenitori e Layout Flex */
+.image-container-products {
+  display: flex;
+  flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+  gap: 20px; /* Spazio tra gli elementi */
+}
+
+/* Gestione del Layout Responsivo */
+@media (max-width: 768px) {
+  .carousel-item img {
+    width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
+  }
+
+  .product-item {
+    width: 100%; /* Adatta l'elemento alla larghezza del contenitore */
+  }
+}
+
 @media (max-width: 1200px) {
   header {
     padding: 10px 5%;
