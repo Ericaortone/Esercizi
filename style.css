@@ -1,4 +1,3 @@
-/* Stili base per tutti i dispositivi */
 * {
   margin: 0;
   padding: 0;
@@ -94,12 +93,10 @@ header .navbar ul {
   font-family: "kromosius";
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* Permette la responsività degli elementi del menu */
-  gap: 10px; /* Spazio tra gli elementi del menu */
 }
 
 header .navbar ul li {
-  margin: 0;
+  margin-right: 20px;
 }
 
 header .navbar ul li a {
@@ -118,7 +115,6 @@ header .navbar ul li a:hover {
 .header-right {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Permette la responsività degli elementi a destra */
 }
 
 .search-bar {
@@ -128,8 +124,7 @@ header .navbar ul li a:hover {
   border-radius: 20px;
   padding: 5px 10px;
   background-color: #fff;
-  margin-right: 10px;
-  flex: 1 1 auto; /* Permette di adattarsi agli spazi disponibili */
+  margin-right: 10px; 
 }
 
 .search-bar input[type="text"] {
@@ -137,7 +132,7 @@ header .navbar ul li a:hover {
   outline: none;
   padding: 5px;
   border-radius: 20px;
-  width: 100%; /* Adatta la larghezza dell'input al contenitore */
+  width: 120px; 
 }
 
 .search-bar button {
@@ -155,12 +150,12 @@ header .navbar ul li a:hover {
 }
 
 .cart a:hover {
-  color: #e88a8a;
+  color: #e88a8a
 }
 
 .profile {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 15px; /* Spazio tra profilo e carrello */
   font-family: 'Kromosius', sans-serif;
 }
 
@@ -174,8 +169,7 @@ header .navbar ul li a:hover {
 }
 
 .container {
-  max-width: 100%;
-  padding: 0 15px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -186,22 +180,22 @@ header .navbar ul li a:hover {
 
 .back-to-top {
   position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background-color: rgb(218, 182, 182);
-  color: #fff;
+  bottom: 80px;    /* Distanza dal fondo della finestra */
+  right: 20px;     /* Distanza dal lato destro della finestra */
+  background-color: rgb(218, 182, 182); /* Colore di sfondo del pulsante */
+  color: #fff;     /* Colore del testo */
   padding: 15px 20px;
   border-radius: 50px;
   font-size: 16px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none; /* Rimuove la sottolineatura dal link */
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 1000;   /* Assicura che il pulsante sia sempre sopra gli altri contenuti */
 }
 
 .back-to-top:hover {
-  background-color: #da7070;
+  background-color: #da7070; /* Cambia colore al passaggio del mouse */
 }
 
 #chatbot {
@@ -303,174 +297,137 @@ header .navbar ul li a:hover {
 #chisiamo h1 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
-  padding: 0px;
+  padding: 0px; 
   font-family: kromosius;
   text-align: center;
 }
 
 #sfondo {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
+  width: 100%; /* Larghezza totale della pagina */
+  height: 300px; /* Altezza fissa del contenitore */
+  overflow: hidden; /* Nasconde la parte dell'immagine fuori dal contenitore */
+  position: relative; /* Necessario per il posizionamento dell'immagine */
 }
 
 #sfondo img {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%; /* Larghezza dell'immagine */
+  height: auto; /* Mantiene le proporzioni verticali */
+  position: absolute; /* Permette di posizionare l'immagine */
+  top: 50%; /* Posiziona l'immagine al centro verticale */
+  left: 50%; /* Posiziona l'immagine al centro orizzontale */
+  transform: translate(-50%, -50%); /* Centra esattamente l'immagine */
 }
 
-.banner {
-  background-color: #f9f9f9;
-  padding: 50px 20px;
-  border-radius: 20px;
-  text-align: center;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.banner h1 {
-  color: #333;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.banner p {
-  font-family: kromosius;
-  color: black;
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.banner .button {
-  background-color: #e88a8a;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-.banner .button:hover {
-  background-color: #da7070;
-}
-
-.articles {
+#articoli {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  gap: 20px; /* Spazio tra le schede degli articoli */
 }
 
-.article {
+#articoli .articolo {
+  flex: 1 1 calc(50% - 20px); /* Due articoli per riga con gap */
+  border: 1px solid rgba(168, 126, 126, 0.363);
+  border-radius: 8px;
+  padding: 10px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 300px;
-  max-width: 100%;
-  text-align: center;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.article:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+#articoli .articolo:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.article img {
-  max-width: 100%;
+#articoli .articolo img {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
 }
 
-.article h2 {
-  font-family: 'Kromosius', sans-serif;
-  font-size: 24px;
-  margin: 15px 0;
+#articoli .articolo h3 {
+  font-size: 18px;
+  margin: 10px 0;
 }
 
-.article p {
-  font-family: 'Kromosius', sans-serif;
-  font-size: 16px;
-  color: #555;
+#articoli .articolo p {
+  color: #333;
 }
 
-.article a {
-  font-family: 'Kromosius', sans-serif;
-  color: rgb(218, 182, 182);
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-  transition: color 0.3s ease;
-}
+@media (max-width: 900px) {
+  header .navbar ul {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.article a:hover {
-  color: #e88a8a;
-}
+  header .navbar ul li {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
 
-/* Media Queries per la Responsività */
+  header .navbar ul li a {
+    font-size: 18px;
+  }
 
-/* Per schermi piccoli (smartphone) */
-@media (max-width: 600px) {
-  header {
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar input[type="text"] {
+    width: calc(100% - 50px); /* Adatta la larghezza dell'input */
+  }
+
+  .header-right {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .header-right {
-    margin-top: 10px;
-    justify-content: flex-start;
-    width: 100%;
-  }
-
-  .search-bar {
-    width: 100%;
-  }
-
-  .cart a, .profile a {
+  .cart a {
+    margin-right: 0;
     font-size: 20px;
   }
+}
 
-  .cookie-popup {
-    width: calc(100% - 40px);
-    left: 20px;
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .header-right {
+    align-items: center;
+  }
+
+  .profile, .cart {
+    margin-right: 0;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  #chatbot {
+    width: 130px;
   }
 
   .chatbot-window {
     width: 250px;
-    bottom: 100px;
   }
 
-  .banner h1 {
-    font-size: 28px;
-  }
-
-  .banner p {
-    font-size: 16px;
-  }
-
-  .article {
-    width: 100%;
+  #articoli .articolo {
+    flex: 1 1 100%; /* Un articolo per riga */
   }
 }
 
-/* Per schermi medi (tablet) */
-@media (max-width: 900px) {
-  .article {
-    width: calc(50% - 20px);
-  }
-
-  .search-bar {
-    width: auto;
-  }
-}
 
 
 
