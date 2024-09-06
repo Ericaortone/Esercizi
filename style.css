@@ -10,7 +10,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius;  
+  font-family: kromosius,  
 }
 
 
@@ -831,51 +831,7 @@ footer .social-media a:hover {
 }
 
 
-@media (max-width: 768px) {
-  .banner {
-    padding: 30px 10px;
-    box-sizing: border-box; /* Includi il padding e il bordo nella larghezza totale */
-  }
 
-  .product-item {
-    width: 100%;
-    box-sizing: border-box; /* Includi il padding e il bordo nella larghezza totale */
-  }
-
-  .cookie-popup {
-    width: 90%; /* Larghezza quasi a tutta la larghezza dello schermo per dispositivi molto piccoli */
-    left: 5%; /* Spazio sul lato sinistro */
-    transform: none; /* Rimuovi la trasformazione se non necessaria */
-  }
-}
-
-@media (max-width: 576px) {
-  .search-bar input[type="text"] {
-    width: 80px;
-  }
-
-  .cookie-popup {
-    width: 90%; /* Assicurati che la larghezza sia adeguata */
-    left: 5%; /* Spazio sul lato sinistro */
-    transform: none; /* Rimuovi la trasformazione se non necessaria */
-  }
-
-  .chat-input {
-    font-size: 12px;
-  }
-
-  .send-button {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-
-  .back-to-top {
-    bottom: 50px;
-    right: 10px;
-    padding: 10px;
-    font-size: 14px;
-  }
-}
 
   
 
