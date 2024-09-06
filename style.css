@@ -864,9 +864,9 @@ footer .social-media a:hover {
     margin-bottom: 10px;
   }
 
-  .cookie-popup {
-    width: 90%;
-    left: 5%;
+  ..cookie-popup {
+    width: 250px; /* Larghezza per schermi medi */
+    left: 15px; /* Allineamento più vicino al bordo */
   }
 
   .product-grid {
@@ -899,6 +899,11 @@ footer .social-media a:hover {
   #chatbot {
     width: 150px;
   }
+
+  .cookie-popup {
+    width: 220px; /* Larghezza per schermi piccoli */
+    left: 10px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -911,8 +916,8 @@ footer .social-media a:hover {
   }
 
   .cookie-popup {
-    width: 100%;
-    left: 0;
+    width: 90%; /* Larghezza quasi a tutta la larghezza dello schermo per dispositivi molto piccoli */
+    left: 5%;
   }
 
   .chat-input {
