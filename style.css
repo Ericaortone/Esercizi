@@ -10,9 +10,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius;
-  box-sizing: border-box; /* Include padding e border nel calcolo della larghezza e altezza */
-  overflow-x: hidden; /* Nasconde qualsiasi scorrimento orizzontale */
+  font-family: kromosius, 
 }
 
 
@@ -181,7 +179,7 @@ header .navbar ul li a:hover {
 
 
 .container {
-  max-width: 1200px; /* Riduci la larghezza massima */
+  max-width: 9200px;
   margin: 0 auto;
 }
 
@@ -521,9 +519,16 @@ h2 {
   margin-right: 30px; /* Aumenta lo spazio tra immagine e testo */
 }
 
-.carousel-text p {
-  line-height: 1.; /* Migliora l'altezza della linea per una migliore leggibilità */
+.carousel-text h2 {
+text-align: center;
 }
+
+.carousel-text p {
+  line-height: 1.;
+  text-align: center;
+}
+
+
 
 input[name="carousel"] {
   display: none;
@@ -683,7 +688,7 @@ input[name="carousel"] {
 
 .promo-bar {
     background-color: rgb(218, 182, 182); /* Colore di sfondo rosa */
-    padding: 50px 20px; /* Spaziatura */
+    padding: 50px 250px; /* Spaziatura */
     display: flex; /* Disposizione flessibile */
     justify-content: space-between; /* Spaziatura tra gli elementi */
     align-items: center; /* Allinea verticalmente gli elementi */
