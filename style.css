@@ -1,23 +1,23 @@
-/* Reset di base */
+/* Regole globali */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Stili di base */
 body {
   min-height: 100vh;
   background-color: rgba(168, 126, 126, 0.363);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius, sans-serif; /* Aggiunto un font di riserva */
+  font-family: kromosius, sans-serif;
 }
 
-/* Header */
 header {
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: rgb(218, 182, 182);
   box-shadow: 0 5px 10px rgba(168, 126, 126, 0.363);
   padding: 10px 7%;
@@ -27,13 +27,53 @@ header {
   z-index: 1000;
 }
 
-/* Logo */
 .logo {
   width: 50px;
   height: auto;
 }
 
-/* Popup dei cookie */
+/* Media Queries per rendere il design responsive */
+
+/* Schermi piccoli come smartphone (max larghezza: 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Disposizione verticale per i contenuti dell'header */
+    padding: 10px 5%;       /* Riduce il padding laterale per schermi più piccoli */
+  }
+
+  .logo {
+    width: 40px;           /* Riduce la dimensione del logo su schermi piccoli */
+  }
+}
+
+/* Schermi molto piccoli come smartphone in verticale (max larghezza: 480px) */
+@media (max-width: 480px) {
+  body {
+    background-size: contain;  /* Modifica lo sfondo per adattarsi meglio su schermi piccoli */
+  }
+
+  header {
+    padding: 10px 3%;          /* Riduce ulteriormente il padding laterale */
+  }
+
+  .logo {
+    width: 30px;               /* Riduce ancora di più la dimensione del logo */
+  }
+}
+
+/* Schermi grandi come desktop (min larghezza: 1200px) */
+@media (min-width: 1200px) {
+  header {
+    padding: 15px 10%;         /* Aumenta il padding laterale su schermi grandi */
+  }
+
+  .logo {
+    width: 60px;               /* Aumenta leggermente la dimensione del logo su schermi grandi */
+  }
+}
+
+
+/* Stile generale per il popup dei cookie */
 .cookie-popup {
   position: fixed;
   bottom: 0;
@@ -98,43 +138,61 @@ header {
   background-color: #e88a8a;
 }
 
-/* Media Queries per dispositivi mobili */
+/* Media Queries per rendere il design responsive */
+
+/* Schermi piccoli come smartphone (max larghezza: 768px) */
 @media (max-width: 768px) {
-  header {
-    padding: 10px 5%; /* Riduci il padding per dispositivi mobili */
-  }
-
-  .logo {
-    width: 40px; /* Riduci la dimensione del logo sui dispositivi mobili */
-  }
-
   .cookie-popup {
-    width: calc(100% - 40px); /* Rende il popup più largo sui dispositivi mobili */
-    left: 20px; /* Mantiene il margine sinistro */
-    bottom: 10px; /* Riduci la distanza dal bordo inferiore */
-    padding: 15px; /* Riduci il padding del popup */
+    width: 90%; /* Popup occupa il 90% della larghezza dello schermo */
+    left: 5%;   /* Centra il popup orizzontalmente */
+    padding: 15px; /* Riduce il padding */
+    bottom: 10px;  /* Aumenta lo spazio dal bordo inferiore */
+  }
+
+  .cookie-button {
+    padding: 8px 15px; /* Riduce il padding del pulsante */
+    font-size: 14px;   /* Riduce la dimensione del testo del pulsante */
+  }
+
+  .cookie-content {
+    gap: 8px; /* Riduce lo spazio tra gli elementi */
   }
 }
 
+/* Schermi molto piccoli come smartphone in verticale (max larghezza: 480px) */
 @media (max-width: 480px) {
-  header {
-    padding: 10px 2%; /* Ulteriormente riduci il padding per piccoli schermi */
-  }
-
-  .logo {
-    width: 30px; /* Riduci ulteriormente la dimensione del logo sui piccoli dispositivi */
-  }
-
   .cookie-popup {
-    width: calc(100% - 20px); /* Rende il popup quasi a larghezza intera sui piccoli dispositivi */
-    left: 10px; /* Riduci il margine sinistro sui piccoli dispositivi */
-    bottom: 10px; /* Mantieni il margine inferiore */
-    padding: 10px; /* Riduci ulteriormente il padding del popup */
+    width: 100%;   /* Il popup occupa tutta la larghezza dello schermo */
+    left: 0;       /* Rimuove il margine laterale */
+    padding: 10px; /* Riduce ulteriormente il padding */
+    bottom: 5px;   /* Riduce lo spazio dal bordo inferiore */
+    border-radius: 0; /* Rimuove i bordi arrotondati per uno stile più semplice */
   }
 
+  .cookie-button {
+    padding: 6px 10px;  /* Riduce ulteriormente il padding del pulsante */
+    font-size: 12px;    /* Riduce ancora di più la dimensione del testo del pulsante */
+  }
+
+  .cookie-content {
+    gap: 5px;  /* Riduce ancora di più lo spazio tra gli elementi */
+  }
+}
+
+/* Schermi grandi come desktop (min larghezza: 1200px) */
+@media (min-width: 1200px) {
+  .cookie-popup {
+    width: 350px;  /* Aumenta leggermente la larghezza del popup su schermi grandi */
+    padding: 25px; /* Aumenta il padding */
+  }
+
+  .cookie-button {
+    padding: 12px 25px;  /* Aumenta il padding del pulsante */
+    font-size: 16px;     /* Aumenta la dimensione del testo del pulsante */
+  }
+}
 
 
-/* Stile per il menu di navigazione dell'header */
 header .navbar ul {
   font-family: "kromosius";
   list-style: none;
@@ -163,6 +221,66 @@ header .navbar ul li a:hover {
   align-items: center;
 }
 
+/* Responsive Design */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  header .navbar ul {
+    flex-direction: column; /* Disposizione verticale della lista */
+    align-items: center;    /* Centra gli elementi della lista */
+  }
+
+  header .navbar ul li {
+    margin-right: 0;       /* Rimuove il margine a destra */
+    margin-bottom: 10px;   /* Aggiunge spazio tra gli elementi della lista */
+  }
+
+  header .navbar ul li a {
+    font-size: 18px;       /* Riduce la dimensione del font per adattarsi meglio agli schermi piccoli */
+    padding: 8px;          /* Riduce il padding */
+  }
+
+  .header-right {
+    flex-direction: column; /* Disposizione verticale degli elementi a destra dell'header */
+    margin-top: 10px;       /* Aggiunge spazio sopra gli elementi */
+  }
+}
+
+/* Per schermi molto piccoli (max larghezza: 480px) */
+@media (max-width: 480px) {
+  header .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .navbar ul li {
+    margin-bottom: 5px;    /* Riduce lo spazio tra gli elementi della lista */
+  }
+
+  header .navbar ul li a {
+    font-size: 16px;       /* Riduce ulteriormente la dimensione del testo */
+    padding: 6px;          /* Riduce ulteriormente il padding */
+  }
+
+  .header-right {
+    flex-direction: column;
+    margin-top: 5px;       /* Riduce il margine sopra gli elementi della sezione destra */
+  }
+}
+
+/* Per schermi grandi (min larghezza: 1200px) */
+@media (min-width: 1200px) {
+  header .navbar ul li a {
+    font-size: 22px;       /* Aumenta la dimensione del testo su schermi molto grandi */
+    padding: 12px;         /* Aumenta il padding per una migliore leggibilità */
+  }
+
+  .header-right {
+    margin-top: 0;         /* Rimuove il margine verticale, se c'è */
+  }
+}
+
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -170,7 +288,8 @@ header .navbar ul li a:hover {
   border-radius: 20px;
   padding: 5px 10px;
   background-color: #fff;
-  margin-right: 10px; 
+  margin-right: 10px;
+  max-width: 100%; /* Aggiunto per evitare overflow */
 }
 
 .search-bar input[type="text"] {
@@ -178,7 +297,7 @@ header .navbar ul li a:hover {
   outline: none;
   padding: 5px;
   border-radius: 20px;
-  width: 120px; 
+  width: 120px; /* Valore iniziale per desktop */
 }
 
 .search-bar button {
@@ -190,47 +309,145 @@ header .navbar ul li a:hover {
   font-weight: bold;
 }
 
+/* Responsive Design */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100%;               /* La barra di ricerca occupa tutta la larghezza disponibile */
+    margin-right: 0;           /* Rimuove il margine a destra */
+    padding: 5px;              /* Riduce il padding */
+    justify-content: space-between; /* Spazia in modo uniforme l'input e il pulsante */
+  }
+
+  .search-bar input[type="text"] {
+    width: calc(100% - 60px);  /* Adatta la larghezza dell'input al contenitore */
+    padding: 8px;              /* Aggiunge un po' di padding per schermi piccoli */
+  }
+
+  .search-bar button {
+    font-size: 20px;           /* Riduce la dimensione del pulsante */
+  }
+}
+
+/* Per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  .search-bar {
+    width: 100%;
+    padding: 5px;              /* Mantiene un padding compatto */
+  }
+
+  .search-bar input[type="text"] {
+    width: calc(100% - 50px);  /* Adatta ulteriormente la larghezza dell'input */
+    font-size: 14px;           /* Riduce la dimensione del testo per l'input */
+    padding: 6px;              /* Aggiunge un padding leggermente maggiore */
+  }
+
+  .search-bar button {
+    font-size: 18px;           /* Riduce ulteriormente la dimensione del pulsante */
+  }
+}
+
+/* Stile per i link del carrello */
 .cart a {
   color: #e88a8a;
-  font-size: 24px;
+  font-size: 24px; /* Dimensione predefinita per schermi grandi */
+  text-decoration: none; /* Rimuove la sottolineatura dai link */
 }
 
-.cart a:hover {
-  color: #e88a8a;
+
+/* Responsive Design */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .cart a {
+    font-size: 20px; /* Riduce la dimensione del testo per schermi medi */
+  }
 }
+
+/* Per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  .cart a {
+    font-size: 18px; /* Riduce ulteriormente la dimensione del testo per schermi piccoli */
+  }
+}
+
+/* Per schermi extra-large (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .cart a {
+    font-size: 28px; /* Aumenta la dimensione del testo per schermi molto grandi */
+  }
+}
+
 
 /* Stile per il contenitore del profilo */
+/* Stile per il profilo */
 .profile {
   display: inline-block;
-  margin-right: 15px; /* Spazio tra profilo e carrello */
   font-family: 'Kromosius', sans-serif;
 }
 
+/* Stile per i link del profilo */
 .profile a {
   color: #e88a8a;
-  font-size: 24px;
+  font-size: 24px; /* Dimensione predefinita per schermi grandi */
+  text-decoration: none; /* Rimuove la sottolineatura dai link */
 }
 
+/* Stile per le icone del profilo */
 .profile i {
   margin-right: 5px;
 }
 
+/* Responsive Design */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .profile {
+    margin-right: 10px; /* Riduce lo spazio tra profilo e carrello per schermi medi */
+  }
+
+  .profile a {
+    font-size: 20px; /* Riduce la dimensione del testo per schermi medi */
+  }
+}
+
+/* Per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  .profile {
+    margin-right: 5px; /* Riduce ulteriormente lo spazio tra profilo e carrello per schermi piccoli */
+  }
+
+  .profile a {
+    font-size: 18px; /* Riduce ulteriormente la dimensione del testo per schermi piccoli */
+  }
+}
+
+/* Per schermi extra-large (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .profile a {
+    font-size: 28px; /* Aumenta la dimensione del testo per schermi molto grandi */
+  }
+}
+
+
 .container {
-  max-width: 920px; /* Modifica il valore a 920px, sembra un errore nel valore iniziale di 9200px */
+  max-width: 9200px;
   margin: 0 auto;
 }
 
-.titolo {
-  font-family: "kromosius";
-  text-align: center;
+.titolo{
+font-family: "kromosius";
+text-align: center;
 } 
 
+/* Stile base per il pulsante Back to Top */
 .back-to-top {
   position: fixed;
-  bottom: 80px;    /* Distanza dal fondo della finestra */
-  right: 20px;     /* Distanza dal lato destro della finestra */
+  bottom: 80px; /* Distanza dal fondo della finestra */
+  right: 20px; /* Distanza dal lato destro della finestra */
   background-color: rgb(218, 182, 182); /* Colore di sfondo del pulsante */
-  color: #fff;     /* Colore del testo */
+  color: #fff; /* Colore del testo */
   padding: 15px 20px;
   border-radius: 50px;
   font-size: 16px;
@@ -238,14 +455,39 @@ header .navbar ul li a:hover {
   text-decoration: none; /* Rimuove la sottolineatura dal link */
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out;
-  z-index: 1000;   /* Assicura che il pulsante sia sempre sopra gli altri contenuti */
+  z-index: 1000; /* Assicura che il pulsante sia sempre sopra gli altri contenuti */
+  font-family: "Kromosius"; /* Font del pulsante */
 }
 
+/* Stile al passaggio del mouse */
 .back-to-top:hover {
   background-color: #da7070; /* Cambia colore al passaggio del mouse */
 }
 
+/* Media Queries */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 60px; /* Riduci la distanza dal fondo */
+    right: 15px; /* Riduci la distanza dal lato destro */
+    padding: 12px 15px; /* Riduci il padding */
+    font-size: 14px; /* Riduci la dimensione del testo */
+  }
+}
+
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 50px; /* Ulteriore riduzione della distanza dal fondo */
+    right: 10px; /* Ulteriore riduzione della distanza dal lato destro */
+    padding: 10px 12px; /* Ulteriore riduzione del padding */
+    font-size: 12px; /* Ulteriore riduzione della dimensione del testo */
+  }
+}
+
 /* Stile generale per il contenitore del chatbot */
+/* Stile generale per il chatbot */
 #chatbot {
   position: fixed;
   bottom: 20px;
@@ -330,118 +572,66 @@ header .navbar ul li a:hover {
 }
 
 /* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
-  header .navbar ul {
-    flex-direction: column; /* Cambia la disposizione dei link in colonna per schermi più piccoli */
-  }
-
-  header .navbar ul li {
-    margin-right: 0;
-    margin-bottom: 10px; /* Aggiungi margine tra gli elementi della lista */
-  }
-
-  header .navbar ul li a {
-    font-size: 18px; /* Riduci la dimensione del testo */
-    padding: 8px; /* Riduci il padding */
-  }
-
-  .search-bar {
-    width: 100%; /* Fai in modo che la barra di ricerca occupi tutta la larghezza disponibile */
-    margin-right: 0; /* Rimuovi il margine destro */
-  }
-
-  .search-bar input[type="text"] {
-    width: calc(100% - 60px); /* Adatta la larghezza dell'input per adattarsi alla barra di ricerca */
-  }
-
-  .search-bar button {
-    font-size: 20px; /* Riduci la dimensione del font */
-  }
-
-  .cart a,
-  .profile a {
-    font-size: 20px; /* Riduci la dimensione del font per i link */
-  }
-
-  .profile {
-    margin-right: 10px; /* Riduci il margine destro */
-  }
-
-  .container {
-    max-width: 100%; /* Adatta il contenitore alla larghezza dello schermo */
-  }
-
-  .back-to-top {
-    bottom: 20px; /* Riduci la distanza dal fondo per schermi più piccoli */
-    right: 10px; /* Riduci la distanza dal lato destro */
-    padding: 10px 15px; /* Riduci il padding */
-    font-size: 14px; /* Riduci la dimensione del font */
-  }
-
   #chatbot {
-    width: 150px; /* Riduci la larghezza del chatbot per schermi più piccoli */
+    width: 150px; /* Riduce la larghezza del bottone del chatbot per schermi più piccoli */
+  }
+
+  .chatbot-button {
+    padding: 12px; /* Riduce il padding del bottone del chatbot */
+    font-size: 14px; /* Riduce la dimensione del testo del bottone */
   }
 
   .chatbot-window {
-    width: 250px; /* Riduci la larghezza della finestra del chatbot */
-    bottom: 80px; /* Adatta la posizione della finestra del chatbot */
+    width: 250px; /* Riduce la larghezza della finestra del chatbot */
+    bottom: 100px; /* Adatta la posizione della finestra del chatbot */
+  }
+
+  .chatbot-window h2 {
+    font-size: 16px; /* Riduce la dimensione del testo dell'intestazione */
+  }
+
+  .chat-content {
+    max-height: 250px; /* Riduce l'altezza massima del contenuto della chat */
+  }
+
+  .chat-input {
+    font-size: 12px; /* Riduce la dimensione del testo dell'input */
   }
 }
 
+/* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
-  header .navbar ul {
-    flex-direction: column; /* Mantieni la disposizione dei link in colonna per schermi molto piccoli */
-  }
-
-  header .navbar ul li {
-    margin-bottom: 5px; /* Riduci il margine tra gli elementi della lista */
-  }
-
-  header .navbar ul li a {
-    font-size: 16px; /* Riduci ulteriormente la dimensione del testo */
-    padding: 6px; /* Riduci il padding */
-  }
-
-  .search-bar input[type="text"] {
-    width: calc(100% - 50px); /* Adatta la larghezza dell'input per schermi molto piccoli */
-  }
-
-  .search-bar button {
-    font-size: 18px; /* Riduci ulteriormente la dimensione del font */
-  }
-
-  .cart a,
-  .profile a {
-    font-size: 18px; /* Riduci ulteriormente la dimensione del font per i link */
-  }
-
-  .profile {
-    margin-right: 5px; /* Riduci il margine destro */
-  }
-
-  .container {
-    padding: 0 10px; /* Aggiungi un po' di padding laterale per i dispositivi più piccoli */
-    max-width: 100%; /* Mantieni la larghezza del contenitore adattabile */
-  }
-
-  .back-to-top {
-    bottom: 10px; /* Riduci ulteriormente la distanza dal fondo */
-    right: 5px; /* Riduci ulteriormente la distanza dal lato destro */
-    padding: 8px 10px; /* Riduci ulteriormente il padding */
-    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
-  }
-
   #chatbot {
-    width: 130px; /* Riduci ulteriormente la larghezza del chatbot per schermi molto piccoli */
+    width: 130px; /* Riduce ulteriormente la larghezza del bottone del chatbot */
+  }
+
+  .chatbot-button {
+    padding: 10px; /* Riduce ulteriormente il padding del bottone del chatbot */
+    font-size: 12px; /* Riduce ulteriormente la dimensione del testo del bottone */
   }
 
   .chatbot-window {
-    width: 200px; /* Riduci ulteriormente la larghezza della finestra del chatbot */
-    bottom: 60px; /* Adatta la posizione della finestra del chatbot */
+    width: 200px; /* Riduce ulteriormente la larghezza della finestra del chatbot */
+    bottom: 80px; /* Adatta ulteriormente la posizione della finestra del chatbot */
   }
 
+  .chatbot-window h2 {
+    font-size: 14px; /* Riduce ulteriormente la dimensione del testo dell'intestazione */
+  }
 
-/* Pulsante di invio */
+  .chat-content {
+    max-height: 200px; /* Riduce ulteriormente l'altezza massima del contenuto della chat */
+  }
+
+  .chat-input {
+    font-size: 10px; /* Riduce ulteriormente la dimensione del testo dell'input */
+  }
+}
+
+/* Stile base per il pulsante di invio */
 .send-button {
   background-color: rgb(218, 182, 182);
   color: white;
@@ -451,24 +641,67 @@ header .navbar ul li a:hover {
   margin-left: 10px;
   cursor: pointer;
   font-size: 13px;
+  transition: background-color 0.3s ease-in-out; /* Transizione per l'effetto hover */
 }
 
 .send-button:hover {
   background-color: #e88a8a;
 }
 
+/* Media Queries */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .send-button {
+    padding: 8px 12px; /* Riduci il padding per schermi più piccoli */
+    font-size: 12px; /* Riduci la dimensione del font */
+    margin-left: 5px; /* Riduci il margine a sinistra */
+  }
+}
+
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+  .send-button {
+    padding: 6px 10px; /* Ulteriore riduzione del padding per schermi molto piccoli */
+    font-size: 11px; /* Ulteriore riduzione della dimensione del font */
+    margin-left: 3px; /* Ulteriore riduzione del margine a sinistra */
+  }
+}
+
+
 /* Stile per la checkbox nascosta (usata per gestire l'apertura e la chiusura) */
 .chatbot-toggle {
   display: none;
 }
 
+
+/* Stile base per il titolo */
 #chisiamo h1 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
-  padding: 0px;
-  font-family: kromosius;
+  padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
+  font-family: Kromosius;
   text-align: center;
 }
+
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  #chisiamo h1 {
+    font-size: 30px; /* Riduci la dimensione del font per schermi più piccoli */
+    padding: 8px; /* Riduci il padding per adattarsi meglio */
+  }
+}
+
+/* Per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  #chisiamo h1 {
+    font-size: 24px; /* Riduci ulteriormente la dimensione del font */
+    padding: 6px; /* Riduci ulteriormente il padding */
+  }
+}
+
 
 #sfondo {
   width: 100%; /* Larghezza totale della pagina */
@@ -486,56 +719,130 @@ header .navbar ul li a:hover {
   transform: translate(-50%, -50%); /* Centra l'immagine nel contenitore */
 }
 
+
+/* Stile base per il banner */
 .banner {
-  background-color: #f9f9f9;
-  padding: 50px 20px;
-  border-radius: 20px;
-  text-align: center;
-  max-width: 1370px;
-  margin: 0 auto;
+  background-color: #f9f9f9; 
+  padding: 50px 20px; 
+  border-radius: 20px; 
+  text-align: center; 
+  max-width: 1370px; 
+  margin: 0 auto; 
 }
 
 .banner h1 {
-  color: #333;
-  font-size: 36px;
-  margin-bottom: 20px;
+  color: #333; 
+  font-size: 36px; 
+  margin-bottom: 20px; 
 }
 
 .banner p {
-  font-family: kromosius;
-  color: black;
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-family: Kromosius ;
+  color: black; 
+  font-size: 18px; 
+  margin-bottom: 30px; 
 }
 
 .banner .button {
-  background-color: rgb(218, 182, 182);
-  color: #fff;
-  padding: 15px 30px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
+  background-color: rgb(218, 182, 182); 
+  color: #fff; 
+  padding: 15px 30px; 
+  border-radius: 25px; 
+  text-decoration: none; 
+  transition: background-color 0.3s ease-in-out; 
 }
 
 .banner .button:hover {
-  background-color: #e88a8a;
+  background-color: #e88a8a; 
 }
 
+/* Media Queries */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .banner {
+    padding: 40px 15px; /* Riduci il padding per schermi più piccoli */
+  }
+
+  .banner h1 {
+    font-size: 30px; /* Riduci la dimensione del font per h1 */
+    margin-bottom: 15px; /* Riduci il margine inferiore */
+  }
+
+  .banner p {
+    font-size: 16px; /* Riduci la dimensione del font per p */
+    margin-bottom: 20px; /* Riduci il margine inferiore */
+  }
+
+  .banner .button {
+    padding: 12px 25px; /* Riduci il padding per la button */
+    font-size: 16px; /* Riduci la dimensione del font per la button */
+  }
+}
+
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+  .banner {
+    padding: 30px 10px; /* Ulteriore riduzione del padding */
+  }
+
+  .banner h1 {
+    font-size: 24px; /* Ulteriore riduzione della dimensione del font per h1 */
+    margin-bottom: 10px; /* Ulteriore riduzione del margine inferiore */
+  }
+
+  .banner p {
+    font-size: 14px; /* Ulteriore riduzione della dimensione del font per p */
+    margin-bottom: 15px; /* Ulteriore riduzione del margine inferiore */
+  }
+
+  .banner .button {
+    padding: 10px 20px; /* Ulteriore riduzione del padding per la button */
+    font-size: 14px; /* Ulteriore riduzione della dimensione del font per la button */
+  }
+}
+
+
+
+/* Stile base per il titolo */
 #inostriprodotti h1 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 18px;
-  padding: 0px;
+  padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
   text-align: center;
+  font-family: Kromosius;
 }
 
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  #inostriprodotti h1 {
+    font-size: 28px; /* Riduci la dimensione del font per schermi più piccoli */
+    padding: 8px; /* Riduci il padding per adattarsi meglio */
+  }
+}
+
+/* Per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  #inostriprodotti h1 {
+    font-size: 24px; /* Riduci ulteriormente la dimensione del font */
+    padding: 6px; /* Riduci ulteriormente il padding */
+  }
+}
+
+
+/* Stile base per il contenitore dell'immagine */
 .image-frame {
   border: 2px solid rgb(218, 182, 182);
   padding: 20px;
   margin: 20px;
   border-radius: 18px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Kromosius';
 }
 
+/* Stile per il contenitore delle immagini dei prodotti */
 .image-container-products {
   display: flex;
   justify-content: space-around;
@@ -544,78 +851,209 @@ header .navbar ul li a:hover {
   margin-top: 20px;
 }
 
+/* Stile per ogni div all'interno del contenitore */
 .image-container-products div {
   text-align: center;
   margin: 10px;
   flex: 1;
 }
 
+/* Stile per le immagini all'interno del contenitore */
 .image-container-products img {
   width: 75%;
   height: auto;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
+/* Effetto hover per le immagini */
 .image-container-products div:hover img {
   transform: scale(1.1);
   filter: brightness(80%);
 }
 
+/* Stile per i paragrafi sotto le immagini */
 .image-container-products p {
   margin-top: 10px;
   font-size: 16px;
   color: #333;
 }
 
-.reviews {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+/* Margine specifico per il primo elemento */
+.image-container-products:nth-child(1) div {
+  margin-right: 20%;
 }
 
-.reviews span {
-  color: rgb(218, 182, 182);
-  font-size: 24px;
-  transition: color 0.5s;
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .image-container-products {
+    justify-content: center; /* Centra gli elementi nel contenitore */
+  }
+
+  .image-container-products div {
+    margin: 10px; /* Riduci il margine per adattarsi meglio */
+    flex: 1 0 45%; /* Permette a due elementi di adattarsi su una riga */
+  }
+
+  .image-container-products img {
+    width: 90%; /* Riduci la larghezza dell'immagine per adattarsi meglio */
+  }
+
+  .image-container-products p {
+    font-size: 14px; /* Riduci la dimensione del font per schermi più piccoli */
+  }
+}
+
+/* Per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  .image-container-products div {
+    flex: 1 0 100%; /* Ogni elemento occupa una riga intera */
+    margin: 5px; /* Riduci ulteriormente il margine */
+  }
+
+  .image-container-products img {
+    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
+  }
+
+  .image-container-products p {
+    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
+  }
+}
+
+
+.reviews {
+   display: flex;
+   justify-content: center;
+   margin-top: 10px;
+}
+
+ .reviews span {
+   color: rgb(218, 182, 182);
+   font-size: 24px;
+   transition: color 0.5s;
 }
 
 .reviews span:hover {
+   color: #e88a8a; 
+}
+
+/* Stile per le stelle delle recensioni */
+.image-container-products:nth-child(1) .fa-star.checked:nth-child(-n+4),
+.image-container-products:nth-child(2) .fa-star.checked:nth-child(-n+4),
+.image-container-products:nth-child(3) .fa-star.checked:nth-child(-n+4),
+.image-container-products:nth-child(4) .fa-star.checked:nth-child(-n+4) {
   color: #e88a8a;
 }
 
+/* Stile per gli elementi evidenziati */
 .highlighted {
   color: #e88a8a;
 }
 
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .image-container-products .fa-star {
+    font-size: 20px; /* Riduci la dimensione delle stelle per schermi più piccoli */
+  }
+  
+  .highlighted {
+    font-size: 18px; /* Riduci la dimensione del testo evidenziato per schermi più piccoli */
+  }
+}
+
+/* Per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  .image-container-products .fa-star {
+    font-size: 16px; /* Riduci ulteriormente la dimensione delle stelle per schermi molto piccoli */
+  }
+  
+  .highlighted {
+    font-size: 14px; /* Riduci ulteriormente la dimensione del testo evidenziato per schermi molto piccoli */
+  }
+} 
+
+/* Stile per il contenitore delle stelle */
 .star-container {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
 
+/* Stile per le stelle */
 .star-container span {
   color: rgb(218, 182, 182);
   font-size: 24px;
   transition: color 0.5s;
+  color: #e88a8a;
 }
 
+/* Stile per l'effetto hover sulle stelle */
 .star-container span:hover {
   color: #e88a8a;
 }
 
-#curiositàsuinostriprodotti h1 {
-  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 15px;
-  padding: 0px;
-  text-align: center;
+/* Stile per l'elemento evidenziato */
+.highlighted {
+  color: #e88a8a;
 }
 
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .star-container span {
+    font-size: 20px; /* Riduci la dimensione delle stelle per schermi più piccoli */
+  }
+}
+
+/* Per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  .star-container span {
+    font-size: 16px; /* Riduci ulteriormente la dimensione delle stelle per schermi molto piccoli */
+  }
+}
+
+/* Stile base per gli h1 e h2 */
+#curiositàsuinostriprodotti h1,
 h2 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px;
+  padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
+  text-align: center;
+  font-family: 'Kromosius';
 }
 
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  #curiositàsuinostriprodotti h1 {
+    font-size: 24px; /* Riduci la dimensione del font per gli h1 */
+  }
+
+  h2 {
+    font-size: 20px; /* Riduci la dimensione del font per gli h2 */
+  }
+}
+
+/* Per schermi molto piccoli (max-width: 480px) */
+@media (max-width: 480px) {
+  #curiositàsuinostriprodotti h1 {
+    font-size: 20px; /* Riduci ulteriormente la dimensione del font per gli h1 */
+  }
+
+  h2 {
+    font-size: 16px; /* Riduci ulteriormente la dimensione del font per gli h2 */
+  }
+}
+
+
+
+/* Stile base per il carosello */
 .carousel {
   position: relative;
   width: 80%; /* Adatta la larghezza del carosello */
@@ -652,8 +1090,8 @@ h2 {
 }
 
 .carousel-text p {
-  line-height: 1.5;
   text-align: center;
+  font-family: 'Kromosius';
 }
 
 input[name="carousel"] {
@@ -676,6 +1114,60 @@ input[name="carousel"] {
   margin: 0 5px;
   cursor: pointer;
 }
+
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .carousel {
+    width: 90%; /* Riduci la larghezza del carosello */
+  }
+
+  .carousel-item {
+    padding: 15px; /* Riduci il padding per schermi più piccoli */
+  }
+
+  .carousel-item img {
+    width: 150px; /* Riduci la larghezza dell'immagine */
+    margin-right: 20px; /* Riduci lo spazio tra immagine e testo */
+  }
+
+  .carousel-controls {
+    width: 30%; /* Aumenta la larghezza dei controlli */
+  }
+
+  .carousel-control {
+    width: 12px; /* Riduci la larghezza dei controlli */
+    height: 12px; /* Riduci l'altezza dei controlli */
+  }
+}
+
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+  .carousel {
+    width: 100%; /* Fai in modo che il carosello occupi tutta la larghezza disponibile */
+  }
+
+  .carousel-item {
+    padding: 10px; /* Riduci ulteriormente il padding */
+  }
+
+  .carousel-item img {
+    width: 120px; /* Riduci ulteriormente la larghezza dell'immagine */
+    margin-right: 10px; /* Riduci ulteriormente lo spazio tra immagine e testo */
+  }
+
+  .carousel-controls {
+    width: 40%; /* Aumenta la larghezza dei controlli */
+    bottom: 20px; /* Riduci la distanza dal fondo */
+  }
+
+  .carousel-control {
+    width: 10px; /* Riduci ulteriormente la larghezza dei controlli */
+    height: 10px; /* Riduci ulteriormente l'altezza dei controlli */
+  }
+}
+
 
 #slide1:checked ~ .carousel-images {
   transform: translateX(0%);
@@ -700,190 +1192,59 @@ input[name="carousel"] {
   background-color: white;
 }
 
-/* Media Queries per dispositivi mobili */
-@media (max-width: 768px) {
-  /* Pulsante di invio */
-  .send-button {
-    font-size: 11px; /* Riduci la dimensione del font */
-    padding: 8px 12px; /* Riduci il padding */
-  }
 
-  /* Testi degli h1 */
-  #chisiamo h1, #inostriprodotti h1, #curiositàsuinostriprodotti h1, h2 {
-    font-size: 18px; /* Riduci la dimensione del font */
-    padding: 10px; /* Aggiungi padding per una migliore visualizzazione */
-  }
-
-  /* Immagine di sfondo */
-  #sfondo {
-    height: 200px; /* Riduci l'altezza per schermi più piccoli */
-  }
-
-  .banner {
-    padding: 30px 10px; /* Riduci il padding */
-  }
-
-  .banner h1 {
-    font-size: 28px; /* Riduci la dimensione del font */
-  }
-
-  .banner p {
-    font-size: 16px; /* Riduci la dimensione del font */
-  }
-
-  .banner .button {
-    padding: 12px 24px; /* Riduci il padding */
-    font-size: 14px; /* Riduci la dimensione del font */
-  }
-
-  .image-frame {
-    margin: 10px; /* Riduci il margine */
-  }
-
-  .image-container-products img {
-    width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
-  }
-
-  .carousel {
-    width: 90%; /* Riduci la larghezza del carosello */
-  }
-
-  .carousel-item img {
-    width: 150px; /* Riduci la larghezza dell'immagine */
-    margin-right: 20px; /* Riduci il margine */
-  }
-
-  .carousel-controls {
-    width: 30%; /* Riduci la larghezza dei controlli */
-  }
-}
-
-@media (max-width: 480px) {
-  /* Pulsante di invio */
-  .send-button {
-    font-size: 10px; /* Riduci ulteriormente la dimensione del font */
-    padding: 6px 10px; /* Riduci ulteriormente il padding */
-  }
-
-  /* Testi degli h1 */
-  #chisiamo h1, #inostriprodotti h1, #curiositàsuinostriprodotti h1, h2 {
-    font-size: 16px; /* Riduci ulteriormente la dimensione del font */
-  }
-
-  /* Immagine di sfondo */
-  #sfondo {
-    height: 150px; /* Riduci ulteriormente l'altezza */
-  }
-
-  .banner {
-    padding: 20px 5px; /* Riduci ulteriormente il padding */
-  }
-
-  .banner h1 {
-    font-size: 22px; /* Riduci ulteriormente la dimensione del font */
-  }
-
-  .banner p {
-    font-size: 14px; /* Riduci ulteriormente la dimensione del font */
-  }
-
-  .banner .button {
-    padding: 10px 20px; /* Riduci ulteriormente il padding */
-    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
-  }
-
-  .image-frame {
-    margin: 5px; /* Riduci ulteriormente il margine */
-  }
-
-  .carousel {
-    width: 100%; /* Imposta la larghezza al 100% */
-  }
-
-  .carousel-item img {
-    width: 100px; /* Riduci ulteriormente la larghezza dell'immagine */
-    margin-right: 10px; /* Riduci ulteriormente il margine */
-  }
-
-  .carousel-controls {
-    width: 40%; /* Riduci ulteriormente la larghezza dei controlli */
-  }
-
-
-
-/* Newsletter Bar */
-.newsletter-bar {
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  border-radius: 18px;
-}
-
-.newsletter-bar h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: black;
-}
-
-.newsletter-bar p {
-  font-size: 15px;
-  margin-bottom: 20px;
-  color: black;
-}
-
-.newsletter-bar .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.newsletter-bar input[type="email"] {
-  padding: 15px;
-  font-size: 18px;
-  border-radius: 18px;
-  border: none;
-  width: 70%;
-  margin-bottom: 10px;
-}
-
-.newsletter-bar button {
-  padding: 15px 30px;
-  font-size: 18px;
-  border-radius: 18px;
-  border: none;
-  cursor: pointer;
-  background-color: rgb(218, 182, 182);
-  color: white;
-  font-family: Kromosius;
-}
-
-.newsletter-bar button:hover {
-  background-color: #e88a8a;
-  transition: background-color 0.3s ease-in-out;
-}
-
-/* Dov'è Trovarci */
 #dovetrovarci {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
-  padding: 0px;
   text-align: center;
+  font-family: Kromosius;
 }
 
-/* Privacy Policy */
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  #dovetrovarci {
+    padding: 15px; /* Riduci il padding per schermi più piccoli */
+  }
+}
+
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+  #dovetrovarci {
+    padding: 10px; /* Riduci ulteriormente il padding per schermi molto piccoli */
+  }
+}
+
 .privacy-policy {
   color: black;
 }
 
-/* Servizi che Offriamo */
 #iservizicheoffriamo .container {
   background: rgb(218, 182, 182);
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
-  padding: 0px;
+  padding: 10px; /* Aggiungi padding per schermi più grandi */
   text-align: center;
 }
 
-/* Service Section */
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  #iservizicheoffriamo .container {
+    padding: 15px; /* Riduci il padding per schermi più piccoli */
+  }
+}
+
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+  #iservizicheoffriamo .container {
+    padding: 10px; /* Riduci ulteriormente il padding per schermi molto piccoli */
+  }
+}
+
+
 .service-section {
   background-color: #f9f9f9;
   padding: 50px 20px;
@@ -921,86 +1282,308 @@ input[name="carousel"] {
   background-color: #e88a8a;
 }
 
-/* Promo Bar */
-.promo-bar {
-  background-color: rgb(218, 182, 182);
-  padding: 50px 250px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
+/* Media Queries */
+
+/* Per schermi più piccoli di 1024px (grandi tablet e piccoli desktop) */
+@media (max-width: 1024px) {
+  .service-section {
+    padding: 40px 15px; /* Riduci il padding */
+  }
+
+  .service-section h1 {
+    font-size: 32px; /* Riduci la dimensione del font */
+  }
+
+  .service-section .service-description {
+    font-size: 16px; /* Riduci la dimensione del font */
+    margin-bottom: 20px; /* Riduci il margine inferiore */
+  }
+
+  .service-section .service-cta .button {
+    padding: 12px 25px; /* Riduci il padding del bottone */
+  }
+}
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .service-section {
+    padding: 30px 10px; /* Riduci ulteriormente il padding */
+  }
+
+  .service-section h1 {
+    font-size: 28px; /* Riduci ulteriormente la dimensione del font */
+  }
+
+  .service-section .service-description {
+    font-size: 14px; /* Riduci ulteriormente la dimensione del font */
+    margin-bottom: 15px; /* Riduci ulteriormente il margine inferiore */
+  }
+
+  .service-section .service-cta .button {
+    padding: 10px 20px; /* Riduci ulteriormente il padding del bottone */
+  }
+}
+
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+  .service-section {
+    padding: 20px 5px; /* Riduci ulteriormente il padding */
+  }
+
+  .service-section h1 {
+    font-size: 24px; /* Riduci ulteriormente la dimensione del font */
+  }
+
+  .service-section .service-description {
+    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
+    margin-bottom: 10px; /* Riduci ulteriormente il margine inferiore */
+  }
+
+  .service-section .service-cta .button {
+    padding: 8px 15px; /* Riduci ulteriormente il padding del bottone */
+  }
+}
+
+
+.newsletter-bar {
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 18px;
+}
+
+.newsletter-bar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black; 
+}
+
+.newsletter-bar p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: black; 
+}
+
+.newsletter-bar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsletter-bar input[type="email"] {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 18px;
+  border: none;
+  width: 70%;
+  margin-bottom: 10px;
   font-family: Kromosius;
 }
 
+.newsletter-bar button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(218, 182, 182);
+  color: white;
+  font-family: Kromosius;
+}
+
+.newsletter-bar button:hover {
+  background-color: #e88a8a;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Media Queries per dispositivi mobili */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  .newsletter-bar h2 {
+    font-size: 20px; /* Riduci la dimensione del font per i titoli */
+    margin-bottom: 15px; /* Riduci il margine inferiore */
+  }
+
+  .newsletter-bar p {
+    font-size: 14px; /* Riduci la dimensione del font per il testo */
+    margin-bottom: 15px; /* Riduci il margine inferiore */
+  }
+
+  .newsletter-bar input[type="email"] {
+    width: 80%; /* Aumenta la larghezza per schermi più piccoli */
+    padding: 12px; /* Riduci il padding */
+    font-size: 16px; /* Riduci la dimensione del font */
+  }
+
+  .newsletter-bar button {
+    padding: 12px 25px; /* Riduci il padding per i pulsanti */
+    font-size: 16px; /* Riduci la dimensione del font per i pulsanti */
+  }
+}
+
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+  .newsletter-bar h2 {
+    font-size: 18px; /* Riduci ulteriormente la dimensione del font per i titoli */
+    margin-bottom: 10px; /* Riduci ulteriormente il margine inferiore */
+  }
+
+  .newsletter-bar p {
+    font-size: 13px; /* Riduci ulteriormente la dimensione del font per il testo */
+    margin-bottom: 10px; /* Riduci ulteriormente il margine inferiore */
+  }
+
+  .newsletter-bar input[type="email"] {
+    width: 90%; /* Fai in modo che l'input occupi quasi tutta la larghezza disponibile */
+    padding: 10px; /* Riduci ulteriormente il padding */
+    font-size: 14px; /* Riduci ulteriormente la dimensione del font */
+  }
+
+  .newsletter-bar button {
+    padding: 10px 20px; /* Riduci ulteriormente il padding per i pulsanti */
+    font-size: 14px; /* Riduci ulteriormente la dimensione del font per i pulsanti */
+  }
+}
+
+.promo-bar {
+    background-color: rgb(218, 182, 182); /* Colore di sfondo rosa */
+    padding: 50px 250px; /* Spaziatura */
+    display: flex; /* Disposizione flessibile */
+    justify-content: space-between; /* Spaziatura tra gli elementi */
+    align-items: center; /* Allinea verticalmente gli elementi */
+    color: #fff; /* Colore del testo */
+    font-family: Kromosius; /* Font del testo */
+}
+
 .promo-item {
-  display: flex;
-  align-items: center;
+    display: flex; /* Disposizione flessibile per icona e testo */
+    align-items: center; /* Allinea verticalmente icona e testo */
 }
 
 .promo-item i {
-  font-size: 60px;
-  color: #e88a8a;
-  margin-right: 20px;
+    font-size: 60px; /* Dimensione dell'icona */
+    color: #e88a8a; /* Colore dell'icona */
+    margin-right: 20px; /* Spaziatura tra icona e testo */
 }
 
 .promo-text p {
-  margin: 0;
-  line-height: 1.2;
+    margin: 0; /* Rimuove il margine dai paragrafi */
+    line-height: 1.2; /* Altezza linea per il testo */
 }
 
-.promo-bar .promo-item:first-child {
-  margin-right: auto;
+/* Media Queries */
+
+/* Per schermi più piccoli di 1024px (grandi tablet e piccoli desktop) */
+@media (max-width: 1024px) {
+    .promo-bar {
+        padding: 40px 150px; /* Riduci il padding per adattare meglio su schermi più piccoli */
+    }
 }
 
-.promo-bar .promo-item:last-child {
-  margin-left: auto;
-  text-align: right;
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+    .promo-bar {
+        flex-direction: column; /* Disposizione verticale per adattarsi meglio su schermi più piccoli */
+        padding: 30px 20px; /* Riduci ulteriormente il padding */
+        text-align: center; /* Allinea il testo al centro */
+    }
+
+    .promo-item {
+        margin-bottom: 20px; /* Spazio tra gli elementi nella disposizione verticale */
+        justify-content: center; /* Centra gli elementi */
+    }
+
+    .promo-item i {
+        margin-right: 0; /* Rimuovi la spaziatura tra icona e testo nella disposizione verticale */
+        margin-bottom: 10px; /* Aggiungi spazio sotto l'icona */
+    }
 }
 
-/* Footer */
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+    .promo-bar {
+        padding: 20px 10px; /* Riduci ulteriormente il padding */
+    }
+
+    .promo-item i {
+        margin-bottom: 10px; /* Aggiungi spazio sotto l'icona */
+    }
+}
+
+
 footer {
-  background-color: rgb(218, 182, 182);
-  padding: 20px 0;
-  color: #fff;
-  text-align: center;
+  background-color: rgb(218, 182, 182); /* Sfondo scuro per il footer */
+  padding: 20px 0; /* Spazio interno al footer */
+  color: #fff; /* Colore del testo */
+  text-align: center; /* Centra il testo */
 }
 
 footer .container {
-  max-width: 960px;
-  margin: 0 auto;
+  max-width: 960px; /* Larghezza massima del contenitore */
+  margin: 0 auto; /* Centro del contenitore */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 footer p {
-  margin: 10px 0;
+  margin: 10px 0; /* Margine tra il testo e gli elementi circostanti */
 }
 
+/* Stili per la sezione dei social media */
 footer .social-media {
-  list-style: none;
+  list-style: none; /* Rimuove i punti elenco */
   padding: 0;
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+  justify-content: center; /* Centra le icone orizzontalmente */
+  gap: 15px; /* Spazio tra le icone */
+  margin-top: 15px; /* Spazio tra il testo e le icone */
 }
 
 footer .social-media li {
-  display: inline-block;
+  display: inline-block; /* Dispone le icone in linea */
 }
 
 footer .social-media a {
-  color: #fff;
-  font-size: 24px;
-  transition: color 0.3s ease-in-out;
+  color: #fff; /* Colore delle icone */
+  font-size: 24px; /* Dimensione delle icone */
+  transition: color 0.3s ease-in-out; /* Transizione per l'effetto hover */
 }
 
 footer .social-media a:hover {
-  color: #e88a8a;
+  color: #e88a8a; /* Cambia colore al passaggio del mouse */
 }
 
-/* Popup Notifica */
+/* Media Queries */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 10px; /* Riduci il padding per adattare meglio su schermi più piccoli */
+  }
+
+  footer .social-media {
+    gap: 10px; /* Riduci lo spazio tra le icone */
+  }
+
+  footer .social-media a {
+    font-size: 20px; /* Riduci la dimensione delle icone */
+  }
+}
+
+/* Per schermi molto piccoli (480px e meno) */
+@media (max-width: 480px) {
+  footer .social-media {
+    flex-direction: column; /* Disposizione verticale delle icone per schermi molto piccoli */
+    gap: 10px; /* Riduci lo spazio tra le icone */
+  }
+
+  footer .social-media a {
+    font-size: 18px; /* Riduci ulteriormente la dimensione delle icone */
+  }
+}
+
+
 .notification-popup {
   display: flex;
   position: fixed;
@@ -1020,9 +1603,9 @@ footer .social-media a:hover {
   padding: 20px;
   border-radius: 8px;
   max-width: 500px;
-  width: 100%;
+  width: 90%; /* Aumenta la larghezza per schermi più piccoli */
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
@@ -1061,6 +1644,7 @@ footer .social-media a:hover {
   color: #333;
 }
 
+/* Nascondi il popup quando il checkbox non è selezionato */
 .popup-toggle:checked ~ .notification-popup {
   transform: translateX(0);
   opacity: 1;
@@ -1072,112 +1656,43 @@ footer .social-media a:hover {
   pointer-events: none;
 }
 
-/* Media Queries per dispositivi mobili */
+/* Media Queries */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
-  /* Newsletter Bar */
-  .newsletter-bar input[type="email"] {
-    width: 80%; /* Riduci la larghezza dell'input */
-    padding: 12px;
-    font-size: 16px;
+  .notification-popup .notification-content {
+    max-width: 90%;
+    width: 90%; /* Adatta meglio la larghezza */
+    padding: 15px; /* Riduci il padding per adattare il contenuto */
   }
 
-  .newsletter-bar button {
-    padding: 12px 20px;
-    font-size: 16px;
+  .notification-popup .notification-content .button {
+    font-size: 14px; /* Riduci la dimensione del testo del pulsante */
+    padding: 8px 16px; /* Riduci il padding del pulsante */
   }
 
-  /* Service Section */
-  .service-section {
-    padding: 30px 10px; /* Riduci il padding */
-  }
-
-  .service-section h1 {
-    font-size: 28px; /* Riduci la dimensione del font */
-  }
-
-  .service-section .service-description {
-    font-size: 16px; /* Riduci la dimensione del font */
-  }
-
-  .service-section .service-cta .button {
-    padding: 12px 24px; /* Riduci il padding */
-    font-size: 14px; /* Riduci la dimensione del font */
-  }
-
-  /* Promo Bar */
-  .promo-bar {
-    padding: 30px 20px; /* Riduci il padding */
-    flex-direction: column; /* Disposizione verticale per schermi piccoli */
-  }
-
-  .promo-item {
-    margin-bottom: 20px; /* Spazio tra gli elementi */
-  }
-
-  .promo-item i {
-    font-size: 40px; /* Riduci la dimensione dell'icona */
-    margin-right: 15px; /* Riduci lo spazio tra icona e testo */
-  }
-
-  /* Footer */
-  footer .container {
-    padding: 0 15px; /* Riduci il padding laterale */
-  }
-
-  footer .social-media {
-    gap: 10px; /* Riduci lo spazio tra le icone */
-  }
-
-  footer .social-media a {
-    font-size: 20px; /* Riduci la dimensione delle icone */
+  .notification-popup .close-btn {
+    font-size: 20px; /* Riduci la dimensione dell'icona di chiusura */
   }
 }
 
+/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
-  /* Newsletter Bar */
-  .newsletter-bar input[type="email"] {
-    width: 90%; /* Riduci ulteriormente la larghezza dell'input */
-    padding: 10px;
-    font-size: 14px;
+  .notification-popup .notification-content {
+    max-width: 95%;
+    width: 95%; /* Ulteriore adattamento della larghezza */
+    padding: 10px; /* Riduci ulteriormente il padding */
   }
 
-  .newsletter-bar button {
-    padding: 10px 15px;
-    font-size: 14px;
+  .notification-popup .notification-content .button {
+    font-size: 12px; /* Riduci ulteriormente la dimensione del testo del pulsante */
+    padding: 6px 12px; /* Riduci ulteriormente il padding del pulsante */
   }
 
-  /* Service Section */
-  .service-section {
-    padding: 20px 5px; /* Riduci ulteriormente il padding */
+  .notification-popup .close-btn {
+    font-size: 18px; /* Riduci ulteriormente la dimensione dell'icona di chiusura */
   }
-
-  .service-section h1 {
-    font-size: 22px; /* Riduci ulteriormente la dimensione del font */
-  }
-
-  .service-section .service-description {
-    font-size: 14px; /* Riduci ulteriormente la dimensione del font */
-  }
-
-  .service-section .service-cta .button {
-    padding: 10px 20px; /* Riduci ulteriormente il padding */
-    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
-  }
-
-  /* Promo Bar */
-  .promo-bar {
-    padding: 20px 10px; /* Riduci ulteriormente il padding */
-  }
-
-  .promo-item i {
-    font-size: 30px; /* Riduci ulteriormente la dimensione dell'icona */
-    margin-right: 10px; /* Riduci ulteriormente lo spazio tra icona e testo */
-  }
-
-  /* Footer */
-  footer .social-media a {
-    font-size: 18px; /* Riduci ulteriormente la dimensione delle icone */
-  }
+}
 
 
 
