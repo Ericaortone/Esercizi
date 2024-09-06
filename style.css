@@ -10,7 +10,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: 'kromosius', sans-serif; 
+  font-family: kromosius, 
 }
 
 
@@ -184,7 +184,8 @@ header .navbar ul li a:hover {
 }
 
 .titolo{
-font-family: "kromosius"  
+font-family: "kromosius";
+text-align: center;
 } 
 
 .back-to-top {
@@ -229,7 +230,7 @@ font-family: "kromosius"
   border: none;
   cursor: pointer;
   font-size: 16px;
-  font-family: 'Kromosius', sans-serif;
+  font-family: Kromosius;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -317,7 +318,8 @@ font-family: "kromosius"
     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px; 
-  font-family: "kromosius"
+  font-family: kromosius;
+  text-align: center;
 }
 
 #sfondo {
@@ -353,7 +355,7 @@ font-family: "kromosius"
   }
 
   .banner p {
-    font-family: "kromosius"
+    font-family: kromosius;
     color: black; 
     font-size: 18px; 
     margin-bottom: 30px; 
@@ -376,6 +378,7 @@ font-family: "kromosius"
     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 18px;
   padding: 0px;
+  text-align: center;
 }
 
 .image-frame {
@@ -474,6 +477,7 @@ font-family: "kromosius"
     background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px;
+  text-align: center;
 }
 
 
@@ -610,6 +614,7 @@ input[name="carousel"] {
   cursor: pointer;
   background-color: rgb(218, 182, 182);
   color: white;
+  font-family: Kromosius;
 }
 
 .newsletter-bar button:hover {
@@ -621,6 +626,7 @@ input[name="carousel"] {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px;
+  text-align: center;
 }
 
 
@@ -633,6 +639,7 @@ input[name="carousel"] {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px; 
   padding: 0px; 
+  text-align: center;
 }
 
 .service-section {
@@ -821,136 +828,6 @@ footer .social-media a:hover {
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
-}
-
-/* Impedire lo scroll orizzontale */
-html, body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-/* Impostare il box-sizing a border-box */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* Stili generali per dispositivi con larghezza dello schermo inferiore a 768px (tablet e mobile) */
-@media (max-width: 768px) {
-
-    /* Il logo e il menu di navigazione si riducono */
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .logo {
-        width: 70px; /* Riduzione del logo per schermi più piccoli */
-        height: auto;
-    }
-
-    /* Navbar verticalmente */
-    .navbar ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
-    /* La barra di ricerca, il carrello e il profilo si centrano e si ridimensionano */
-    .search-bar, .cart, .profile {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-
-    .search-bar input[type="text"] {
-        width: 100%; /* La barra di ricerca si espande per adattarsi allo schermo */
-        margin-bottom: 10px;
-    }
-
-    /* La disposizione delle immagini dei prodotti diventa a colonna */
-    .image-container-products {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-frame {
-        width: 100%; /* Le immagini occupano tutta la larghezza */
-        padding: 0;
-        margin-bottom: 20px;
-    }
-
-    /* Popup dei cookie centrato e ridimensionato */
-    .cookie-popup {
-        width: 30%;
-        left: 5%;
-        bottom: 10px;
-    }
-
-    /* Promozioni, newsletter e footer centrati e a colonna */
-    .promo-bar, .newsletter-bar, footer {
-        text-align: center;
-        flex-direction: column;
-    }
-
-    .promo-bar .promo-item {
-        margin-bottom: 20px;
-    }
-
-    .newsletter-bar input[type="email"] {
-        width: 100%; /* Campo email che si adatta al dispositivo */
-    }
-
-    /* Adattamento del chatbot */
-    #chatbot {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .chatbot-window {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    /* Stile del carosello */
-    .carousel {
-        width: 100%;
-    }
-
-    .carousel-item img {
-        max-width: 100%; /* Assicurati che non superi la larghezza del contenitore */
-        height: auto; /* Mantiene proporzioni corrette */
-        margin: 0 auto;
-    }
-}
-
-/* Media queries per dispositivi con larghezza inferiore a 480px (smartphone) */
-@media (max-width: 480px) {
-    /* Ulteriore riduzione per schermi molto piccoli */
-    .logo {
-        width: 50px;
-    }
-
-    .navbar ul li {
-        margin-bottom: 8px;
-    }
-
-    .image-frame {
-        width: 95%;
-    }
-
-    .carousel-item img {
-        max-width: 100%; /* Riduce ulteriormente le immagini del carosello per smartphone */
-        height: auto; /* Mantiene proporzioni corrette */
-        margin: 0 auto;
-    }
 }
 
 
