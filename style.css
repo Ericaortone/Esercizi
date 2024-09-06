@@ -830,94 +830,37 @@ footer .social-media a:hover {
   pointer-events: none;
 }
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
-  header {
-    padding: 10px 5%;
-  }
-
-  .search-bar input[type="text"] {
-    width: 100px;
-  }
-
-  .product-grid {
-    gap: 15px;
-  }
-
-  .product-item {
-    width: 280px;
-  }
-}
-
-@media (max-width: 992px) {
-  header .navbar ul {
-    flex-direction: column;
-  }
-
-  header .navbar ul li {
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
-
-  .search-bar {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  ..cookie-popup {
-    width: 250px; /* Larghezza per schermi medi */
-    left: 15px; /* Allineamento più vicino al bordo */
-  }
-
-  .product-grid {
-    flex-direction: column;
-    align-items: center;
-  }
+body {
+  overflow-x: hidden; /* Nasconde l'overflow orizzontale */
 }
 
 @media (max-width: 768px) {
   .banner {
     padding: 30px 10px;
-  }
-
-  .banner h1 {
-    font-size: 28px;
-  }
-
-  .banner p {
-    font-size: 16px;
+    box-sizing: border-box; /* Includi il padding e il bordo nella larghezza totale */
   }
 
   .product-item {
     width: 100%;
-  }
-
-  .chatbot-window {
-    width: 260px;
-  }
-
-  #chatbot {
-    width: 150px;
+    box-sizing: border-box; /* Includi il padding e il bordo nella larghezza totale */
   }
 
   .cookie-popup {
-    width: 220px; /* Larghezza per schermi piccoli */
-    left: 10px;
+    width: 90%; /* Larghezza quasi a tutta la larghezza dello schermo per dispositivi molto piccoli */
+    left: 5%; /* Spazio sul lato sinistro */
+    transform: none; /* Rimuovi la trasformazione se non necessaria */
   }
 }
 
 @media (max-width: 576px) {
-  header .navbar ul li a {
-    font-size: 16px;
-  }
-
   .search-bar input[type="text"] {
     width: 80px;
   }
 
   .cookie-popup {
-    width: 90%; /* Larghezza quasi a tutta la larghezza dello schermo per dispositivi molto piccoli */
-    left: 5%;
+    width: 90%; /* Assicurati che la larghezza sia adeguata */
+    left: 5%; /* Spazio sul lato sinistro */
+    transform: none; /* Rimuovi la trasformazione se non necessaria */
   }
 
   .chat-input {
@@ -936,6 +879,7 @@ footer .social-media a:hover {
     font-size: 14px;
   }
 }
+
   
 
 
