@@ -873,7 +873,7 @@ footer .social-media a:hover {
 
     /* Popup dei cookie centrato e ridimensionato */
     .cookie-popup {
-        width: 90%;
+        width: 30%;
         left: 5%;
         bottom: 10px;
     }
