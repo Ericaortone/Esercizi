@@ -162,7 +162,7 @@ header {
 /* Schermi molto piccoli come smartphone in verticale (max larghezza: 480px) */
 @media (max-width: 480px) {
   .cookie-popup {
-    width: 100%;   /* Il popup occupa tutta la larghezza dello schermo */
+    width: 50%;   /* Il popup occupa tutta la larghezza dello schermo */
     left: 0;       /* Rimuove il margine laterale */
     padding: 10px; /* Riduce ulteriormente il padding */
     bottom: 5px;   /* Riduce lo spazio dal bordo inferiore */
