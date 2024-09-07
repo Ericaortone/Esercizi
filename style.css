@@ -143,16 +143,16 @@ header {
 /* Schermi piccoli come smartphone (max larghezza: 768px) */
 @media (max-width: 768px) {
   .cookie-popup {
-    width: 90%;   /* Popup occupa il 90% della larghezza dello schermo */
-    left: 5%;     /* Centra il popup orizzontalmente */
-    padding: 15px; /* Riduce il padding */
+    width: 80%;   /* Popup più stretto per schermi piccoli */
+    left: 10%;    /* Centra il popup orizzontalmente */
+    padding: 10px; /* Riduce il padding */
     bottom: 10px;  /* Aumenta lo spazio dal bordo inferiore */
     border-radius: 8px; /* Mantiene un bordo arrotondato leggero */
   }
 
   .cookie-button {
     padding: 8px 15px; /* Riduce il padding del pulsante */
-    font-size: 14px;   /* Riduce la dimensione del testo del pulsante */
+    font-size: 14px;   /* Mantiene la dimensione del testo leggibile */
   }
 
   .cookie-content {
@@ -163,16 +163,16 @@ header {
 /* Schermi molto piccoli come smartphone in verticale (max larghezza: 480px) */
 @media (max-width: 480px) {
   .cookie-popup {
-    width: 95%;   /* Il popup occupa il 95% della larghezza dello schermo */
-    left: 2.5%;   /* Leggero margine per centrare il popup */
-    padding: 10px; /* Riduce ulteriormente il padding */
-    bottom: 5px;   /* Riduce lo spazio dal bordo inferiore */
-    border-radius: 5px; /* Riduce i bordi arrotondati per uno stile più semplice */
+    width: 85%;   /* Popup più stretto per schermi molto piccoli */
+    left: 7.5%;   /* Leggero margine per centrare il popup */
+    padding: 8px; /* Riduce ulteriormente il padding */
+    bottom: 5px;  /* Riduce lo spazio dal bordo inferiore */
+    border-radius: 5px; /* Bordi arrotondati più semplici */
   }
 
   .cookie-button {
     padding: 6px 10px;  /* Riduce ulteriormente il padding del pulsante */
-    font-size: 12px;    /* Riduce ancora di più la dimensione del testo del pulsante */
+    font-size: 12px;    /* Mantiene il testo compatto */
   }
 
   .cookie-content {
@@ -193,6 +193,7 @@ header {
     font-size: 16px;     /* Aumenta la dimensione del testo del pulsante */
   }
 }
+
 
 
 header .navbar ul {
