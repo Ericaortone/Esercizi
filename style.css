@@ -143,7 +143,7 @@ header {
 /* Schermi piccoli come smartphone (max larghezza: 768px) */
 @media (max-width: 768px) {
   .cookie-popup {
-    width: 90%; /* Popup occupa il 90% della larghezza dello schermo */
+    width: 50%; /* Popup occupa il 90% della larghezza dello schermo */
     left: 5%;   /* Centra il popup orizzontalmente */
     padding: 15px; /* Riduce il padding */
     bottom: 10px;  /* Aumenta lo spazio dal bordo inferiore */
