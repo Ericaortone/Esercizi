@@ -158,7 +158,7 @@ header {
 /* Schermi molto piccoli come smartphone in verticale (fino a 480px) */
 @media (max-width: 480px) {
   .cookie-popup {
-    width: 80%;    /* Popup più stretto per schermi piccoli */
+    width: 20%;    /* Popup più stretto per schermi piccoli */
     left: 10%;     /* Margine laterale ridotto */
     bottom: 5px;   /* Popup quasi in fondo alla pagina */
     padding: 8px;  /* Riduce ulteriormente il padding */
