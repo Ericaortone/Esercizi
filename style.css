@@ -143,10 +143,11 @@ header {
 /* Schermi piccoli come smartphone (max larghezza: 768px) */
 @media (max-width: 768px) {
   .cookie-popup {
-    width: 50%; /* Popup occupa il 90% della larghezza dello schermo */
-    left: 5%;   /* Centra il popup orizzontalmente */
+    width: 90%;   /* Popup occupa il 90% della larghezza dello schermo */
+    left: 5%;     /* Centra il popup orizzontalmente */
     padding: 15px; /* Riduce il padding */
     bottom: 10px;  /* Aumenta lo spazio dal bordo inferiore */
+    border-radius: 8px; /* Mantiene un bordo arrotondato leggero */
   }
 
   .cookie-button {
@@ -162,11 +163,11 @@ header {
 /* Schermi molto piccoli come smartphone in verticale (max larghezza: 480px) */
 @media (max-width: 480px) {
   .cookie-popup {
-    width: 50%;   /* Il popup occupa tutta la larghezza dello schermo */
-    left: 0;       /* Rimuove il margine laterale */
+    width: 95%;   /* Il popup occupa il 95% della larghezza dello schermo */
+    left: 2.5%;   /* Leggero margine per centrare il popup */
     padding: 10px; /* Riduce ulteriormente il padding */
     bottom: 5px;   /* Riduce lo spazio dal bordo inferiore */
-    border-radius: 0; /* Rimuove i bordi arrotondati per uno stile più semplice */
+    border-radius: 5px; /* Riduce i bordi arrotondati per uno stile più semplice */
   }
 
   .cookie-button {
@@ -184,6 +185,7 @@ header {
   .cookie-popup {
     width: 350px;  /* Aumenta leggermente la larghezza del popup su schermi grandi */
     padding: 25px; /* Aumenta il padding */
+    bottom: 20px;  /* Aumenta lo spazio dal bordo inferiore */
   }
 
   .cookie-button {
