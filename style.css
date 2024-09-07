@@ -73,10 +73,9 @@ header {
 }
 
 
-/* Stile generale per desktop e tablet */
 .cookie-popup {
   position: fixed;
-  bottom: 20px;
+  bottom: 0;
   left: 20px;
   width: 300px;
   padding: 20px;
@@ -90,7 +89,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(218, 182, 182, 1); /* Aggiunto per visibilità */
+  background-color: rgba(218, 182, 182, 1); /* Sfondo per visibilità */
 }
 
 /* Mostra il popup quando il checkbox non è selezionato */
@@ -144,10 +143,10 @@ header {
 /* Schermi di dimensioni medie (fino a 768px) */
 @media (max-width: 768px) {
   .cookie-popup {
-    width: 80%;    /* Popup più largo ma meno rispetto al desktop */
-    left: 10%;     /* Centra orizzontalmente */
+    width: 70%;    /* Popup più stretto rispetto alla versione precedente */
+    left: 15%;     /* Centra orizzontalmente */
     bottom: 10px;  /* Sposta un po' verso l'alto */
-    padding: 15px; /* Riduce il padding */
+    padding: 12px; /* Riduce il padding */
   }
 
   .cookie-button {
@@ -159,10 +158,10 @@ header {
 /* Schermi molto piccoli come smartphone in verticale (fino a 480px) */
 @media (max-width: 480px) {
   .cookie-popup {
-    width: 90%;    /* Popup occupa quasi tutta la larghezza */
-    left: 5%;      /* Margine laterale piccolo */
+    width: 80%;    /* Popup più stretto per schermi piccoli */
+    left: 10%;     /* Margine laterale ridotto */
     bottom: 5px;   /* Popup quasi in fondo alla pagina */
-    padding: 10px; /* Riduce ulteriormente il padding */
+    padding: 8px;  /* Riduce ulteriormente il padding */
     border-radius: 4px; /* Riduce l'angolo arrotondato */
   }
 
@@ -189,6 +188,7 @@ header {
     font-size: 16px;    /* Font più grande */
   }
 }
+
 
 
 
