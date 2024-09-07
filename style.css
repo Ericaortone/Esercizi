@@ -357,14 +357,14 @@ header .navbar ul li a:hover {
 /* Contenitore per il profilo e il carrello */
 .header-icons {
   display: flex; /* Allinea il profilo e il carrello sulla stessa linea */
-  align-items: center; /* Allinea verticalmente gli elementi al centro */
+  align-items: center; /* Allinea verticalmente al centro */
   justify-content: flex-end; /* Allinea gli elementi a destra */
   gap: 20px; /* Spazio tra il profilo e il carrello */
 }
 
 /* Stile per il profilo */
 .profile {
-  display: inline-flex;
+  display: inline-flex; /* Mantiene il profilo in linea con il carrello */
   font-family: 'Kromosius', sans-serif;
 }
 
@@ -375,27 +375,27 @@ header .navbar ul li a:hover {
   text-decoration: none; /* Rimuove la sottolineatura dai link */
 }
 
-/* Stile per le icone del profilo */
+/* Stile per l'icona del profilo */
 .profile i {
-  margin-right: 5px;
+  margin-right: 5px; /* Spazio tra l'icona e il testo */
 }
 
 /* Stile per il carrello */
 .cart a {
   color: #e88a8a;
-  font-size: 24px;
-  text-decoration: none; /* Rimuove la sottolineatura dai link */
+  font-size: 24px; /* Dimensione predefinita per schermi grandi */
+  text-decoration: none;
 }
 
-/* Responsive Design */
+/* --- Responsive Design --- */
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .header-icons {
-    gap: 10px; /* Riduce lo spazio tra profilo e carrello per schermi medi */
-    display: flex;
+    justify-content: center; /* Centra gli elementi su schermi medi */
+    gap: 10px; /* Riduce lo spazio tra profilo e carrello */
   }
-  
+
   .profile a, .cart a {
     font-size: 20px; /* Riduce la dimensione del testo per schermi medi */
   }
@@ -404,8 +404,8 @@ header .navbar ul li a:hover {
 /* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
   .header-icons {
-    gap: 5px; /* Riduce ulteriormente lo spazio tra profilo e carrello per schermi piccoli */
-    display: flex;
+    justify-content: center; /* Centra gli elementi su schermi piccoli */
+    gap: 5px; /* Riduce lo spazio tra profilo e carrello */
   }
 
   .profile a, .cart a {
@@ -417,9 +417,9 @@ header .navbar ul li a:hover {
 @media (min-width: 1200px) {
   .profile a, .cart a {
     font-size: 28px; /* Aumenta la dimensione del testo per schermi molto grandi */
-    display: flex;
   }
 }
+
 
 
 
