@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius, sans-serif;
+  font-family: kromosius;
 }
 
 header {
@@ -147,11 +147,13 @@ header {
     left: 15%;     /* Centra orizzontalmente */
     bottom: 10px;  /* Sposta un po' verso l'alto */
     padding: 12px; /* Riduce il padding */
+    font-family: "Kromosius";
   }
 
   .cookie-button {
     padding: 8px 16px; /* Riduce il padding del pulsante */
     font-size: 14px;   /* Font più piccolo per il pulsante */
+    font-family: "Kromosius";
   }
 }
 
@@ -163,15 +165,18 @@ header {
     bottom: 5px;   /* Popup quasi in fondo alla pagina */
     padding: 8px;  /* Riduce ulteriormente il padding */
     border-radius: 4px; /* Riduce l'angolo arrotondato */
+    font-family: "Kromosius";
   }
 
   .cookie-button {
     padding: 6px 12px; /* Ancora meno padding per il pulsante */
     font-size: 12px;   /* Font ridotto per il pulsante */
+    font-family: "Kromosius";
   }
 
   .cookie-content {
     gap: 5px; /* Meno spazio tra gli elementi */
+    font-family: "Kromosius";
   }
 }
 
@@ -181,11 +186,13 @@ header {
     width: 350px;  /* Popup leggermente più grande su schermi desktop ampi */
     padding: 25px; /* Aumenta il padding */
     bottom: 30px;  /* Maggiore spazio dal bordo inferiore */
+    font-family: "Kromosius";
   }
 
   .cookie-button {
     padding: 12px 25px; /* Aumenta il padding del pulsante */
     font-size: 16px;    /* Font più grande */
+    font-family: "Kromosius";
   }
 }
 
