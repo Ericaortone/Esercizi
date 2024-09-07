@@ -478,7 +478,7 @@ text-align: center;
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   .back-to-top {
-    bottom: 100px; /* Ulteriore riduzione della distanza dal fondo */
+    bottom: 70px; /* Ulteriore riduzione della distanza dal fondo */
     right: 10px; /* Ulteriore riduzione della distanza dal lato destro */
     padding: 10px 12px; /* Ulteriore riduzione del padding */
     font-size: 12px; /* Ulteriore riduzione della dimensione del testo */
@@ -606,6 +606,7 @@ text-align: center;
 @media (max-width: 480px) {
   #chatbot {
     width: 130px; /* Riduce ulteriormente la larghezza del bottone del chatbot */
+    right: 15px; /* Riduci la distanza dal lato destro */
   }
 
   .chatbot-button {
