@@ -576,6 +576,7 @@ text-align: center;
 @media (max-width: 768px) {
   #chatbot {
     width: 150px; /* Riduce la larghezza del bottone del chatbot per schermi più piccoli */
+    right: 15px; /* Riduci la distanza dal lato destro */
   }
 
   .chatbot-button {
