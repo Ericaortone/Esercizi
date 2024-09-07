@@ -468,7 +468,7 @@ text-align: center;
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .back-to-top {
-    bottom: 60px; /* Riduci la distanza dal fondo */
+    bottom: 100px; /* Riduci la distanza dal fondo */
     right: 15px; /* Riduci la distanza dal lato destro */
     padding: 12px 15px; /* Riduci il padding */
     font-size: 14px; /* Riduci la dimensione del testo */
