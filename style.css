@@ -393,6 +393,7 @@ header .navbar ul li a:hover {
 @media (max-width: 768px) {
   .header-icons {
     gap: 10px; /* Riduce lo spazio tra profilo e carrello per schermi medi */
+    display: flex;
   }
   
   .profile a, .cart a {
@@ -404,6 +405,7 @@ header .navbar ul li a:hover {
 @media (max-width: 480px) {
   .header-icons {
     gap: 5px; /* Riduce ulteriormente lo spazio tra profilo e carrello per schermi piccoli */
+    display: flex;
   }
 
   .profile a, .cart a {
@@ -415,6 +417,7 @@ header .navbar ul li a:hover {
 @media (min-width: 1200px) {
   .profile a, .cart a {
     font-size: 28px; /* Aumenta la dimensione del testo per schermi molto grandi */
+    display: flex;
   }
 }
 
