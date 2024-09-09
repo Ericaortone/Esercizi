@@ -3,5 +3,19 @@
 <p>Corso di web Design</p>
 <p>Prof.Baccan Matteo</p>
 <p>Anno Accademico 2023/2024</p>
-<h2>Progetto Esmeny-shampoo solido</h2>
-Progetto d'esame Ortone Erica. Esmeny è un'azienda di shampoo solido ecostostenibile che si basa sulla produzione e vendita di prodotti naturali che mettono d'accordo sostenibilità, innovazione e design. Tutti i prodotti sono progettati per evitare l'uso di plastica monouso e di sostanze chimiche non necessaria. L'obiettivo è far si che sempre più persone scelgano una vita quotidiana più sostenibile e rispettosa dell'ambiente.
+<h2>Esmeny-shampoo solido (sito)</h2>
+<p>Esmeny è il mio sito ufficiale di vendita di prodotti naturali e sostenibili</p>
+<h2>Descrizione</h2>
+<p>Esmeny è un brand che crea prodotti naturali che mettono d'accordo sostenibilità, innovazione e design. Tutti i prodotti Esmeny sono progettati per evitare l'uso di plastica monouso e di sostanze chimiche non necessarie</p>
+<h2>Accesso al sito</h2>
+<p>Puoi trovare il mio sito online: https://esmenyperteeperiltuofuturo.netlify.app</p>
+<h2>About the Site</h2>
+<p>Esmeny è stato progettato per essere chiaro ed efficace. Il nostro obiettivo principale è facilitare l'acquisto e fornire al cliente informazioni dettagliate sui prodotti, comprese le certificazioni necessarie. Ci impegniamo a evitare confusione e a garantire una navigazione semplice e completa, affinché ogni cliente possa fare scelte informate e soddisfacenti. </p>
+<h2>Elementi strutturali</h2>
+<p>Il sito web di Esmeny è organizzato in diverse sezioni che offrono un'esperienza utente completa, con vari elementi e funzionalità.</p>
+<h2>Strumenti </h2>
+<p>Github</p>
+<p>Netlify</p>
+<p>Codepen</p>
+<p>YouTube</p>
+<p>Chatgpt</p>
