@@ -430,7 +430,6 @@ header .navbar ul li a:hover {
 
 
 
-
 .container {
   max-width: 9200px;
   margin: 0 auto;
@@ -678,7 +677,7 @@ text-align: center;
 
 
 /* Stile base per il titolo */
-#chisiamo h1 {
+#chisiamo h2 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
@@ -690,7 +689,7 @@ text-align: center;
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
-  #chisiamo h1 {
+  #chisiamo h2 {
     font-size: 30px; /* Riduci la dimensione del font per schermi più piccoli */
     padding: 8px; /* Riduci il padding per adattarsi meglio */
   }
@@ -698,7 +697,7 @@ text-align: center;
 
 /* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
-  #chisiamo h1 {
+  #chisiamo h2 {
     font-size: 24px; /* Riduci ulteriormente la dimensione del font */
     padding: 6px; /* Riduci ulteriormente il padding */
   }
@@ -807,7 +806,7 @@ text-align: center;
 
 
 /* Stile base per il titolo */
-#inostriprodotti h1 {
+#inostriprodotti h2 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 18px;
   padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
@@ -819,7 +818,7 @@ text-align: center;
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
-  #inostriprodotti h1 {
+  #inostriprodotti h2 {
     font-size: 28px; /* Riduci la dimensione del font per schermi più piccoli */
     padding: 8px; /* Riduci il padding per adattarsi meglio */
   }
@@ -827,7 +826,7 @@ text-align: center;
 
 /* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
-  #inostriprodotti h1 {
+  #inostriprodotti h2 {
     font-size: 24px; /* Riduci ulteriormente la dimensione del font */
     padding: 6px; /* Riduci ulteriormente il padding */
   }
@@ -1019,7 +1018,7 @@ text-align: center;
 }
 
 /* Stile base per gli h1 e h2 */
-#curiositàsuinostriprodotti h1,
+#curiositàsuinostriprodotti h2,
 h2 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
@@ -1033,7 +1032,7 @@ h2 {
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
-  #curiositàsuinostriprodotti h1 {
+  #curiositàsuinostriprodotti h2 {
     font-size: 24px; /* Riduci la dimensione del font per gli h1 */
   }
 
@@ -1044,7 +1043,7 @@ h2 {
 
 /* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
-  #curiositàsuinostriprodotti h1 {
+  #curiositàsuinostriprodotti h2 {
     font-size: 20px; /* Riduci ulteriormente la dimensione del font per gli h1 */
   }
 
@@ -1203,8 +1202,7 @@ input[name="carousel"] {
     text-align: center;
 }
 
-.certificazioni h1 {
-    color: #333;
+.certificazioni h3 {
     font-size: 28px;
     margin-bottom: 20px;
 }
@@ -1283,7 +1281,8 @@ input[name="carousel"] {
 #dovetrovarci {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   }
-  
+ 
+
 .footer-content {
     display: flex;
     align-items: flex-start;
@@ -1824,6 +1823,7 @@ footer .social-media a:hover {
     font-size: 18px; /* Riduci ulteriormente la dimensione dell'icona di chiusura */
   }
 }
+
 
 
 
