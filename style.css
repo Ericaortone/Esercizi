@@ -360,58 +360,53 @@ header .navbar ul li a:hover {
 }
 
 
-/* Stile per il profilo */
-.profile {
-  display: inline-flex; /* Mantiene il profilo in linea con il carrello */
-  font-family: 'Kromosius';
+.header-icons {
+  display: flex; /* Imposta il layout flessibile per allineare gli elementi sulla stessa riga */
+  justify-content: space-between; /* Spazia gli elementi sulla stessa riga */
+  align-items: center; /* Allinea verticalmente al centro */
+  gap: 20px; /* Spazio tra carrello e profilo */
 }
 
-/* Stile per i link del profilo */
-.profile a {
-  color: #e88a8a;
-  font-size: 24px;
-  text-decoration: none; /* Rimuove la sottolineatura dai link */
+.cart a, .profile a {
+  font-size: 24px; /* Dimensione dell'icona */
+  color: #e88a8a; /* Colore delle icone */
 }
-
-/* Stile per l'icona del profilo */
-.profile i {
-  margin-right: 5px; /* Spazio tra l'icona e il testo */
-}
-
-/* Stile per il carrello */
-.cart a {
-  color: #e88a8a;
-  font-size: 24px; /* Dimensione predefinita per schermi grandi */
-  text-decoration: none;
-}
-
-/* --- Responsive Design --- */
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
+  .header-icons {
+    justify-content: center; /* Centra gli elementi su schermi medi */
+    gap: 10px; /* Riduce lo spazio tra profilo e carrello */
+  }
+
   .profile a, .cart a {
-    font-size: 20px; /* Riduce la dimensione del testo per schermi medi */
-    justify-content: center; /* Centra gli elementi su schermi piccoli */
+    font-size: 20px; /* Riduce la dimensione delle icone per schermi medi */
   }
 }
 
 /* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
-    .profile a, .cart a {
-    font-size: 18px; /* Riduce ulteriormente la dimensione del testo per schermi piccoli */
+  .header-icons {
     justify-content: center; /* Centra gli elementi su schermi piccoli */
+    gap: 8px; /* Riduce ulteriormente lo spazio tra gli elementi */
+  }
+
+  .profile a, .cart a {
+    font-size: 18px; /* Riduce ulteriormente la dimensione delle icone */
   }
 }
 
 /* Per schermi extra-large (min-width: 1200px) */
 @media (min-width: 1200px) {
+  .header-icons {
+    justify-content: flex-start; /* Allinea gli elementi a sinistra su schermi grandi */
+    gap: 30px; /* Aumenta lo spazio tra gli elementi */
+  }
+
   .profile a, .cart a {
-    font-size: 28px; /* Aumenta la dimensione del testo per schermi molto grandi */
-    justify-content: center; /* Centra gli elementi su schermi piccoli */
+    font-size: 28px; /* Aumenta la dimensione delle icone per schermi grandi */
   }
 }
-
-
 
 .container {
   max-width: 9200px;
