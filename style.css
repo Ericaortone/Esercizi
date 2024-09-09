@@ -71,45 +71,70 @@ header {
   }
 }
 
-
-/* Stile base per il pop-up dei cookie */
+/* Stile generale per il popup dei cookie */
 .cookie-popup {
-  display: none; /* Nascondi il pop-up per default */
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgb(218, 182, 182);
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  border-top: 1px solid #ddd;
-  z-index: 1000; /* Assicurati che il pop-up sia sopra altri contenuti */
-}
-
-/* Contenuto del pop-up */
-.cookie-content {
-  background: #; /* Colore di sfondo del contenuto del pop-up */
+  left: 20px;
+  width: 300px;
   padding: 20px;
-  border-radius: 10px;
-  display: inline-block; /* Per centrare il contenuto */
-}
-
-/* Pulsante di accettazione */
-.cookie-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #e88a8a; /* Colore del pulsante */
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Mostra il pop-up quando il checkbox è selezionato */
+/* Mostra il popup quando il checkbox non è selezionato */
+.cookie-toggle:not(:checked) ~ .cookie-popup {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Nascondi il popup quando il checkbox è selezionato */
 .cookie-toggle:checked ~ .cookie-popup {
-  display: block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* Stile per il contenuto del popup */
+.cookie-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Link nel popup */
+.cookie-content a {
+  color: #e88a8a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cookie-content a:hover {
+  text-decoration: underline;
+}
+
+/* Stile del pulsante "Accetta" */
+.cookie-button {
+  cursor: pointer;
+  background-color: rgb(218, 182, 182);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cookie-button:hover {
+  background-color: #e88a8a;
 }
 
 /* Nascondi il checkbox */
@@ -1246,8 +1271,7 @@ input[name="carousel"] {
     }
 }
 
-
-#dovetrovarci {
+ #dovetrovarci {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
 }   
    
@@ -1258,6 +1282,7 @@ input[name="carousel"] {
   font-family: 'Kromosius';
 }
 
+  
 .footer-content {
     display: flex;
     align-items: flex-start;
@@ -1281,8 +1306,8 @@ input[name="carousel"] {
 }
 
 @media (max-width: 768px) {
-  #dovetrovarci h2 {
-    font-size: 24px; /* Riduci la dimensione del font per gli h1 */
+  #dovetrovarci {
+    padding: 20px; /* Aggiusta il padding per schermi più piccoli */
   }
 
   .footer-content {
@@ -1302,8 +1327,8 @@ input[name="carousel"] {
 
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
-  #dovetrovarci h2 {
-    font-size: 20px; /* Riduci la dimensione del font per schermi molto piccoli */
+  #dovetrovarci {
+    font-size: 16px; /* Riduci la dimensione del font per schermi molto piccoli */
   }
 
   .contact-details p {
@@ -1722,7 +1747,7 @@ footer .social-media a:hover {
 }
 
 .notification-popup .notification-content .button {
-  display: inline-block;
+  cursor: pointer;
   padding: 10px 20px;
   background-color: rgb(218, 182, 182);
   color: #fff;
@@ -1755,7 +1780,10 @@ footer .social-media a:hover {
 .popup-toggle:not(:checked) ~ .notification-popup {
   transform: translateX(100%);
   opacity: 0;
-  pointer-events: none;
+}
+
+.popup-toggle {
+  display: none;
 }
 
 /* Media Queries */
