@@ -1270,12 +1270,10 @@ input[name="carousel"] {
         width: 100%; /* Utilizza la larghezza completa per schermi molto piccoli */
     }
 }
-
- #dovetrovarci {
-  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-}   
+  
    
 #dovetrovarci h2 {
+  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 10px;
   text-align: center;
@@ -1307,7 +1305,7 @@ input[name="carousel"] {
 
 @media (max-width: 768px) {
   #dovetrovarci {
-    padding: 20px; /* Aggiusta il padding per schermi più piccoli */
+    font-size: 24px;
   }
 
   .footer-content {
@@ -1328,7 +1326,7 @@ input[name="carousel"] {
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   #dovetrovarci {
-    font-size: 16px; /* Riduci la dimensione del font per schermi molto piccoli */
+     font-size: 20px;/* Riduci la dimensione del font per schermi molto piccoli */
   }
 
   .contact-details p {
@@ -1823,6 +1821,7 @@ footer .social-media a:hover {
     font-size: 18px; /* Riduci ulteriormente la dimensione dell'icona di chiusura */
   }
 }
+
 
 
 
