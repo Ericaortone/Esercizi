@@ -1277,6 +1277,11 @@ input[name="carousel"] {
   margin-bottom: 30px;
 }
 
+.service-section .service-cta {
+  display: flex;
+  justify-content: center;
+}
+
 .service-section .service-cta .button {
   background-color: rgb(218, 182, 182);
   color: #fff;
@@ -1284,14 +1289,12 @@ input[name="carousel"] {
   border-radius: 25px;
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
-  justify-content: center; /* Centra orizzontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: 100%; /* Assicura che il contenitore abbia l'altezza completa */
 }
 
 .service-section .service-cta .button:hover {
   background-color: #e88a8a;
 }
+
 
 /* Media Queries */
 
