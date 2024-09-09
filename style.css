@@ -1266,8 +1266,11 @@ input[name="carousel"] {
 }
 
 
-#dovetrovarci  {
+#dovetrovarci {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+}   
+   
+#dovetrovarci h2 {
   border-radius: 15px;
   padding: 0px;
   text-align: center;
