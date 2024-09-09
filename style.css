@@ -1284,7 +1284,6 @@ input[name="carousel"] {
   border-radius: 25px;
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
-  display: flex; /* Abilita Flexbox */
   justify-content: center; /* Centra orizzontalmente */
   align-items: center; /* Centra verticalmente */
   height: 100%; /* Assicura che il contenitore abbia l'altezza completa */
