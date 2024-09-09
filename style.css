@@ -1207,6 +1207,10 @@ input[name="carousel"] {
     font-size: 24px;
   }
 }
+  #dovetrovarci p {
+    text-align: center; /* Mantieni la centratura del testo */
+  }
+}
 
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
@@ -1215,18 +1219,23 @@ input[name="carousel"] {
   }
 }
 
+#dovetrovarci p {
+    text-align: center; /* Mantieni la centratura del testo */
+  }
+}
+
 .privacy-policy {
   color: black;
 }
 
 #iservizicheoffriamo .container h2 {
-  background: rgb(218, 182, 182);
-  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
-  padding: 10px; /* Aggiungi padding per schermi più grandi */
+  padding: 0px;
+  padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
   text-align: center;
+  font-family: 'Kromosius';
 }
-
 /* Media Queries per dispositivi mobili */
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
