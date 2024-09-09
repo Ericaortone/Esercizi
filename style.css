@@ -72,70 +72,51 @@ header {
 }
 
 
+/* Stile base per il pop-up dei cookie */
 .cookie-popup {
+  display: none; /* Nascondi il pop-up per default */
   position: fixed;
   bottom: 0;
-  left: 20px;
-  width: 300px;
-  padding: 20px;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(100%);
-  opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgba(218, 182, 182, 1); /* Sfondo per visibilità */
-}
-
-/* Mostra il popup quando il checkbox non è selezionato */
-.cookie-toggle:not(:checked) ~ .cookie-popup {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* Nascondi il popup quando il checkbox è selezionato */
-.cookie-toggle:checked ~ .cookie-popup {
-  transform: translateY(100%);
-  opacity: 0;
-}
-
-/* Stile per il contenuto del popup */
-.cookie-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.cookie-content a {
-  color: #e88a8a;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.cookie-content a:hover {
-  text-decoration: underline;
-}
-
-/* Stile del pulsante "Accetta" */
-.cookie-button {
-  cursor: pointer;
+  left: 0;
+  width: 100%;
   background-color: rgb(218, 182, 182);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+  color: #fff;
   text-align: center;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  z-index: 1000; /* Assicurati che il pop-up sia sopra altri contenuti */
 }
 
-.cookie-button:hover {
-  background-color: #e88a8a;
+/* Contenuto del pop-up */
+.cookie-content {
+  background: #; /* Colore di sfondo del contenuto del pop-up */
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block; /* Per centrare il contenuto */
 }
+
+/* Pulsante di accettazione */
+.cookie-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #e88a8a; /* Colore del pulsante */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Mostra il pop-up quando il checkbox è selezionato */
+.cookie-toggle:checked ~ .cookie-popup {
+  display: block;
+}
+
+/* Nascondi il checkbox */
+.cookie-toggle {
+  display: none;
+}
+
 
 /* --- Responsive Styles --- */
 
