@@ -1193,6 +1193,7 @@ input[name="carousel"] {
 #dovetrovarci {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
+  padding: 10px;
   text-align: center;
   font-family: Kromosius;
 }
@@ -1202,14 +1203,14 @@ input[name="carousel"] {
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   #dovetrovarci {
-    padding: 15px; /* Riduci il padding per schermi più piccoli */
+    font-size: 24px;
   }
 }
 
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   #dovetrovarci {
-    padding: 10px; /* Riduci ulteriormente il padding per schermi molto piccoli */
+    font-size: 20px;
   }
 }
 
@@ -1230,14 +1231,14 @@ input[name="carousel"] {
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   #iservizicheoffriamo .container {
-    padding: 15px; /* Riduci il padding per schermi più piccoli */
+   font-size: 24px;
   }
 }
 
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   #iservizicheoffriamo .container {
-    padding: 10px; /* Riduci ulteriormente il padding per schermi molto piccoli */
+    font-size: 20px;
   }
 }
 
