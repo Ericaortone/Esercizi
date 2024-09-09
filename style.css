@@ -57,7 +57,7 @@ header {
   }
 
   .logo {
-    width: 30px;               /* Riduce ancora di più la dimensione del logo */
+    width: 40px;               /* Riduce ancora di più la dimensione del logo */
   }
 }
 
@@ -398,6 +398,7 @@ header .navbar ul li a:hover {
 
   .profile a, .cart a {
     font-size: 20px; /* Riduce la dimensione del testo per schermi medi */
+    justify-content: center; /* Centra gli elementi su schermi piccoli */
   }
 }
 
@@ -405,11 +406,12 @@ header .navbar ul li a:hover {
 @media (max-width: 480px) {
   .header-icons {
     justify-content: center; /* Centra gli elementi su schermi piccoli */
-    gap: 5px; /* Riduce lo spazio tra profilo e carrello */
+    gap: 10px; /* Riduce lo spazio tra profilo e carrello */
   }
 
   .profile a, .cart a {
     font-size: 18px; /* Riduce ulteriormente la dimensione del testo per schermi piccoli */
+    justify-content: center; /* Centra gli elementi su schermi piccoli */
   }
 }
 
@@ -417,6 +419,7 @@ header .navbar ul li a:hover {
 @media (min-width: 1200px) {
   .profile a, .cart a {
     font-size: 28px; /* Aumenta la dimensione del testo per schermi molto grandi */
+    justify-content: center; /* Centra gli elementi su schermi piccoli */
   }
 }
 
