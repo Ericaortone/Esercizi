@@ -1301,7 +1301,7 @@ input[name="carousel"] {
 
 @media (max-width: 768px) {
   #dovetrovarci {
-    padding: 20px; /* Aggiusta il padding per schermi più piccoli */
+    font-size: 24px; /* Riduci la dimensione del font per gli h1 */
   }
 
   .footer-content {
@@ -1322,7 +1322,7 @@ input[name="carousel"] {
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   #dovetrovarci {
-    font-size: 16px; /* Riduci la dimensione del font per schermi molto piccoli */
+    font-size: 20px; /* Riduci la dimensione del font per schermi molto piccoli */
   }
 
   .contact-details p {
