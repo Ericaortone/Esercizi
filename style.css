@@ -1190,26 +1190,27 @@ input[name="carousel"] {
 }
 
 
-#dovetrovarci {
+#dovetrovarci h2 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
-  padding: 10px;
+  padding: 0px;
+  padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
   text-align: center;
-  font-family: Kromosius;
+  font-family: 'Kromosius';
 }
 
 /* Media Queries per dispositivi mobili */
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
-  #dovetrovarci {
+  #dovetrovarci h2 {
     font-size: 24px;
   }
 }
 
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
-  #dovetrovarci {
+  #dovetrovarci h2 {
     font-size: 20px;
   }
 }
