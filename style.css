@@ -1190,7 +1190,7 @@ input[name="carousel"] {
 }
 
 
-#dovetrovarci {
+#dovetrovarci h2 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 10px;
@@ -1202,14 +1202,14 @@ input[name="carousel"] {
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
-  #dovetrovarci {
+  #dovetrovarci h2 {
     font-size: 24px;
   }
 }
 
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
-  #dovetrovarci {
+  #dovetrovarci h2 {
     font-size: 20px;
   }
 }
@@ -1218,7 +1218,7 @@ input[name="carousel"] {
   color: black;
 }
 
-#iservizicheoffriamo .container {
+#iservizicheoffriamo .container h2 {
   background: rgb(218, 182, 182);
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
@@ -1230,14 +1230,14 @@ input[name="carousel"] {
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
-  #iservizicheoffriamo .container {
+  #iservizicheoffriamo .container h2 {
    font-size: 24px;
   }
 }
 
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
-  #iservizicheoffriamo .container {
+  #iservizicheoffriamo .container h2 {
     font-size: 20px;
   }
 }
