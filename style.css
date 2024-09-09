@@ -1280,6 +1280,9 @@ input[name="carousel"] {
   font-family: 'Kromosius';
 }
 
+#dovetrovarci {
+  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
+  }
   
 .footer-content {
     display: flex;
