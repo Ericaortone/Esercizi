@@ -359,18 +359,11 @@ header .navbar ul li a:hover {
   }
 }
 
-/* Contenitore per il profilo e il carrello */
-.header-icons {
-  display: flex; /* Allinea il profilo e il carrello sulla stessa linea */
-  align-items: center; /* Allinea verticalmente al centro */
-  justify-content: flex-end; /* Allinea gli elementi a destra */
-  gap: 20px; /* Spazio tra il profilo e il carrello */
-}
 
 /* Stile per il profilo */
 .profile {
   display: inline-flex; /* Mantiene il profilo in linea con il carrello */
-  font-family: 'Kromosius', sans-serif;
+  font-family: 'Kromosius';
 }
 
 /* Stile per i link del profilo */
@@ -396,11 +389,6 @@ header .navbar ul li a:hover {
 
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
-  .header-icons {
-    justify-content: center; /* Centra gli elementi su schermi medi */
-    gap: 10px; /* Riduce lo spazio tra profilo e carrello */
-  }
-
   .profile a, .cart a {
     font-size: 20px; /* Riduce la dimensione del testo per schermi medi */
     justify-content: center; /* Centra gli elementi su schermi piccoli */
@@ -409,12 +397,7 @@ header .navbar ul li a:hover {
 
 /* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
-  .header-icons {
-    justify-content: center; /* Centra gli elementi su schermi piccoli */
-    gap: 10px; /* Riduce lo spazio tra profilo e carrello */
-  }
-
-  .profile a, .cart a {
+    .profile a, .cart a {
     font-size: 18px; /* Riduce ulteriormente la dimensione del testo per schermi piccoli */
     justify-content: center; /* Centra gli elementi su schermi piccoli */
   }
