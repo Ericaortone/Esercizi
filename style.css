@@ -1300,7 +1300,7 @@ input[name="carousel"] {
 }
 
 @media (max-width: 768px) {
-  #dovetrovarci {
+  #dovetrovarci h2 {
     font-size: 24px; /* Riduci la dimensione del font per gli h1 */
   }
 
@@ -1321,7 +1321,7 @@ input[name="carousel"] {
 
 /* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
-  #dovetrovarci {
+  #dovetrovarci h2 {
     font-size: 20px; /* Riduci la dimensione del font per schermi molto piccoli */
   }
 
