@@ -1204,7 +1204,7 @@ input[name="carousel"] {
 /* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   #dovetrovarci h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
   #dovetrovarci p {
@@ -1284,6 +1284,10 @@ input[name="carousel"] {
   border-radius: 25px;
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
+  display: flex; /* Abilita Flexbox */
+  justify-content: center; /* Centra orizzontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100%; /* Assicura che il contenitore abbia l'altezza completa */
 }
 
 .service-section .service-cta .button:hover {
