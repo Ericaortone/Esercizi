@@ -1,16 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const cookieToggle = document.getElementById('cookie-toggle');
+document.addEventListener('DOMContentLoaded', () => {
+  const acceptButton = document.getElementById('accept-button');
+  const closeButton = document.getElementById('close-button');
+  const popupToggle = document.getElementById('popup-toggle');
 
-    // Controlla se l'utente ha già accettato i cookie
-    if (localStorage.getItem('cookieAccepted')) {
-        cookieToggle.checked = true;
-    }
+  // Nascondi il popup quando si clicca il pulsante "Accetta"
+  acceptButton.addEventListener('click', () => {
+    popupToggle.checked = true;
+  });
 
-    // Quando l'utente accetta i cookie
-    cookieToggle.addEventListener('change', function () {
-        if (cookieToggle.checked) {
-            localStorage.setItem('cookieAccepted', 'true');
-        }
-    });
+  // Nascondi il popup quando si clicca il pulsante di chiusura
+  closeButton.addEventListener('click', () => {
+    popupToggle.checked = true;
+  });
 });
-
