@@ -35,4 +35,7 @@
 <p>Sito Web:https://esmenyperteeperiltuofuturo.netlify.app</p>
 <p>Store ufficile: Via Giovanni Bellezza 23, Milano, Italia</p>
 <p>Orari di apertura: Lun-Sab 10:00 - 19:00</p>
+<h2>Test Validazione</h2>
+<h2>Licenze</h2>
+<p>Il contenuto di questo portfolio è soggetto alla Esmeny License. Consulta il file LICENSE per ulteriori dettagli.</p>
 
