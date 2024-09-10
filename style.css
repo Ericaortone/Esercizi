@@ -86,7 +86,6 @@ header {
 
 .cookie-toggle:checked ~ .cookie-popup {
   transform: translateY(100%);
-  opacity: 0;
 }
 
 .cookie-content {
@@ -105,6 +104,7 @@ header {
   text-decoration: underline;
 }
 
+/* Stile del pulsante "Accetta" */
 .cookie-button {
   cursor: pointer;
   background-color: rgb(218, 182, 182);
@@ -128,7 +128,7 @@ header {
 @media (max-width: 768px) {
   .cookie-popup {
     width: 70%;   
-    left: 15%;    
+    left: 15%;     
     bottom: 10px;  
     padding: 12px; 
     font-family: "Kromosius";
@@ -143,7 +143,7 @@ header {
 
 @media (max-width: 480px) {
   .cookie-popup {
-    width: 40%;  
+    width: 40%;    
     left: 10%;    
     bottom: 5px;   
     padding: 8px;  
@@ -172,8 +172,8 @@ header {
   }
 
   .cookie-button {
-    padding: 12px 25px;
-    font-size: 16px;   
+    padding: 12px 25px; 
+    font-size: 16px;    
     font-family: "Kromosius";
   }
 }
@@ -255,6 +255,7 @@ header .navbar ul li a:hover {
   }
 }
 
+
 .search-bar {
   display: flex;
   border-radius: 20px;
@@ -310,8 +311,7 @@ header .navbar ul li a:hover {
     font-size: 18px;          
   }
 }
-
-
+ 
 .header-icons {
   display: flex; 
 }
@@ -358,6 +358,7 @@ header .navbar ul li a:hover {
 font-family: "kromosius";
 text-align: center;
 } 
+
 
 .back-to-top {
   position: fixed;
@@ -756,7 +757,6 @@ text-align: center;
   }
 }
 
-
  .reviews span {
    color: rgb(218, 182, 182);
    font-size: 24px;
@@ -1076,14 +1076,13 @@ input[name="carousel"] {
 
 .footer-content {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
     gap: 20px;
 }
 
+
 .map-container {
     flex: 1;
-    max-width: 300px; /* Limita la larghezza della mappa */
+    max-width: 300px; 
     margin-left: 400px;
 }
 
@@ -1102,31 +1101,29 @@ input[name="carousel"] {
   }
 
   .footer-content {
-    flex-direction: column; /* Disporre gli elementi in colonna su schermi piccoli */
-    align-items: center; /* Centra gli elementi */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .map-container {
-    max-width: 100%; /* La mappa occupa tutta la larghezza disponibile */
-    margin-left: 0; /* Rimuovi margine a sinistra */
+    max-width: 100%; 
+    margin-left: 0; 
   }
 
   .contact-details {
-    text-align: center; /* Centra il testo sui dispositivi mobili */
+    text-align: center; 
   }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   #dovetrovarci h2 {
-     font-size: 20px;/* Riduci la dimensione del font per schermi molto piccoli */
+     font-size: 20px;
   }
 
   .contact-details p {
-    font-size: 14px; /* Riduci la dimensione del font per una migliore leggibilità su schermi piccoli */
+    font-size: 14px; 
   }
 }
-
 
 .privacy-policy {
   color: black;
@@ -1136,26 +1133,22 @@ input[name="carousel"] {
   linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px;
-  padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
+  padding: 10px; 
   text-align: center;
   font-family: 'Kromosius';
 }
-/* Media Queries per dispositivi mobili */
 
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   #iservizicheoffriamo .container h2 {
    font-size: 24px;
   }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   #iservizicheoffriamo .container h2 {
     font-size: 20px;
   }
 }
-
 
 .service-section {
   background-color: #f9f9f9;
@@ -1163,22 +1156,10 @@ input[name="carousel"] {
   border-radius: 20px;
 }
 
-.service-section .container {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .service-section h1 {
   color: #333;
   font-size: 36px;
   margin-bottom: 20px;
-}
-
-.service-section .service-description {
-  color: black;
-  font-size: 18px;
-  margin-bottom: 30px;
 }
 
 .service-section .service-cta {
@@ -1199,75 +1180,67 @@ input[name="carousel"] {
   background-color: #e88a8a;
 }
 
-
-/* Media Queries */
-
-/* Per schermi più piccoli di 1024px (grandi tablet e piccoli desktop) */
 @media (max-width: 1024px) {
   .service-section {
-    padding: 40px 15px; /* Riduci il padding */
+    padding: 40px 15px; 
   }
 
   .service-section h1 {
-    font-size: 32px; /* Riduci la dimensione del font */
+    font-size: 32px; 
   }
 
   .service-section .service-description {
-    font-size: 16px; /* Riduci la dimensione del font */
-    margin-bottom: 20px; /* Riduci il margine inferiore */
+    font-size: 16px; 
+    margin-bottom: 20px; 
   }
 
   .service-section .service-cta .button {
-    padding: 12px 25px; /* Riduci il padding del bottone */
+    padding: 12px 25px; /
   }
 }
 
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .service-section {
-    padding: 30px 10px; /* Riduci ulteriormente il padding */
+    padding: 30px 10px; 
   }
 
   .service-section h1 {
-    font-size: 28px; /* Riduci ulteriormente la dimensione del font */
+    font-size: 28px; 
   }
 
   .service-section .service-description {
-    font-size: 14px; /* Riduci ulteriormente la dimensione del font */
-    margin-bottom: 15px; /* Riduci ulteriormente il margine inferiore */
+    font-size: 14px;
+    margin-bottom: 15px; 
   }
 
   .service-section .service-cta .button {
-    padding: 10px 20px; /* Riduci ulteriormente il padding del bottone */
+    padding: 10px 20px;
   }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   .service-section {
-    padding: 20px 5px; /* Riduci ulteriormente il padding */
+    padding: 20px 5px; 
   }
 
   .service-section h1 {
-    font-size: 24px; /* Riduci ulteriormente la dimensione del font */
+    font-size: 24px; 
   }
 
   .service-section .service-description {
-    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
-    margin-bottom: 10px; /* Riduci ulteriormente il margine inferiore */
+    font-size: 12px; 
+    margin-bottom: 10px; 
   }
 
   .service-section .service-cta .button {
-    padding: 8px 15px; /* Riduci ulteriormente il padding del bottone */
+    padding: 8px 15px; 
   }
 }
-
 
 .newsletter-bar {
   color: white;
   text-align: center;
   padding: 20px 0;
-  border-radius: 18px;
 }
 
 .newsletter-bar h2 {
@@ -1302,7 +1275,6 @@ input[name="carousel"] {
   font-size: 18px;
   border-radius: 18px;
   border: none;
-  cursor: pointer;
   background-color: rgb(218, 182, 182);
   color: white;
   font-family: Kromosius;
@@ -1313,191 +1285,173 @@ input[name="carousel"] {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* Media Queries per dispositivi mobili */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .newsletter-bar h2 {
-    font-size: 20px; /* Riduci la dimensione del font per i titoli */
-    margin-bottom: 15px; /* Riduci il margine inferiore */
+    font-size: 20px; 
+    margin-bottom: 15px; 
   }
 
   .newsletter-bar p {
-    font-size: 14px; /* Riduci la dimensione del font per il testo */
-    margin-bottom: 15px; /* Riduci il margine inferiore */
+    font-size: 14px; 
+    margin-bottom: 15px; 
   }
 
   .newsletter-bar input[type="email"] {
-    width: 80%; /* Aumenta la larghezza per schermi più piccoli */
-    padding: 12px; /* Riduci il padding */
-    font-size: 16px; /* Riduci la dimensione del font */
+    width: 80%; 
+    padding: 12px; 
+    font-size: 16px; 
   }
 
   .newsletter-bar button {
-    padding: 12px 25px; /* Riduci il padding per i pulsanti */
-    font-size: 16px; /* Riduci la dimensione del font per i pulsanti */
+    padding: 12px 25px; 
+    font-size: 16px; 
   }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   .newsletter-bar h2 {
-    font-size: 18px; /* Riduci ulteriormente la dimensione del font per i titoli */
-    margin-bottom: 10px; /* Riduci ulteriormente il margine inferiore */
+    font-size: 18px; 
+    margin-bottom: 10px; 
   }
 
   .newsletter-bar p {
-    font-size: 13px; /* Riduci ulteriormente la dimensione del font per il testo */
-    margin-bottom: 10px; /* Riduci ulteriormente il margine inferiore */
+    font-size: 13px; 
+    margin-bottom: 10px; 
   }
 
   .newsletter-bar input[type="email"] {
-    width: 90%; /* Fai in modo che l'input occupi quasi tutta la larghezza disponibile */
-    padding: 10px; /* Riduci ulteriormente il padding */
-    font-size: 14px; /* Riduci ulteriormente la dimensione del font */
+    width: 90%; 
+    padding: 10px;
+    font-size: 14px; 
   }
 
   .newsletter-bar button {
-    padding: 10px 20px; /* Riduci ulteriormente il padding per i pulsanti */
-    font-size: 14px; /* Riduci ulteriormente la dimensione del font per i pulsanti */
+    padding: 10px 20px; 
+    font-size: 14px; 
   }
 }
 
 .promo-bar {
-    background-color: rgb(218, 182, 182); /* Colore di sfondo rosa */
-    padding: 50px 250px; /* Spaziatura */
-    display: flex; /* Disposizione flessibile */
-    justify-content: space-between; /* Spaziatura tra gli elementi */
-    align-items: center; /* Allinea verticalmente gli elementi */
-    color: #fff; /* Colore del testo */
-    font-family: Kromosius; /* Font del testo */
+    background-color: rgb(218, 182, 182); 
+    padding: 50px 250px; 
+    display: flex; /
+    justify-content: space-between; 
+    align-items: center; 
+    color: #fff; 
+    font-family: Kromosius; 
 }
 
 .promo-item {
-    display: flex; /* Disposizione flessibile per icona e testo */
-    align-items: center; /* Allinea verticalmente icona e testo */
+    display: flex; 
+    align-items: center; 
 }
 
 .promo-item i {
-    font-size: 60px; /* Dimensione dell'icona */
-    color: #e88a8a; /* Colore dell'icona */
-    margin-right: 20px; /* Spaziatura tra icona e testo */
+    font-size: 60px; 
+    color: #e88a8a; 
+    margin-right: 20px; 
 }
 
 .promo-text p {
-    margin: 0; /* Rimuove il margine dai paragrafi */
-    line-height: 1.2; /* Altezza linea per il testo */
+    margin: 0; 
+    line-height: 1.2; 
 }
 
-/* Media Queries */
-
-/* Per schermi più piccoli di 1024px (grandi tablet e piccoli desktop) */
 @media (max-width: 1024px) {
     .promo-bar {
-        padding: 40px 150px; /* Riduci il padding per adattare meglio su schermi più piccoli */
+        padding: 40px 150px; 
     }
 }
 
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
     .promo-bar {
-        flex-direction: column; /* Disposizione verticale per adattarsi meglio su schermi più piccoli */
-        padding: 30px 20px; /* Riduci ulteriormente il padding */
-        text-align: center; /* Allinea il testo al centro */
+        flex-direction: column; 
+        padding: 30px 20px; 
+        text-align: center; 
     }
 
     .promo-item {
-        margin-bottom: 20px; /* Spazio tra gli elementi nella disposizione verticale */
-        justify-content: center; /* Centra gli elementi */
+        margin-bottom: 20px; 
+        justify-content: center; 
     }
 
     .promo-item i {
-        margin-right: 0; /* Rimuovi la spaziatura tra icona e testo nella disposizione verticale */
-        margin-bottom: 10px; /* Aggiungi spazio sotto l'icona */
+        margin-right: 0; 
+        margin-bottom: 10px; 
     }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
     .promo-bar {
-        padding: 20px 10px; /* Riduci ulteriormente il padding */
+        padding: 20px 10px; 
     }
 
     .promo-item i {
-        margin-bottom: 10px; /* Aggiungi spazio sotto l'icona */
+        margin-bottom: 10px; 
     }
 }
 
-
 footer {
-  background-color: rgb(218, 182, 182); /* Sfondo scuro per il footer */
-  padding: 20px 0; /* Spazio interno al footer */
-  color: #fff; /* Colore del testo */
-  text-align: center; /* Centra il testo */
+  background-color: rgb(218, 182, 182);
+  padding: 20px; 
+  color: #fff; 
+  text-align: center; 
 }
 
 footer .container {
-  max-width: 960px; /* Larghezza massima del contenitore */
-  margin: 0 auto; /* Centro del contenitore */
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto; 
   align-items: center;
 }
 
 footer p {
-  margin: 10px 0; /* Margine tra il testo e gli elementi circostanti */
+  margin: 10px 0; 
 }
 
-/* Stili per la sezione dei social media */
+
 footer .social-media {
-  list-style: none; /* Rimuove i punti elenco */
   padding: 0;
   display: flex;
-  justify-content: center; /* Centra le icone orizzontalmente */
-  gap: 15px; /* Spazio tra le icone */
-  margin-top: 15px; /* Spazio tra il testo e le icone */
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 15px; 
 }
 
 footer .social-media li {
-  display: inline-block; /* Dispone le icone in linea */
+  display: inline-block; 
 }
 
 footer .social-media a {
-  color: #fff; /* Colore delle icone */
-  font-size: 24px; /* Dimensione delle icone */
-  transition: color 0.3s ease-in-out; /* Transizione per l'effetto hover */
+  color: #fff; 
+  font-size: 24px; 
+  transition: color 0.3s ease-in-out; 
 }
 
 footer .social-media a:hover {
-  color: #e88a8a; /* Cambia colore al passaggio del mouse */
+  color: #e88a8a; 
 }
 
-/* Media Queries */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   footer {
-    padding: 20px 10px; /* Riduci il padding per adattare meglio su schermi più piccoli */
+    padding: 20px 10px; 
   }
 
   footer .social-media {
-    gap: 10px; /* Riduci lo spazio tra le icone */
+    gap: 10px; 
   }
 
   footer .social-media a {
-    font-size: 20px; /* Riduci la dimensione delle icone */
+    font-size: 20px; 
   }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   footer .social-media {
-    flex-direction: column; /* Disposizione verticale delle icone per schermi molto piccoli */
-    gap: 10px; /* Riduci lo spazio tra le icone */
+    flex-direction: column; 
+    gap: 10px; 
   }
 
   footer .social-media a {
-    font-size: 18px; /* Riduci ulteriormente la dimensione delle icone */
+    font-size: 18px; 
   }
 }
 
@@ -1505,8 +1459,6 @@ footer .social-media a:hover {
 .notification-popup {
   display: flex;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -1521,7 +1473,7 @@ footer .social-media a:hover {
   padding: 20px;
   border-radius: 8px;
   max-width: 500px;
-  width: 90%; /* Aumenta la larghezza per schermi più piccoli */
+  width: 90%; 
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -1562,7 +1514,6 @@ footer .social-media a:hover {
   color: #333;
 }
 
-/* Nascondi il popup quando il checkbox non è selezionato */
 .popup-toggle:checked ~ .notification-popup {
   transform: translateX(0);
   opacity: 1;
@@ -1577,41 +1528,37 @@ footer .social-media a:hover {
   display: none;
 }
 
-/* Media Queries */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .notification-popup .notification-content {
     max-width: 90%;
-    width: 90%; /* Adatta meglio la larghezza */
-    padding: 15px; /* Riduci il padding per adattare il contenuto */
+    width: 90%; 
+    padding: 15px; 
   }
 
   .notification-popup .notification-content .button {
-    font-size: 14px; /* Riduci la dimensione del testo del pulsante */
-    padding: 8px 16px; /* Riduci il padding del pulsante */
+    font-size: 14px; 
+    padding: 8px 16px; 
   }
 
   .notification-popup .close-btn {
-    font-size: 20px; /* Riduci la dimensione dell'icona di chiusura */
+    font-size: 20px; 
   }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   .notification-popup .notification-content {
     max-width: 95%;
-    width: 95%; /* Ulteriore adattamento della larghezza */
-    padding: 10px; /* Riduci ulteriormente il padding */
+    width: 95%; 
+    padding: 10px; 
   }
 
   .notification-popup .notification-content .button {
-    font-size: 12px; /* Riduci ulteriormente la dimensione del testo del pulsante */
-    padding: 6px 12px; /* Riduci ulteriormente il padding del pulsante */
+    font-size: 12px; 
+    padding: 6px 12px; 
   }
 
   .notification-popup .close-btn {
-    font-size: 18px; /* Riduci ulteriormente la dimensione dell'icona di chiusura */
+    font-size: 18px; 
   }
 }
 
