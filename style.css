@@ -1012,12 +1012,13 @@ input[name="carousel"] {
     border-radius: 10px;
     margin: 40px;
     text-align: center;
-    font-family: kromosius,
+    font-family: kromosius;
 }
 
 .certificazioni h3 {
     font-size: 28px;
     margin-bottom: 20px;
+    font-family: kromosius;
 }
 
 .certificazioni-list {
