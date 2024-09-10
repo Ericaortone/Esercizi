@@ -24,6 +24,33 @@ header {
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  /* Riduci il padding dell'header per piccoli schermi */
+  header {
+    padding: 10px 5%;
+  }
+
+  /* Riduci la dimensione del background per evitare overflow */
+  body {
+    background-size: cover;
+    background-position: top;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adattamenti per schermi molto piccoli (smartphone) */
+  header {
+    flex-direction: column; /* Rende l'header verticale */
+    align-items: flex-start;
+    padding: 10px 3%;
+  }
+
+  /* Riduci ulteriormente il padding e gli elementi interni */
+  body {
+    background-size: 150%; /* Maggiore ridimensionamento su schermi piccoli */
+  }
+}
+
 
 .logo {
   width: 50px;
