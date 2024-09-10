@@ -757,12 +757,6 @@ text-align: center;
 }
 
 
-.reviews {
-   display: flex;
-   justify-content: center;
-   margin-top: 10px;
-}
-
  .reviews span {
    color: rgb(218, 182, 182);
    font-size: 24px;
@@ -773,7 +767,6 @@ text-align: center;
    color: #e88a8a; 
 }
 
-/* Stile per le stelle delle recensioni */
 .image-container-products:nth-child(1) .fa-star.checked:nth-child(-n+4),
 .image-container-products:nth-child(2) .fa-star.checked:nth-child(-n+4),
 .image-container-products:nth-child(3) .fa-star.checked:nth-child(-n+4),
@@ -781,43 +774,30 @@ text-align: center;
   color: #e88a8a;
 }
 
-/* Stile per gli elementi evidenziati */
 .highlighted {
   color: #e88a8a;
 }
 
-/* Media Queries per dispositivi mobili */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .image-container-products .fa-star {
-    font-size: 20px; /* Riduci la dimensione delle stelle per schermi più piccoli */
+    font-size: 20px;
   }
   
   .highlighted {
-    font-size: 18px; /* Riduci la dimensione del testo evidenziato per schermi più piccoli */
+    font-size: 18px; 
   }
 }
 
-/* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
   .image-container-products .fa-star {
-    font-size: 16px; /* Riduci ulteriormente la dimensione delle stelle per schermi molto piccoli */
+    font-size: 16px; 
   }
   
   .highlighted {
-    font-size: 14px; /* Riduci ulteriormente la dimensione del testo evidenziato per schermi molto piccoli */
+    font-size: 14px; 
   }
 } 
 
-/* Stile per il contenitore delle stelle */
-.star-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-/* Stile per le stelle */
 .star-container span {
   color: rgb(218, 182, 182);
   font-size: 24px;
@@ -825,64 +805,53 @@ text-align: center;
   color: #e88a8a;
 }
 
-/* Stile per l'effetto hover sulle stelle */
 .star-container span:hover {
   color: #e88a8a;
 }
 
-/* Stile per l'elemento evidenziato */
 .highlighted {
   color: #e88a8a;
 }
 
-/* Media Queries per dispositivi mobili */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .star-container span {
-    font-size: 20px; /* Riduci la dimensione delle stelle per schermi più piccoli */
+    font-size: 20px; 
   }
 }
 
-/* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
   .star-container span {
-    font-size: 16px; /* Riduci ulteriormente la dimensione delle stelle per schermi molto piccoli */
+    font-size: 16px; 
   }
 }
 
-/* Stile base per gli h1 e h2 */
 #curiositàsuinostriprodotti h2,
 h2 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
   padding: 0px;
-  padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
+  padding: 10px; 
   text-align: center;
   font-family: 'Kromosius';
 }
 
-/* Media Queries per dispositivi mobili */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   #curiositàsuinostriprodotti h2 {
-    font-size: 24px; /* Riduci la dimensione del font per gli h1 */
+    font-size: 24px; 
   }
 
   h2 {
-    font-size: 20px; /* Riduci la dimensione del font per gli h2 */
+    font-size: 20px; 
   }
 }
 
-/* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
   #curiositàsuinostriprodotti h2 {
-    font-size: 20px; /* Riduci ulteriormente la dimensione del font per gli h1 */
+    font-size: 20px; 
   }
 
   h2 {
-    font-size: 16px; /* Riduci ulteriormente la dimensione del font per gli h2 */
+    font-size: 16px; 
   }
 }
 
