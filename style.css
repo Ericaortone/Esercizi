@@ -51,7 +51,6 @@ header {
   }
 }
 
-
 .logo {
   width: 50px;
   height: auto;
@@ -736,9 +735,11 @@ text-align: center;
   font-family: 'Kromosius';
 }
 
-.image-container-products {
+.image-container-products{
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
