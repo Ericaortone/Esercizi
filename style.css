@@ -585,23 +585,21 @@ text-align: center;
 }
 
 #sfondo {
-  width: 100%; /* Larghezza totale della pagina */
-  height: 300px; /* Altezza fissa del contenitore */
-  overflow: hidden; /* Nasconde la parte dell'immagine fuori dal contenitore */
-  position: relative; /* Necessario per il posizionamento dell'immagine */
+  width: 100%; 
+  height: 300px; 
+  overflow: hidden; 
+  position: relative; 
 }
 
 #sfondo img {
-  width: 100%; /* Larghezza dell'immagine */
-  height: auto; /* Mantiene le proporzioni verticali */
-  position: absolute; /* Permette di posizionare l'immagine */
-  top: 50%; /* Posiziona l'immagine al centro verticale */
-  left: 50%; /* Posiziona l'immagine al centro orizzontale */
-  transform: translate(-50%, -50%); /* Centra l'immagine nel contenitore */
+  width: 100%; 
+  height: auto; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
-/* Stile base per il banner */
 .banner {
   background-color: #f9f9f9; 
   padding: 50px 20px; 
@@ -611,12 +609,6 @@ text-align: center;
   margin: 0 auto; 
 }
 
-.banner h1 {
-  color: #333; 
-  font-size: 36px; 
-  margin-bottom: 20px; 
-}
-
 .banner p {
   font-family: Kromosius ;
   color: black; 
@@ -624,96 +616,70 @@ text-align: center;
   margin-bottom: 30px; 
 }
 
-.banner .button {
-  background-color: rgb(218, 182, 182); 
-  color: #fff; 
-  padding: 15px 30px; 
-  border-radius: 25px; 
-  text-decoration: none; 
-  transition: background-color 0.3s ease-in-out; 
-}
-
-.banner .button:hover {
-  background-color: #e88a8a; 
-}
-
-/* Media Queries */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .banner {
-    padding: 40px 15px; /* Riduci il padding per schermi più piccoli */
+    padding: 40px 15px; 
   }
 
   .banner h1 {
-    font-size: 30px; /* Riduci la dimensione del font per h1 */
-    margin-bottom: 15px; /* Riduci il margine inferiore */
+    font-size: 30px; 
+    margin-bottom: 15px; 
   }
 
   .banner p {
-    font-size: 16px; /* Riduci la dimensione del font per p */
-    margin-bottom: 20px; /* Riduci il margine inferiore */
+    font-size: 16px; 
+    margin-bottom: 20px; 
   }
 
   .banner .button {
-    padding: 12px 25px; /* Riduci il padding per la button */
-    font-size: 16px; /* Riduci la dimensione del font per la button */
+    padding: 12px 25px; 
+    font-size: 16px; 
   }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   .banner {
-    padding: 30px 10px; /* Ulteriore riduzione del padding */
+    padding: 30px 10px; 
   }
 
   .banner h1 {
-    font-size: 24px; /* Ulteriore riduzione della dimensione del font per h1 */
-    margin-bottom: 10px; /* Ulteriore riduzione del margine inferiore */
+    font-size: 24px; 
+    margin-bottom: 10px; 
   }
 
   .banner p {
-    font-size: 14px; /* Ulteriore riduzione della dimensione del font per p */
-    margin-bottom: 15px; /* Ulteriore riduzione del margine inferiore */
+    font-size: 14px; 
+    margin-bottom: 15px; 
   }
 
   .banner .button {
-    padding: 10px 20px; /* Ulteriore riduzione del padding per la button */
-    font-size: 14px; /* Ulteriore riduzione della dimensione del font per la button */
+    padding: 10px 20px; 
+    font-size: 14px; 
   }
 }
 
-
-
-/* Stile base per il titolo */
 #inostriprodotti h2 {
-  background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
-  border-radius: 18px;
-  padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
+
+  padding: 10px; 
   text-align: center;
   font-family: Kromosius;
 }
 
-/* Media Queries per dispositivi mobili */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   #inostriprodotti h2 {
-    font-size: 28px; /* Riduci la dimensione del font per schermi più piccoli */
-    padding: 8px; /* Riduci il padding per adattarsi meglio */
+    font-size: 28px; 
+    padding: 8px; 
   }
 }
 
-/* Per schermi molto piccoli (max-width: 480px) */
+
 @media (max-width: 480px) {
   #inostriprodotti h2 {
-    font-size: 24px; /* Riduci ulteriormente la dimensione del font */
-    padding: 6px; /* Riduci ulteriormente il padding */
+    font-size: 24px; 
+    padding: 6px;
   }
 }
 
-
-/* Stile base per il contenitore dell'immagine */
 .image-frame {
   border: 2px solid rgb(218, 182, 182);
   padding: 20px;
@@ -723,82 +689,70 @@ text-align: center;
   font-family: 'Kromosius';
 }
 
-/* Stile per il contenitore delle immagini dei prodotti */
 .image-container-products {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   margin-top: 20px;
 }
 
-/* Stile per ogni div all'interno del contenitore */
 .image-container-products div {
   text-align: center;
   margin: 10px;
   flex: 1;
 }
 
-/* Stile per le immagini all'interno del contenitore */
 .image-container-products img {
   width: 75%;
   height: auto;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* Effetto hover per le immagini */
 .image-container-products div:hover img {
   transform: scale(1.1);
   filter: brightness(80%);
 }
 
-/* Stile per i paragrafi sotto le immagini */
 .image-container-products p {
   margin-top: 10px;
   font-size: 16px;
   color: #333;
 }
 
-/* Margine specifico per il primo elemento */
 .image-container-products:nth-child(1) div {
   margin-right: 20%;
 }
 
-/* Media Queries per dispositivi mobili */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .image-container-products {
-    justify-content: center; /* Centra gli elementi nel contenitore */
+    justify-content: center; 
   }
 
   .image-container-products div {
-    margin: 10px; /* Riduci il margine per adattarsi meglio */
-    flex: 1 0 45%; /* Permette a due elementi di adattarsi su una riga */
+    margin: 10px; 
+    flex: 1 0 45%; 
   }
 
   .image-container-products img {
-    width: 90%; /* Riduci la larghezza dell'immagine per adattarsi meglio */
+    width: 90%; 
   }
 
   .image-container-products p {
-    font-size: 14px; /* Riduci la dimensione del font per schermi più piccoli */
+    font-size: 14px; 
   }
 }
 
-/* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
   .image-container-products div {
-    flex: 1 0 100%; /* Ogni elemento occupa una riga intera */
-    margin: 5px; /* Riduci ulteriormente il margine */
+    flex: 1 0 100%; 
+    margin: 5px; 
   }
 
   .image-container-products img {
-    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
+    width: 100%; 
   }
 
   .image-container-products p {
-    font-size: 12px; /* Riduci ulteriormente la dimensione del font */
+    font-size: 12px; 
   }
 }
 
