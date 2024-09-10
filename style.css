@@ -1052,6 +1052,7 @@ input[name="carousel"] {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Permette di avvolgere le certificazioni su più righe */
 }
 
 .certificazione {
@@ -1059,7 +1060,7 @@ input[name="carousel"] {
     border-radius: 10px;
     padding: 15px;
     text-align: center;
-    width: 300px; 
+    width: 300px;
     border: 4px solid #e88a8a;
 }
 
@@ -1074,6 +1075,7 @@ input[name="carousel"] {
     margin-bottom: 10px;
 }
 
+/* Responsive: Adattamenti per schermi più piccoli */
 @media (max-width: 768px) {
     .certificazioni {
         padding: 20px;
@@ -1084,9 +1086,14 @@ input[name="carousel"] {
         font-size: 24px;
     }
 
+    .certificazioni-list {
+        flex-direction: column; /* Disposizione in colonna per schermi piccoli */
+        gap: 30px; /* Spazio tra le certificazioni */
+    }
+
     .certificazione {
-        width: 100%; /* Prende tutto lo spazio disponibile sui dispositivi più piccoli */
-        margin-bottom: 20px; /* Spazio aggiuntivo tra gli elementi */
+        width: 100%; /* Ogni certificazione occupa l'intera larghezza */
+        margin-bottom: 20px; /* Aggiunge spazio tra le certificazioni */
     }
 }
 
@@ -1104,8 +1111,7 @@ input[name="carousel"] {
         font-size: 16px;
     }
 }
-  
-   
+ 
 #dovetrovarci h2 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
