@@ -10,11 +10,13 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: kromosius, 
+  font-family: kromosius, sans-serif;
 }
 
 header {
-  top: 0; left: 0; right: 0;
+  top: 0; 
+  left: 0; 
+  right: 0;
   background-color: rgb(218, 182, 182);
   box-shadow: 0 5px 10px rgba(168, 126, 126, 0.363);
   padding: 10px 7%;
@@ -24,73 +26,41 @@ header {
   z-index: 1000;
 }
 
-@media (max-width: 768px) {
-  /* Riduci il padding dell'header per piccoli schermi */
-  header {
-    padding: 10px 5%;
-  }
-
-  /* Riduci la dimensione del background per evitare overflow */
-  body {
-    background-size: cover;
-    background-position: top;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Adattamenti per schermi molto piccoli (smartphone) */
-  header {
-    flex-direction: column; /* Rende l'header verticale */
-    align-items: flex-start;
-    padding: 10px 3%;
-  }
-
-  /* Riduci ulteriormente il padding e gli elementi interni */
-  body {
-    background-size: 150%; /* Maggiore ridimensionamento su schermi piccoli */
-  }
-}
-
 .logo {
   width: 50px;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
+/* Responsive layout */
+
+/* Tablet layout (max-width 768px) */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    padding: 10px 5%;       
+    padding: 10px 5%; /* Riduce la spaziatura */
+    justify-content: center; /* Centra gli elementi nell'header */
   }
 
   .logo {
-    width: 40px;          
+    width: 40px; /* Riduce la dimensione del logo */
   }
 }
 
+/* Mobile layout (max-width 480px) */
 @media (max-width: 480px) {
-  body {
-    background-size: contain;  
-  }
-
   header {
-    padding: 10px 3%;         
+    padding: 10px 3%; /* Riduce ulteriormente la spaziatura */
+    flex-direction: column; /* Dispone gli elementi in colonna */
+    align-items: center;
   }
 
   .logo {
-    width: 40px;               
+    width: 30px; /* Ancora più piccolo su mobile */
+    margin-bottom: 10px; /* Aggiunge uno spazio tra il logo e altri elementi */
   }
 }
 
-
-@media (min-width: 1200px) {
-  header {
-    padding: 15px 10%;       
-  }
-
-  .logo {
-    width: 60px;               
-  }
-}
 
 .cookie-popup {
   position: fixed;
