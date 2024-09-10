@@ -5,25 +5,19 @@
 }
 
 body {
-  min-height: 100vh;
   background-color: rgba(168, 126, 126, 0.363);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   font-family: kromosius;
 }
 
 header {
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: rgb(218, 182, 182);
   box-shadow: 0 5px 10px rgba(168, 126, 126, 0.363);
   padding: 10px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
 }
 
 .logo {
@@ -31,43 +25,39 @@ header {
   height: auto;
 }
 
-/* Media Queries per rendere il design responsive */
-
-/* Schermi piccoli come smartphone (max larghezza: 768px) */
 @media (max-width: 768px) {
   header {
-    flex-direction: column; /* Disposizione verticale per i contenuti dell'header */
-    padding: 10px 5%;       /* Riduce il padding laterale per schermi più piccoli */
+    flex-direction: column;
+    padding: 10px 5%;       
   }
 
   .logo {
-    width: 40px;           /* Riduce la dimensione del logo su schermi piccoli */
+    width: 40px;          
   }
 }
 
-/* Schermi molto piccoli come smartphone in verticale (max larghezza: 480px) */
 @media (max-width: 480px) {
   body {
-    background-size: contain;  /* Modifica lo sfondo per adattarsi meglio su schermi piccoli */
+    background-size: contain;  
   }
 
   header {
-    padding: 10px 3%;          /* Riduce ulteriormente il padding laterale */
+    padding: 10px 3%;         
   }
 
   .logo {
-    width: 40px;               /* Riduce ancora di più la dimensione del logo */
+    width: 40px;               
   }
 }
 
-/* Schermi grandi come desktop (min larghezza: 1200px) */
+
 @media (min-width: 1200px) {
   header {
-    padding: 15px 10%;         /* Aumenta il padding laterale su schermi grandi */
+    padding: 15px 10%;       
   }
 
   .logo {
-    width: 60px;               /* Aumenta leggermente la dimensione del logo su schermi grandi */
+    width: 60px;               
   }
 }
 
