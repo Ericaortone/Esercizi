@@ -255,71 +255,59 @@ header .navbar ul li a:hover {
   }
 }
 
-
 .search-bar {
   display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
   border-radius: 20px;
   padding: 5px 10px;
   background-color: #fff;
   margin-right: 10px;
-  max-width: 100%; /* Aggiunto per evitare overflow */
 }
 
 .search-bar input[type="text"] {
   border: none;
-  outline: none;
   padding: 5px;
-  border-radius: 20px;
-  width: 120px; /* Valore iniziale per desktop */
+  width: 120px; 
 }
 
 .search-bar button {
   border: none;
   background: none;
-  cursor: pointer;
   color: #e88a8a;
   font-size: 24px;
-  font-weight: bold;
 }
 
-/* Responsive Design */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .search-bar {
-    width: 100%;               /* La barra di ricerca occupa tutta la larghezza disponibile */
-    margin-right: 0;           /* Rimuove il margine a destra */
-    padding: 5px;              /* Riduce il padding */
-    justify-content: space-between; /* Spazia in modo uniforme l'input e il pulsante */
+    width: 100%;               
+    margin-right: 0;          
+    padding: 5px;            
+    justify-content: space-between; 
   }
 
   .search-bar input[type="text"] {
-    width: calc(100% - 60px);  /* Adatta la larghezza dell'input al contenitore */
-    padding: 8px;              /* Aggiunge un po' di padding per schermi piccoli */
+    width: calc(100% - 60px);  
+    padding: 8px;              
   }
 
   .search-bar button {
-    font-size: 20px;           /* Riduce la dimensione del pulsante */
+    font-size: 20px;          
   }
 }
 
-/* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
   .search-bar {
     width: 100%;
-    padding: 5px;              /* Mantiene un padding compatto */
+    padding: 5px;              
   }
 
   .search-bar input[type="text"] {
-    width: calc(100% - 50px);  /* Adatta ulteriormente la larghezza dell'input */
-    font-size: 14px;           /* Riduce la dimensione del testo per l'input */
-    padding: 6px;              /* Aggiunge un padding leggermente maggiore */
+    width: calc(100% - 50px);  
+    font-size: 14px;          
+    padding: 6px;              
   }
 
   .search-bar button {
-    font-size: 18px;           /* Riduce ulteriormente la dimensione del pulsante */
+    font-size: 18px;          
   }
 }
 
