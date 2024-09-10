@@ -313,62 +313,52 @@ header .navbar ul li a:hover {
 
 
 .header-icons {
-  display: flex; /* Imposta il layout flessibile per allineare gli elementi sulla stessa riga */
-  justify-content: space-between; /* Spazia gli elementi sulla stessa riga */
-  align-items: center; /* Allinea verticalmente al centro */
-  gap: 20px; /* Spazio tra carrello e profilo */
+  display: flex; 
 }
 
 .cart a, .profile a {
-  font-size: 24px; /* Dimensione dell'icona */
-  color: #e88a8a; /* Colore delle icone */
+  font-size: 24px; 
+  color: #e88a8a; 
 }
 
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .header-icons {
-    justify-content: center; /* Centra gli elementi su schermi medi */
-    gap: 10px; /* Riduce lo spazio tra profilo e carrello */
+    justify-content: center; 
+    gap: 10px; 
   }
 
   .profile a, .cart a {
-    font-size: 20px; /* Riduce la dimensione delle icone per schermi medi */
+    font-size: 20px; 
   }
 }
 
-/* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
   .header-icons {
-    justify-content: center; /* Centra gli elementi su schermi piccoli */
-    gap: 8px; /* Riduce ulteriormente lo spazio tra gli elementi */
+    justify-content: center; 
+    gap: 8px; 
   }
 
   .profile a, .cart a {
-    font-size: 18px; /* Riduce ulteriormente la dimensione delle icone */
+    font-size: 18px; 
   }
 }
 
-/* Per schermi extra-large (min-width: 1200px) */
 @media (min-width: 1200px) {
   .header-icons {
-    justify-content: flex-start; /* Allinea gli elementi a sinistra su schermi grandi */
-    gap: 30px; /* Aumenta lo spazio tra gli elementi */
+    justify-content: flex-start; 
+    gap: 30px; 
   }
 
   .profile a, .cart a {
-    font-size: 28px; /* Aumenta la dimensione delle icone per schermi grandi */
+    font-size: 28px; 
   }
-}
-
-.container {
-  max-width: 9200px;
-  margin: 0 auto;
 }
 
 .titolo{
 font-family: "kromosius";
 text-align: center;
 } 
+
 
 /* Stile base per il pulsante Back to Top */
 .back-to-top {
