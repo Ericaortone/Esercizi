@@ -5,20 +5,25 @@
 }
 
 body {
+  min-height: 100vh;
   background-color: rgba(168, 126, 126, 0.363);
   background-size: cover;
   background-position: center;
-  font-family: kromosius;
+  background-repeat: no-repeat;
+  font-family: kromosius, 
 }
 
 header {
+  top: 0; left: 0; right: 0;
   background-color: rgb(218, 182, 182);
   box-shadow: 0 5px 10px rgba(168, 126, 126, 0.363);
   padding: 10px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1000;
 }
+
 
 .logo {
   width: 50px;
@@ -189,7 +194,10 @@ header .navbar ul li {
 }
 
 header .navbar ul li a {
+  font-size: 20px;
+  padding: 10px;
   color: #fff;
+  display: block;
 }
 
 header .navbar ul li a:hover {
@@ -258,23 +266,29 @@ header .navbar ul li a:hover {
 
 .search-bar {
   display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
   border-radius: 20px;
   padding: 5px 10px;
   background-color: #fff;
-  margin-right: 10px;
+  margin-right: 10px; 
 }
 
 .search-bar input[type="text"] {
   border: none;
+  outline: none;
   padding: 5px;
+  border-radius: 20px;
   width: 120px; 
 }
 
 .search-bar button {
   border: none;
   background: none;
+  cursor: pointer;
   color: #e88a8a;
   font-size: 24px;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -361,18 +375,19 @@ text-align: center;
 
 
 .back-to-top {
-  position: fixed;
-  bottom: 80px; 
-  right: 20px; 
-  background-color: rgb(218, 182, 182); 
-  transition: background-color 0.3s ease-in-out;
-  color: #fff; 
-  padding: 15px 20px;
-  border-radius: 50px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none; 
-  font-family: "Kromosius"; 
+    position: fixed;
+    bottom: 80px;    
+    right: 20px; 
+    background-color: rgb(218, 182, 182); 
+    color: #fff;     
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; 
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1000;   
 }
 
 .back-to-top:hover {
@@ -398,10 +413,11 @@ text-align: center;
 }
 
 #chatbot {
-  position: fixed;
+   position: fixed;
   bottom: 20px;
   right: 20px;
   width: 170px;
+  z-index: 1000;
 }
 
 .chatbot-button {
@@ -412,6 +428,8 @@ text-align: center;
   color: white;
   padding: 15px;
   border-radius: 50px;
+  border: none;
+  cursor: pointer;
   font-size: 16px;
   font-family: Kromosius;
   transition: background-color 0.3s ease-in-out;
@@ -426,7 +444,7 @@ text-align: center;
 }
 
 .chatbot-window {
-  display: none;
+    display: none;
   position: fixed;
   bottom: 150px;
   right: 20px;
@@ -435,8 +453,9 @@ text-align: center;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Kromosius', sans-serif;
+  font-family: 'Kromosius';
 }
+
 
 #chatbot-toggle:checked ~ .chatbot-window {
   display: block;
@@ -1383,75 +1402,84 @@ input[name="carousel"] {
 
 @media (max-width: 480px) {
     .promo-bar {
-        padding: 20px 10px; 
+        padding: 20px 10px; /* Riduci ulteriormente il padding */
     }
 
     .promo-item i {
-        margin-bottom: 10px; 
+        margin-bottom: 10px; /* Aggiungi spazio sotto l'icona */
     }
 }
 
+
 footer {
-  background-color: rgb(218, 182, 182);
-  padding: 20px; 
-  color: #fff; 
-  text-align: center; 
+  background-color: rgb(218, 182, 182); /* Sfondo scuro per il footer */
+  padding: 20px 0; /* Spazio interno al footer */
+  color: #fff; /* Colore del testo */
+  text-align: center; /* Centra il testo */
 }
 
 footer .container {
-  margin: 0 auto; 
+  max-width: 960px; /* Larghezza massima del contenitore */
+  margin: 0 auto; /* Centro del contenitore */
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 footer p {
-  margin: 10px 0; 
+  margin: 10px 0; /* Margine tra il testo e gli elementi circostanti */
 }
 
-
+/* Stili per la sezione dei social media */
 footer .social-media {
+  list-style: none; /* Rimuove i punti elenco */
   padding: 0;
   display: flex;
-  justify-content: center; 
-  gap: 15px; 
-  margin-top: 15px; 
+  justify-content: center; /* Centra le icone orizzontalmente */
+  gap: 15px; /* Spazio tra le icone */
+  margin-top: 15px; /* Spazio tra il testo e le icone */
 }
 
 footer .social-media li {
-  display: inline-block; 
+  display: inline-block; /* Dispone le icone in linea */
 }
 
 footer .social-media a {
-  color: #fff; 
-  font-size: 24px; 
-  transition: color 0.3s ease-in-out; 
+  color: #fff; /* Colore delle icone */
+  font-size: 24px; /* Dimensione delle icone */
+  transition: color 0.3s ease-in-out; /* Transizione per l'effetto hover */
 }
 
 footer .social-media a:hover {
-  color: #e88a8a; 
+  color: #e88a8a; /* Cambia colore al passaggio del mouse */
 }
 
+/* Media Queries */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   footer {
-    padding: 20px 10px; 
+    padding: 20px 10px; /* Riduci il padding per adattare meglio su schermi più piccoli */
   }
 
   footer .social-media {
-    gap: 10px; 
+    gap: 10px; /* Riduci lo spazio tra le icone */
   }
 
   footer .social-media a {
-    font-size: 20px; 
+    font-size: 20px; /* Riduci la dimensione delle icone */
   }
 }
 
+/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   footer .social-media {
-    flex-direction: column; 
-    gap: 10px; 
+    flex-direction: column; /* Disposizione verticale delle icone per schermi molto piccoli */
+    gap: 10px; /* Riduci lo spazio tra le icone */
   }
 
   footer .social-media a {
-    font-size: 18px; 
+    font-size: 18px; /* Riduci ulteriormente la dimensione delle icone */
   }
 }
 
@@ -1459,6 +1487,8 @@ footer .social-media a:hover {
 .notification-popup {
   display: flex;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -1473,7 +1503,7 @@ footer .social-media a:hover {
   padding: 20px;
   border-radius: 8px;
   max-width: 500px;
-  width: 90%; 
+  width: 90%; /* Aumenta la larghezza per schermi più piccoli */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -1514,6 +1544,7 @@ footer .social-media a:hover {
   color: #333;
 }
 
+/* Nascondi il popup quando il checkbox non è selezionato */
 .popup-toggle:checked ~ .notification-popup {
   transform: translateX(0);
   opacity: 1;
@@ -1528,37 +1559,41 @@ footer .social-media a:hover {
   display: none;
 }
 
+/* Media Queries */
+
+/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .notification-popup .notification-content {
     max-width: 90%;
-    width: 90%; 
-    padding: 15px; 
+    width: 90%; /* Adatta meglio la larghezza */
+    padding: 15px; /* Riduci il padding per adattare il contenuto */
   }
 
   .notification-popup .notification-content .button {
-    font-size: 14px; 
-    padding: 8px 16px; 
+    font-size: 14px; /* Riduci la dimensione del testo del pulsante */
+    padding: 8px 16px; /* Riduci il padding del pulsante */
   }
 
   .notification-popup .close-btn {
-    font-size: 20px; 
+    font-size: 20px; /* Riduci la dimensione dell'icona di chiusura */
   }
 }
 
+/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   .notification-popup .notification-content {
     max-width: 95%;
-    width: 95%; 
-    padding: 10px; 
+    width: 95%; /* Ulteriore adattamento della larghezza */
+    padding: 10px; /* Riduci ulteriormente il padding */
   }
 
   .notification-popup .notification-content .button {
-    font-size: 12px; 
-    padding: 6px 12px; 
+    font-size: 12px; /* Riduci ulteriormente la dimensione del testo del pulsante */
+    padding: 6px 12px; /* Riduci ulteriormente il padding del pulsante */
   }
 
   .notification-popup .close-btn {
-    font-size: 18px; 
+    font-size: 18px; /* Riduci ulteriormente la dimensione dell'icona di chiusura */
   }
 }
 
