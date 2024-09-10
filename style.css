@@ -371,7 +371,6 @@ text-align: center;
   font-size: 16px;
   text-align: center;
   text-decoration: none; 
-  z-index: 1000;
   font-family: "Kromosius"; 
 }
 
@@ -527,7 +526,6 @@ text-align: center;
   }
 }
 
-/* Stile base per il pulsante di invio */
 .send-button {
   background-color: rgb(218, 182, 182);
   color: white;
@@ -537,67 +535,54 @@ text-align: center;
   margin-left: 10px;
   cursor: pointer;
   font-size: 13px;
-  transition: background-color 0.3s ease-in-out; /* Transizione per l'effetto hover */
+  transition: background-color 0.3s ease-in-out; 
 }
 
 .send-button:hover {
   background-color: #e88a8a;
 }
 
-/* Media Queries */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .send-button {
-    padding: 8px 12px; /* Riduci il padding per schermi più piccoli */
-    font-size: 12px; /* Riduci la dimensione del font */
-    margin-left: 5px; /* Riduci il margine a sinistra */
+    padding: 8px 12px; 
+    font-size: 12px; 
+    margin-left: 5px; 
   }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   .send-button {
-    padding: 6px 10px; /* Ulteriore riduzione del padding per schermi molto piccoli */
-    font-size: 11px; /* Ulteriore riduzione della dimensione del font */
-    margin-left: 3px; /* Ulteriore riduzione del margine a sinistra */
+    padding: 6px 10px; 
+    font-size: 11px; 
+    margin-left: 3px; 
   }
 }
 
-
-/* Stile per la checkbox nascosta (usata per gestire l'apertura e la chiusura) */
 .chatbot-toggle {
   display: none;
 }
 
-
-/* Stile base per il titolo */
 #chisiamo h2 {
   background: linear-gradient(to right, rgba(218, 182, 182, 0), rgb(218, 182, 182), rgba(218, 182, 182, 0));
   border-radius: 15px;
-  padding: 10px; /* Aggiungi un po' di padding per migliorare l'aspetto */
+  padding: 10px; 
   font-family: Kromosius;
   text-align: center;
 }
 
-/* Media Queries per dispositivi mobili */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   #chisiamo h2 {
-    font-size: 30px; /* Riduci la dimensione del font per schermi più piccoli */
-    padding: 8px; /* Riduci il padding per adattarsi meglio */
+    font-size: 30px; 
+    padding: 8px; 
   }
 }
 
-/* Per schermi molto piccoli (max-width: 480px) */
 @media (max-width: 480px) {
   #chisiamo h2 {
-    font-size: 24px; /* Riduci ulteriormente la dimensione del font */
-    padding: 6px; /* Riduci ulteriormente il padding */
+    font-size: 24px; 
+    padding: 6px; 
   }
 }
-
 
 #sfondo {
   width: 100%; /* Larghezza totale della pagina */
