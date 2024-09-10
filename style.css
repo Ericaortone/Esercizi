@@ -855,12 +855,9 @@ h2 {
   }
 }
 
-
-
-/* Stile base per il carosello */
 .carousel {
   position: relative;
-  width: 80%; /* Adatta la larghezza del carosello */
+  width: 80%; 
   margin: auto;
   overflow: hidden;
 }
@@ -880,13 +877,13 @@ h2 {
 .carousel-item {
   display: flex;
   align-items: center;
-  padding: 20px; /* Aggiungi un po' di padding */
+  padding: 20px; 
 }
 
 .carousel-item img {
-  width: 200px; /* Aumenta la larghezza dell'immagine */
+  width: 200px; 
   height: auto;
-  margin-right: 30px; /* Aumenta lo spazio tra immagine e testo */
+  margin-right: 30px; 
 }
 
 .carousel-text h2 {
@@ -919,59 +916,54 @@ input[name="carousel"] {
   cursor: pointer;
 }
 
-/* Media Queries per dispositivi mobili */
-
-/* Per schermi più piccoli di 768px (tablet e telefoni) */
 @media (max-width: 768px) {
   .carousel {
-    width: 90%; /* Riduci la larghezza del carosello */
+    width: 90%; 
   }
 
   .carousel-item {
-    padding: 15px; /* Riduci il padding per schermi più piccoli */
+    padding: 15px; 
   }
 
   .carousel-item img {
-    width: 150px; /* Riduci la larghezza dell'immagine */
-    margin-right: 20px; /* Riduci lo spazio tra immagine e testo */
+    width: 150px; 
+    margin-right: 20px; 
   }
 
   .carousel-controls {
-    width: 30%; /* Aumenta la larghezza dei controlli */
+    width: 30%; 
   }
 
   .carousel-control {
-    width: 12px; /* Riduci la larghezza dei controlli */
-    height: 12px; /* Riduci l'altezza dei controlli */
+    width: 12px; 
+    height: 12px; 
   }
 }
 
-/* Per schermi molto piccoli (480px e meno) */
 @media (max-width: 480px) {
   .carousel {
-    width: 100%; /* Fai in modo che il carosello occupi tutta la larghezza disponibile */
+    width: 100%; 
   }
 
   .carousel-item {
-    padding: 10px; /* Riduci ulteriormente il padding */
+    padding: 10px; 
   }
 
   .carousel-item img {
-    width: 120px; /* Riduci ulteriormente la larghezza dell'immagine */
-    margin-right: 10px; /* Riduci ulteriormente lo spazio tra immagine e testo */
+    width: 120px; 
+    margin-right: 10px; 
   }
 
   .carousel-controls {
-    width: 40%; /* Aumenta la larghezza dei controlli */
-    bottom: 20px; /* Riduci la distanza dal fondo */
+    width: 40%; 
+    bottom: 20px; 
   }
 
   .carousel-control {
-    width: 10px; /* Riduci ulteriormente la larghezza dei controlli */
-    height: 10px; /* Riduci ulteriormente l'altezza dei controlli */
+    width: 10px; 
+    height: 10px; 
   }
 }
-
 
 #slide1:checked ~ .carousel-images {
   transform: translateX(0%);
@@ -996,7 +988,6 @@ input[name="carousel"] {
   background-color: white;
 }
 
-
 .certificazioni {
     background-color: #f9f9f9;
     padding: 40px;
@@ -1014,22 +1005,19 @@ input[name="carousel"] {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .certificazione {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     text-align: center;
-    width: 300px; /* Regola la larghezza in base alle tue immagini */
-    border: 4px solid #e88a8a; /* Bordo rosa */
+    width: 300px; 
+    border: 4px solid #e88a8a;
 }
 
 .certificazione img {
     max-width: 100%;
-    height: auto;
     margin-bottom: 10px;
 }
 
@@ -1046,7 +1034,7 @@ input[name="carousel"] {
     }
 
     .certificazione {
-        width: 250px; /* Adatta la larghezza per schermi più piccoli */
+        width: 250px;
     }
 }
 
@@ -1057,7 +1045,7 @@ input[name="carousel"] {
     }
 
     .certificazione {
-        width: 200px; /* Adatta ulteriormente la larghezza per schermi più piccoli */
+        width: 200px; 
     }
 }
 
@@ -1068,7 +1056,7 @@ input[name="carousel"] {
     }
 
     .certificazione {
-        width: 100%; /* Utilizza la larghezza completa per schermi molto piccoli */
+        width: 100%; 
     }
 }
   
