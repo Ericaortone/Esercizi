@@ -1371,7 +1371,7 @@ input[name="carousel"] {
     display: flex; 
     align-items: center; 
     justify-content: center;
-    margin: 0 20px;
+    margin: 0 150px;
 }
 
 .promo-item i {
