@@ -1178,6 +1178,7 @@ input[name="carousel"] {
   background-color: #f9f9f9;
   padding: 50px 20px;
   border-radius: 20px;
+  font-family: Kromosius;
 }
 
 .service-section h1 {
@@ -1357,17 +1358,20 @@ input[name="carousel"] {
 
 .promo-bar {
     background-color: rgb(218, 182, 182); 
-    padding: 50px 250px; 
-    display: flex; /
-    justify-content: space-between; 
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
     align-items: center; 
     color: #fff; 
-    font-family: Kromosius; 
+    font-family: Kromosius;
+    text-align: center; 
 }
 
 .promo-item {
     display: flex; 
     align-items: center; 
+    justify-content: center;
+    margin: 0 20px;
 }
 
 .promo-item i {
@@ -1378,43 +1382,44 @@ input[name="carousel"] {
 
 .promo-text p {
     margin: 0; 
-    line-height: 1.2; 
+    line-height: 1.2;
+    font-size: 18px;
+    text-align: left; 
 }
 
-@media (max-width: 1024px) {
-    .promo-bar {
-        padding: 40px 150px; 
-    }
-}
-
+/* Responsive layout */
 @media (max-width: 768px) {
     .promo-bar {
-        flex-direction: column; 
-        padding: 30px 20px; 
-        text-align: center; 
+        flex-direction: column; /* Dispone gli elementi in colonna su schermi più piccoli */
+        padding: 30px 10px;
     }
 
     .promo-item {
-        margin-bottom: 20px; 
-        justify-content: center; 
+        margin: 20px 0;
+        flex-direction: column; /* Icona e testo uno sopra l'altro */
     }
 
     .promo-item i {
-        margin-right: 0; 
-        margin-bottom: 10px; 
+        font-size: 40px; /* Riduce la dimensione dell'icona su schermi piccoli */
+        margin-right: 0; /* Rimuove il margine destro quando gli elementi sono in colonna */
+        margin-bottom: 10px; /* Aggiunge spazio tra l'icona e il testo */
+    }
+
+    .promo-text p {
+        font-size: 16px; /* Riduce la dimensione del testo su schermi piccoli */
+        text-align: center; /* Centra il testo su schermi piccoli */
     }
 }
 
 @media (max-width: 480px) {
-    .promo-bar {
-        padding: 20px 10px; /* Riduci ulteriormente il padding */
+    .promo-item i {
+        font-size: 30px; /* Riduce ulteriormente la dimensione dell'icona su schermi molto piccoli */
     }
 
-    .promo-item i {
-        margin-bottom: 10px; /* Aggiungi spazio sotto l'icona */
+    .promo-text p {
+        font-size: 14px; /* Riduce ulteriormente la dimensione del testo su schermi molto piccoli */
     }
 }
-
 
 footer {
   background-color: rgb(218, 182, 182); /* Sfondo scuro per il footer */
