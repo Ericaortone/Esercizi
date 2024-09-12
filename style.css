@@ -407,7 +407,7 @@ text-align: center;
 
 @media (max-width: 480px) {
   .back-to-top {
-    bottom: 70px; 
+    bottom: 40px; 
     right: 10px; 
     padding: 10px 12px; 
     font-size: 12px; 
