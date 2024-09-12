@@ -35,15 +35,16 @@ header {
 
 /* Responsive layout */
 
-/* Tablet layout (max-width 768px) */
 @media (max-width: 768px) {
   header {
-    padding: 10px 5%; /* Riduce la spaziatura */
-    justify-content: center; /* Centra gli elementi nell'header */
+    padding: 10px 5%; /* Riduce il padding orizzontale */
+    flex-direction: column; /* Dispone gli elementi uno sotto l'altro */
+    align-items: center; /* Allinea al centro gli elementi */
   }
 
   .logo {
-    width: 40px; /* Riduce la dimensione del logo */
+    width: 40px; /* Riduce leggermente la dimensione del logo */
+    margin-bottom: 10px; /* Aggiunge uno spazio sotto il logo */
   }
 }
 
@@ -128,17 +129,20 @@ header {
 
 @media (max-width: 768px) {
   .cookie-popup {
-    width: 70%;   
-    left: 15%;     
-    bottom: 10px;  
-    padding: 12px; 
-    font-family: Kromosius;
+    width: 90%; /* Riduci la larghezza al 90% dello schermo */
+    left: 5%; /* Centra orizzontalmente */
+    padding: 15px; /* Riduci il padding */
+    flex-direction: column; /* Disposizione verticale */
+    gap: 10px; /* Aggiungi spazio tra gli elementi */
   }
 
   .cookie-button {
-    padding: 8px 16px; 
-    font-size: 14px;   
-    font-family: Kromosius;
+    width: 100%; /* Il pulsante "Accetta" occupa tutta la larghezza disponibile */
+    padding: 10px 0; /* Riduci il padding laterale */
+  }
+
+  .cookie-content {
+    text-align: center; /* Centra il testo internamente */
   }
 }
 
@@ -205,27 +209,24 @@ header .navbar ul li a:hover {
 
 @media (max-width: 768px) {
   header .navbar ul {
-    flex-direction: column; 
-    align-items: center;
-    font-family: Kromosius;
+    flex-direction: column; /* Trasforma la navbar in verticale */
+    align-items: center; /* Centra gli elementi */
+    padding: 0;
+    margin: 0;
   }
 
   header .navbar ul li {
-    margin-right: 0;       
-    margin-bottom: 10px;  
+    margin-right: 0; /* Rimuovi il margine a destra */
+    margin-bottom: 10px; /* Aggiungi spazio tra i link */
   }
 
   header .navbar ul li a {
-    font-size: 18px;      
-    padding: 8px;          
-  }
-
-  .header-right {
-    flex-direction: column; 
-    margin-top: 10px;     
+    font-size: 18px; /* Riduci leggermente la dimensione del font */
+    padding: 15px; /* Aumenta lo spazio cliccabile per i link */
+    width: 100%; /* Fai sì che i link occupino tutta la larghezza del contenitore */
+    text-align: center; /* Centra il testo nei link */
   }
 }
-
 
 @media (max-width: 480px) {
   header .navbar ul {
@@ -290,19 +291,20 @@ header .navbar ul li a:hover {
 
 @media (max-width: 768px) {
   .search-bar {
-    width: 100%;               
-    margin-right: 0;          
-    padding: 5px;            
-    justify-content: space-between; 
+    flex-direction: column; /* Disposizione verticale per spazi ristretti */
+    padding: 10px; /* Aumenta il padding per una migliore usabilità su touch */
+    width: 100%; /* La barra di ricerca occuperà tutta la larghezza disponibile */
+    margin-right: 0; /* Rimuovi il margine a destra per evitare spazi inutili */
   }
 
   .search-bar input[type="text"] {
-    width: calc(100% - 60px);  
-    padding: 8px;              
+    width: 100%; /* Fai sì che l'input occupi tutta la larghezza del contenitore */
+    margin-bottom: 10px; /* Aggiungi uno spazio tra l'input e il pulsante */
+    font-size: 16px; /* Aumenta leggermente la dimensione del testo per la leggibilità */
   }
 
   .search-bar button {
-    font-size: 20px;          
+    font-size: 20px; /* Riduci la dimensione del pulsante su schermi piccoli */
   }
 }
 
@@ -334,12 +336,13 @@ header .navbar ul li a:hover {
 
 @media (max-width: 768px) {
   .header-icons {
-    justify-content: center; 
-    gap: 10px; 
+    display: flex;
+    gap: 10px; /* Spazio tra le icone */
   }
 
-  .profile a, .cart a {
-    font-size: 20px; 
+  .cart a, .profile a {
+    font-size: 20px; /* Riduce leggermente la dimensione delle icone */
+    color: #e88a8a;
   }
 }
 
