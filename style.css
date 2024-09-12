@@ -144,8 +144,8 @@ header {
 
 @media (max-width: 480px) {
   .cookie-popup {
-    width: 70%;    
-    left: 10%;    
+    width: 60%;    
+    left: 5%;    
     bottom: 10px;   
     padding: 10px;  
     border-radius: 4px; 
@@ -166,7 +166,7 @@ header {
 
 @media (min-width: 1200px) {
   .cookie-popup {
-    width: 250px;  
+    width: 350px;  
     padding: 25px; 
     bottom: 30px; 
     font-family: "Kromosius";
