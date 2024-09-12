@@ -134,15 +134,18 @@ header {
     padding: 15px; /* Riduci il padding */
     flex-direction: column; /* Disposizione verticale */
     gap: 10px; /* Aggiungi spazio tra gli elementi */
+    font-family: "Kromosius";
   }
 
   .cookie-button {
     width: 100%; /* Il pulsante "Accetta" occupa tutta la larghezza disponibile */
     padding: 10px 0; /* Riduci il padding laterale */
+    font-family: "Kromosius";
   }
 
   .cookie-content {
     text-align: center; /* Centra il testo internamente */
+    font-family: "Kromosius";
   }
 }
 
