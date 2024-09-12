@@ -867,11 +867,13 @@ h2 {
 
 @media (max-width: 768px) {
   #curiositàsuinostriprodotti h2 {
-    font-size: 24px; 
+    font-size: 24px;
+    font-family: "Kromosius";
   }
 
   h2 {
-    font-size: 20px; 
+    font-size: 20px;
+    font-family: "Kromosius";
   }
 }
 
