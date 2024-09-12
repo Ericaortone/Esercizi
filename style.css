@@ -205,27 +205,30 @@ header .navbar ul li a:hover {
 
 @media (max-width: 768px) {
   header .navbar ul {
-    flex-direction: column; 
-    align-items: center;
+    flex-direction: column;  /* Imposta la disposizione degli elementi in colonna */
+    align-items: center;     /* Allinea gli elementi al centro */
     font-family: Kromosius;
+    padding: 0;              /* Elimina il padding aggiuntivo */
   }
 
   header .navbar ul li {
-    margin-right: 0;       
-    margin-bottom: 10px;  
+    margin-right: 0;         /* Rimuove il margine a destra */
+    margin-bottom: 10px;     /* Aggiunge spazio tra i link */
   }
 
   header .navbar ul li a {
-    font-size: 18px;      
-    padding: 8px;          
+    font-size: 18px;         /* Riduce la dimensione del testo */
+    padding: 8px;            /* Aggiunge un padding più piccolo */
+    text-align: center;      /* Centra il testo */
   }
 
   .header-right {
-    flex-direction: column; 
-    margin-top: 10px;     
+    display: flex;
+    flex-direction: column;  /* Disposizione verticale degli elementi */
+    margin-top: 10px;        /* Spazio aggiuntivo sopra */
+    align-items: center;     /* Allinea al centro gli elementi */
   }
 }
-
 
 @media (max-width: 480px) {
   header .navbar ul {
