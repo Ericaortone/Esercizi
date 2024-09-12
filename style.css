@@ -128,16 +128,16 @@ header {
 
 @media (max-width: 768px) {
   .cookie-popup {
-    width: 70%;   
-    left: 15%;     
-    bottom: 10px;  
-    padding: 12px; 
+    width: 60%;       /* Riduce la larghezza del pop-up */
+    left: 10%;        /* Sposta il pop-up verso sinistra */
+    bottom: 10px;     /* Mantiene la distanza dal fondo */
+    padding: 10px;    /* Riduce il padding */
     font-family: Kromosius;
   }
 
   .cookie-button {
-    padding: 8px 16px; 
-    font-size: 14px;   
+    padding: 6px 12px;  /* Riduce il padding del pulsante */
+    font-size: 14px;    /* Mantiene il font-size piccolo */
     font-family: Kromosius;
   }
 }
