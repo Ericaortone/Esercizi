@@ -1,8 +1,10 @@
-<p>Ortone Erica</p>
-<p>Matricola n.941</p>
-<p>Corso di web Design</p>
-<p>Prof.Baccan Matteo</p>
-<p>Anno Accademico 2023/2024</p>
+<ul>
+  <li>Ortone Erica</li>
+  <li>Matricola n.941</li>
+  <li>Corso di web Design</li>
+  <li>Prof.Baccan Matteo</li>
+  <li>Anno Accademico 2023/2024</li>
+</ul>
 <h2>Esmeny-shampoo solido (sito)</h2>
 <p>Esmeny è il mio sito ufficiale di vendita di prodotti naturali e sostenibili</p>
 <h2>Descrizione</h2>
