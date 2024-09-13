@@ -38,7 +38,7 @@
   <li>Store ufficile: Via Giovanni Bellezza 23, Milano, Italia</li>
   <li>Orari di apertura: Lun-Sab 10:00 - 19:00</li>
 <h2>Test Validazione</h2>
-<link url="https://pagespeed.web.dev/analysis/https-esmenyperteeperiltuofuturo-netlify-app/0cbqft8fzq?form_factor=mobile">
+<link href="https://pagespeed.web.dev/analysis/https-esmenyperteeperiltuofuturo-netlify-app/0cbqft8fzq?form_factor=mobile">
 <h2>Licenze</h2>
 <p>Il contenuto di questo portfolio è soggetto alla Esmeny License. Consulta il file LICENSE per ulteriori dettagli.</p>
 
