@@ -25,18 +25,18 @@
   <li>popup</li>
   <li>social</li>
   <li>chat support con interazione e botton "torna su"</li>
-<h2>Strumenti </h2>
-<p>Github</p>
-<p>Netlify</p>
-<p>Codepen</p>
-<p>YouTube</p>
-<p>Chatgpt</p>
-<h2>Contatti</h2>
-<p>Telefono: +39 02 1234 5678</p>
-<p>Email: info@esmenybeauty.com</p>
-<p>Sito Web:https://esmenyperteeperiltuofuturo.netlify.app</p>
-<p>Store ufficile: Via Giovanni Bellezza 23, Milano, Italia</p>
-<p>Orari di apertura: Lun-Sab 10:00 - 19:00</p>
+<ul><h2>Strumenti </h2></ul>
+  <li>Github</li>
+  <li>Netlify</li>
+  <li>Codepen</li>
+  <li>YouTube</li>
+  <li>Chatgpt</li>
+<ul><h2>Contatti</h2></ul>
+  <li>Telefono: +39 02 1234 5678</li>
+  <li>Email: info@esmenybeauty.com</li>
+  <li>Sito Web:https://esmenyperteeperiltuofuturo.netlify.app</li>
+  <li>Store ufficile: Via Giovanni Bellezza 23, Milano, Italia</li>
+  <li>Orari di apertura: Lun-Sab 10:00 - 19:00</li>
 <h2>Test Validazione</h2>
 <h2>Licenze</h2>
 <p>Il contenuto di questo portfolio è soggetto alla Esmeny License. Consulta il file LICENSE per ulteriori dettagli.</p>
