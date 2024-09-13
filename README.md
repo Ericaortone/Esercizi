@@ -13,18 +13,18 @@
 <p>Puoi trovare il mio sito online: https://esmenyperteeperiltuofuturo.netlify.app</p>
 <h2>About the Site</h2>
 <p>Esmeny è stato progettato per essere chiaro ed efficace. Il nostro obiettivo principale è facilitare l'acquisto e fornire al cliente informazioni dettagliate sui prodotti, comprese le certificazioni necessarie. Ci impegniamo a evitare confusione e a garantire una navigazione semplice e completa, affinché ogni cliente possa fare scelte informate e soddisfacenti. </p>
-<h2>Elementi principali della pagina</h2>
-<p>Il sito web di Esmeny è organizzato in diverse sezioni che offrono un'esperienza utente completa, con vari elementi e funzionalità.</p>
-<p>logo</p>
-<p>menù a interazione</p>
-<p>barra di navigazione, profilo e carello</p>
-<p>prodotti</p>
-<p>curiosità sui prodotti e certificazioni</p>
-<p>contatti</p>
-<p>newsletter</p>
-<p>popup</p>
-<p>social</p>
-<p>chat support con interazione e botton "torna su"</p>
+<ul>Elementi principali della pagina</ul>
+  <li>Il sito web di Esmeny è organizzato in diverse sezioni che offrono un'esperienza utente completa, con vari elementi e funzionalità.</li>
+  <li>logo</li>
+  <li>menù a interazione</li>
+  <li>barra di navigazione, profilo e carello</li>
+  <li>prodotti</li>
+  <li>curiosità sui prodotti e certificazioni</li>
+  <li>contatti</li>
+  <li>newsletter</li>
+  <li>popup</li>
+  <li>social</li>
+  <li>chat support con interazione e botton "torna su"</li>
 <h2>Strumenti </h2>
 <p>Github</p>
 <p>Netlify</p>
