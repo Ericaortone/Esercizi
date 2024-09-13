@@ -38,8 +38,10 @@
   <li>Store ufficile: Via Giovanni Bellezza 23, Milano, Italia</li>
   <li>Orari di apertura: Lun-Sab 10:00 - 19:00</li>
 <h2>Test Validazione</h2>
-<a href="https://pagespeed.web.dev/analysis/https-esmenyperteeperiltuofuturo-netlify-app/0cbqft8fzq?form_factor=mobile">PageSpeed Insights</a>
-<a href="https://suite.seotesteronline.com/seo-checker/aHR0cHM6Ly9lc21lbnlwZXJ0ZWVwZXJpbHR1b2Z1dHVyby5uZXRsaWZ5LmFwcA%253D%253D/">SEO Tester Online</a>
+<ol>
+  <li><a href="https://pagespeed.web.dev/analysis/https-esmenyperteeperiltuofuturo-netlify-app/0cbqft8fzq?form_factor=mobile">PageSpeed Insights</a></li>
+  <li><a href="https://suite.seotesteronline.com/seo-checker/aHR0cHM6Ly9lc21lbnlwZXJ0ZWVwZXJpbHR1b2Z1dHVyby5uZXRsaWZ5LmFwcA%253D%253D/">SEO Tester Online</a></li>
+  <li><a href="https://gtmetrix.com/reports/esmenyperteeperiltuofuturo.netlify.app/e8Te7zZ7/">GTmetrix</a></li>
 <h2>Licenze</h2>
 <p>Il contenuto di questo portfolio è soggetto alla Esmeny License. Consulta il file LICENSE per ulteriori dettagli.</p>
 
