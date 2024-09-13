@@ -43,6 +43,7 @@
   <li><a href="https://suite.seotesteronline.com/seo-checker/aHR0cHM6Ly9lc21lbnlwZXJ0ZWVwZXJpbHR1b2Z1dHVyby5uZXRsaWZ5LmFwcA%253D%253D/">SEO Tester Online</a></li>
   <li><a href="https://gtmetrix.com/reports/esmenyperteeperiltuofuturo.netlify.app/e8Te7zZ7/">GTmetrix</a></li>
   <li><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fesmenyperteeperiltuofuturo.netlify.app%2F">Markup Validation Service</a></li>
+  <li><a href="https://seositecheckup.com/seo-audit/esmenyperteeperiltuofuturo.netlify.app">Seo Site Checkup</a></li>
 <h2>Licenze</h2>
-<p>Il contenuto di questo portfolio è soggetto alla Esmeny License. Consulta il file LICENSE per ulteriori dettagli.</p>
+<p>Il contenuto di questo portfolio è soggetto alla Esmeny License.</p>
 
